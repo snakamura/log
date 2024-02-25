@@ -28,3 +28,7 @@
 ### Jul.
 
 - [Traversable, Lone and Distributive](./2023/7/traversable_lone_distributive.html)
+
+### Jun.
+
+- [Control.Applicative.Backwards](./2023/6/backwards.html)
