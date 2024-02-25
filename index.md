@@ -45,3 +45,7 @@
 
 - [zsh supports process substitution using a temporary file](./2023/3/zsh_process_substitution.html)
 - [Smart cast doesn't work well with computed properties](./2023/3/smartcast.html)
+
+### Feb.
+
+- [Use write-ghc-environment-files to run doctest with cabal](./2023/2/cabal_doctest.html)
