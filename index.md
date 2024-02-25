@@ -40,3 +40,7 @@
 ### Apr.
 
 - [Combining two functions in a type-safe way](./2023/4/combine_functions.html)
+
+### Mar.
+
+- [zsh supports process substitution using a temporary file](./2023/3/zsh_process_substitution.html)
