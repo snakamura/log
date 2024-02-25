@@ -32,3 +32,7 @@
 ### Jun.
 
 - [Control.Applicative.Backwards](./2023/6/backwards.html)
+
+### May.
+
+- [Working with record fields in Haskell 2023](./2023/5/record.html)
