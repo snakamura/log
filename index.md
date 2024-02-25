@@ -24,3 +24,7 @@
 - [Type of optics, part 3](./2023/9/optics3.html)
 - [Type of optics, part 2](./2023/9/optics2.html)
 - [Type of optics, part 1](./2023/9/optics1.html)
+
+### Jul.
+
+- [Traversable, Lone and Distributive](./2023/7/traversable_lone_distributive.html)
