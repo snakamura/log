@@ -49,3 +49,4 @@
 ### Feb.
 
 - [Use write-ghc-environment-files to run doctest with cabal](./2023/2/cabal_doctest.html)
+- [Renaming properties in TypeScript](./2023/2/rename_properties.html)
