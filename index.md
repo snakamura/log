@@ -36,3 +36,7 @@
 ### May.
 
 - [Working with record fields in Haskell 2023](./2023/5/record.html)
+
+### Apr.
+
+- [Combining two functions in a type-safe way](./2023/4/combine_functions.html)
