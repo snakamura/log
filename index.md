@@ -62,3 +62,4 @@
 - [Type-safe key and value pair](./2022/8/typesafe_key_value.html)
 - [Coproduct to product monoidal functor](./2022/8/coproduct_product_monoidal.html)
 - [Coproduct monoidal functor](./2022/8/coproduct_monoidal.html)
+- [Monoidal functor](./2022/8/monoidal.html)
