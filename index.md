@@ -56,3 +56,7 @@
 ### Sep.
 
 - [Omit in TypeScript isn't distributive](./2022/9/omit.html)
+
+### Aug.
+
+- [Type-safe key and value pair](./2022/8/typesafe_key_value.html)
