@@ -67,3 +67,14 @@
 ### Jul.
 
 - [Posting images with a structured message to Slack](./2022/7/slack.html)
+
+### May.
+
+- [Expressing relations between types, part 8](./2022/5/types8.html)
+- [Expressing relations between types, part 7](./2022/5/types7.html)
+- [Expressing relations between types, part 6](./2022/5/types6.html)
+- [Expressing relations between types, part 5](./2022/5/types5.html)
+- [Expressing relations between types, part 4](./2022/5/types4.html)
+- [Expressing relations between types, part 3](./2022/5/types3.html)
+- [Expressing relations between types, part 2](./2022/5/types2.html)
+- [Expressing relations between types, part 1](./2022/5/types1.html)
