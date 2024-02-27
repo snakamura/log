@@ -78,3 +78,7 @@
 - [Expressing relations between types, part 3](./2022/5/types3.html)
 - [Expressing relations between types, part 2](./2022/5/types2.html)
 - [Expressing relations between types, part 1](./2022/5/types1.html)
+
+### Apr.
+
+- [Expressing type equality](./2022/4/type_equality.html)
