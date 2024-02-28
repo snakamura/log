@@ -86,3 +86,4 @@
 ### Mar.
 
 - [Monoid of functors](./2022/3/monoid_functor.html)
+- [When do you use Data.Monoid.Endo?](./2022/3/endo.html)
