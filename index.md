@@ -87,3 +87,4 @@
 
 - [Monoid of functors](./2022/3/monoid_functor.html)
 - [When do you use Data.Monoid.Endo?](./2022/3/endo.html)
+- [Running a mongodb replica set in two availability zones may not as stable as you might think](./2022/3/mongodb_psa.html)
