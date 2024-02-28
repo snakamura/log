@@ -82,3 +82,7 @@
 ### Apr.
 
 - [Expressing type equality](./2022/4/type_equality.html)
+
+### Mar.
+
+- [Monoid of functors](./2022/3/monoid_functor.html)
