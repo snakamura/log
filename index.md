@@ -94,3 +94,4 @@
 ### Dec.
 
 - [Changing limits with prlimit](./2021/12/prlimit.html)
+- [Convert a text to a JSON string with jq](./2021/12/jq_string.html)
