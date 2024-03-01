@@ -100,3 +100,7 @@
 
 - [Implementing length-indexed vector using dependent types in Idris](./2021/11/length_indexed_vector_idris.html)
 - [Implementing Maybe using dependent types in Idris](./2021/11/maybe_idris.html)
+
+### Sep.
+
+- [Installing Python using asdf on macos](./2021/9/asdf.html)
