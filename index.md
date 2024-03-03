@@ -106,3 +106,4 @@
 - [Installing Python using asdf on macos](./2021/9/asdf.html)
 - [Implementing length-indexed vector using dependent types (cont.)](./2021/9/length_indexed_vector_cont.html)
 - [Implementing length-indexed vector using dependent types](./2021/9/length_indexed_vector.md)
+- [TypeScript 4.4 changes how it calls a method when it’s imported separately](./2021/9/typescript_method.html)
