@@ -119,3 +119,4 @@
 ### Jun.
 
 - [Calculating sum on console](./2021/6/sum.html)
+- [Classic MVC and Reactive Programming, part 6](./2021/6/mvc_reactive6.html)
