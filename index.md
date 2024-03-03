@@ -115,3 +115,7 @@
 ### Jul.
 
 - [Configure Squid to use Basic authentication](./2021/7/squid.html)
+
+### Jun.
+
+- [Calculating sum on console](./2021/6/sum.html)
