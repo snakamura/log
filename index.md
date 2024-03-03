@@ -111,3 +111,7 @@
 ### Aug.
 
 - [Migrating an ECS service from EC2 container instances to Fargate](./2021/8/fargate.html)
+
+### Jul.
+
+- [Configure Squid to use Basic authentication](./2021/7/squid.html)
