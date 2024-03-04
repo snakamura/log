@@ -144,3 +144,4 @@
 - [Open the door with types, part 4](./2021/3/door4.html)
 - [Open the door with types, part 3](./2021/3/door3.html)
 - [Open the door with types, part 2](./2021/3/door2.html)
+- [Open the door with types, part 1](./2021/3/door1.html)
