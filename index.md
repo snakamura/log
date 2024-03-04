@@ -136,3 +136,7 @@
 ### Apr.
 
 - [Using GADT as a type function](./2021/4/gadt_type_function.html)
+
+### Mar.
+
+- [Open the door with types, part 6](./2021/3/door6.html)
