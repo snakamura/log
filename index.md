@@ -2,6 +2,10 @@
 
 ## 2024
 
+### Mar.
+
+- [Memoize with Representable](./2024/3/representable_memoize.html)
+
 ### Feb.
 
 - [Products and functions](./2024/2/products_functions.html)
