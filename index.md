@@ -164,3 +164,4 @@
 ### Oct.
 
 - [Playing with Sigma, part 2](./2020/10/sigma2.html)
+- [Playing with Sigma, part 1](./2020/10/sigma1.html)
