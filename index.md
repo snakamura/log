@@ -160,3 +160,7 @@
 ### Nov.
 
 - [Implementing Maybe using dependent types](./2020/11/dependent_maybe.html)
+
+### Oct.
+
+- [Playing with Sigma, part 2](./2020/10/sigma2.html)
