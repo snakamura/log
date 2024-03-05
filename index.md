@@ -149,3 +149,9 @@
 ### Feb.
 
 - [Creating a NAT instance with Ubuntu](./2021/2/nat.html)
+
+## 2020
+
+### Dec.
+
+- [Associated types in TypeScript](./2020/12/associated_types.html)
