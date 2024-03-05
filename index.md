@@ -156,3 +156,7 @@
 
 - [Associated types in TypeScript](./2020/12/associated_types.html)
 - [SecItemCopyMatching fails when a device is locked](./2020/12/sec_item_copy_matching.html)
+
+### Nov.
+
+- [Implementing Maybe using dependent types](./2020/11/dependent_maybe.html)
