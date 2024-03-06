@@ -173,3 +173,7 @@
 
 - [Installing GHC 8.8.4 and cabal-install to Ubuntu 20.04 LTS](./2020/9/ghc884.html)
 - [NSMapTable.count counts released objects](./2020/9/ns_map_table.html)
+
+### Aug.
+
+- [MongoDB query planner can be very slow](./2020/8/mongodb_query_planner.html)
