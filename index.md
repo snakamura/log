@@ -172,3 +172,4 @@
 ### Sep.
 
 - [Installing GHC 8.8.4 and cabal-install to Ubuntu 20.04 LTS](./2020/9/ghc884.html)
+- [NSMapTable.count counts released objects](./2020/9/ns_map_table.html)
