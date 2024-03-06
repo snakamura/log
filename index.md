@@ -168,3 +168,7 @@
 - [Function returning some types](./2020/10/return_some_types.html)
 - [Functions taking some types, part 2](./2020/10/take_some_types2.html)
 - [Functions taking some types, part 1](./2020/10/take_some_types1.html)
+
+### Sep.
+
+- [Installing GHC 8.8.4 and cabal-install to Ubuntu 20.04 LTS](./2020/9/ghc884.html)
