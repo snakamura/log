@@ -165,3 +165,4 @@
 
 - [Playing with Sigma, part 2](./2020/10/sigma2.html)
 - [Playing with Sigma, part 1](./2020/10/sigma1.html)
+- [Function returning some types](./2020/10/return_some_types.html)
