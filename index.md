@@ -187,3 +187,7 @@
 - [Why do you need singletons?](./2020/7/singletons.html)
 - [Increase max number of open files of mongodb on Ubuntu with systemd](./2020/7/open_files.html)
 - [Changing maxfiles for mongodb on Mac OS](./2020/7/maxfiles.html)
+
+### Jun.
+
+- [Extend a class with a proxied constructor](./2020/6/proxied_constructor.html)
