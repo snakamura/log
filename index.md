@@ -183,3 +183,4 @@
 
 - [Writer monad and Traced comonad](./2020/7/writer_traced.html)
 - [Reader monad and Env comonad](./2020/7/reader_env.html)
+- [PostgreSQL doesn’t create an index on a column with a foreign key while MySQL does](./2020/7/foreign_key_index.html)
