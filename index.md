@@ -182,3 +182,4 @@
 ### Jul.
 
 - [Writer monad and Traced comonad](./2020/7/writer_traced.html)
+- [Reader monad and Env comonad](./2020/7/reader_env.html)
