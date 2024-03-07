@@ -178,3 +178,7 @@
 
 - [MongoDB query planner can be very slow](./2020/8/mongodb_query_planner.html)
 - [Converting a function taking a callback to a suspend function](./2020/8/suspend_function.html)
+
+### Jul.
+
+- [Writer monad and Traced comonad](./2020/7/writer_traced.html)
