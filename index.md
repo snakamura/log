@@ -217,3 +217,4 @@
 
 - [Convert a type level natural number to a value level integer and vise versa](./2015/2/type_level_natural.html)
 - [Type-safe list with GHC.TypeLits](./2015/2/type_safe_list.html)
+- [Type-safe list, DataKinds, ConstraintKinds and more](./2015/2/kind.html)
