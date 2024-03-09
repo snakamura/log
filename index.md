@@ -191,3 +191,9 @@
 ### Jun.
 
 - [Extend a class with a proxied constructor](./2020/6/proxied_constructor.html)
+
+## 2019
+
+### Sep.
+
+- [All nils are not equal in go](./2019/9/nil.html)
