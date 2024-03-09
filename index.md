@@ -198,3 +198,7 @@
 
 - [All nils are not equal in go](./2019/9/nil.html)
 - [Calculating fibonacci numbers using recursion schemes](./2019/9/recursion_scheme.html)
+
+### Aug.
+
+- [Reusing an algorithm in synchronous and asynchronous functions](./2019/8/sync_async.html)
