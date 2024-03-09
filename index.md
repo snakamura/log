@@ -202,3 +202,7 @@
 ### Aug.
 
 - [Reusing an algorithm in synchronous and asynchronous functions](./2019/8/sync_async.html)
+
+### Jun.
+
+- [Lenses in Javascript](./2019/6/lenses_javascript.html)
