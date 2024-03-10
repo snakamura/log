@@ -224,3 +224,7 @@
 ### Nov.
 
 - [Hash with Pipes](./2014/11/hash_pipes.html)
+
+### Oct.
+
+- [Using cabal-install-1.20 on Travis-CI](./2014/10/cabal_travis.html)
