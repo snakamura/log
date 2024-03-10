@@ -252,3 +252,7 @@
 
 - [Here strings are seekable](./2013/12/here_strings.html)
 - [$TERM becomes unknown when sudoing via ssh](./2013/12/term_sudo.html)
+
+### Oct.
+
+- [Communicating over TCP using bash](./2013/10/tcp_bash.html)
