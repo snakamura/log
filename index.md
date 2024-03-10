@@ -251,3 +251,4 @@
 ### Dec.
 
 - [Here strings are seekable](./2013/12/here_strings.html)
+- [$TERM becomes unknown when sudoing via ssh](./2013/12/term_sudo.html)
