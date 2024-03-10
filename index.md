@@ -236,3 +236,7 @@
 - [Combining pipes](./2014/9/combine_pipes.html)
 - [Evaluate lenses by hand](./2014/9/evaluate_lenses.html)
 - [Calculating a sum in pipes](./2014/9/sum_pipes.html)
+
+### Aug.
+
+- [Grouping in pipes](./2014/8/group_pipes.html)
