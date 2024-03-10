@@ -256,3 +256,7 @@
 ### Oct.
 
 - [Communicating over TCP using bash](./2013/10/tcp_bash.html)
+
+### Jan.
+
+- [Network.URI.escapeURIString converts its input to UTF-8](./2013/1/escape_uri_string.html)
