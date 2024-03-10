@@ -245,3 +245,9 @@
 
 - [Files in /etc/cron.d](./2014/6/cron.html)
 - [Reverse words with tac](./2014/6/tac.html)
+
+## 2013
+
+### Dec.
+
+- [Here strings are seekable](./2013/12/here_strings.html)
