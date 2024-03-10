@@ -244,3 +244,4 @@
 ### Jun.
 
 - [Files in /etc/cron.d](./2014/6/cron.html)
+- [Reverse words with tac](./2014/6/tac.html)
