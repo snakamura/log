@@ -228,3 +228,7 @@
 ### Oct.
 
 - [Using cabal-install-1.20 on Travis-CI](./2014/10/cabal_travis.html)
+
+### Sep.
+
+- [Writing an instance of Arbitrary for a list](./2014/9/arbitrary_list.html)
