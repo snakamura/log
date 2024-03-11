@@ -260,3 +260,9 @@
 ### Jan.
 
 - [Network.URI.escapeURIString converts its input to UTF-8](./2013/1/escape_uri_string.html)
+
+## 2012
+
+### Nov.
+
+- [Out parameter in Objective-C with ARC](./2012/11/out_parameter.html)
