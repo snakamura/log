@@ -266,3 +266,7 @@
 ### Nov.
 
 - [Out parameter in Objective-C with ARC](./2012/11/out_parameter.html)
+
+### Jul.
+
+- [Creating your own error class with util.inherits is not that simple](./2012/7/error_class.html)
