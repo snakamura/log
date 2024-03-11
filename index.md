@@ -278,3 +278,4 @@
 ### Apr.
 
 - [Round corners of an image with ImageMagick](./2012/4/rounded_corners.html)
+- [CPP with multi-line string literals](./2012/4/cpp_multiline.html)
