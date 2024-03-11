@@ -270,3 +270,7 @@
 ### Jul.
 
 - [Creating your own error class with util.inherits is not that simple](./2012/7/error_class.html)
+
+### Jun.
+
+- [Binding an event handler to a search box with jQuery Mobile](./2012/6/jquery_mobile.html)
