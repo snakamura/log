@@ -274,3 +274,7 @@
 ### Jun.
 
 - [Binding an event handler to a search box with jQuery Mobile](./2012/6/jquery_mobile.html)
+
+### Apr.
+
+- [Round corners of an image with ImageMagick](./2012/4/rounded_corners.html)
