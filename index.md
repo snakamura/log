@@ -283,3 +283,4 @@
 ### Mar.
 
 - [How to upgrade a kernel image supporting pv-grub on EC2](./2012/3/pv_grub.html)
+- [Lifting a monadic computation through a stack of monad transformers, part 2](./2012/3/monad_transformer2.html)
