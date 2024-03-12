@@ -279,3 +279,7 @@
 
 - [Round corners of an image with ImageMagick](./2012/4/rounded_corners.html)
 - [CPP with multi-line string literals](./2012/4/cpp_multiline.html)
+
+### Mar.
+
+- [How to upgrade a kernel image supporting pv-grub on EC2](./2012/3/pv_grub.html)
