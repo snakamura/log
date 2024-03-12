@@ -291,3 +291,4 @@
 - [Catching an exception using MonadCatchIO](./2012/2/monad_catch_io.html)
 - [MonadBase is a generalized MonadIO](./2012/2/monad_base.html)
 - [Recovering from a failure of git svn dcommit](./2012/2/git_svn_dcommit.html)
+- [Decreasing the number of generations kept by logrotate won't delete old log files](./2012/2/log_rotate.html)
