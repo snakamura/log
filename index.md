@@ -289,3 +289,4 @@
 ### Feb.
 
 - [Catching an exception using MonadCatchIO](./2012/2/monad_catch_io.html)
+- [MonadBase is a generalized MonadIO](./2012/2/monad_base.html)
