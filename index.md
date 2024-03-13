@@ -293,3 +293,7 @@
 - [Recovering from a failure of git svn dcommit](./2012/2/git_svn_dcommit.html)
 - [Decreasing the number of generations kept by logrotate won't delete old log files](./2012/2/log_rotate.html)
 - [Generating a sequence in a shell script](./2012/2/sequence.html)
+
+### Jan.
+
+- [Taking a photo from your app on Android](./2012/1/android_photo.html)
