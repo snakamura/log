@@ -298,3 +298,9 @@
 
 - [Taking a photo from your app on Android](./2012/1/android_photo.html)
 - [Creating a universal static library for iOS](./2012/1/universal_static_library.html)
+
+## 2011
+
+### Dec.
+
+- [Never call mysql_real_connect more than once without calling mysql_init again](./2011/12/mysql_real_connect.html)
