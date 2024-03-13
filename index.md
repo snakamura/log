@@ -297,3 +297,4 @@
 ### Jan.
 
 - [Taking a photo from your app on Android](./2012/1/android_photo.html)
+- [Creating a universal static library for iOS](./2012/1/universal_static_library.html)
