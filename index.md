@@ -304,3 +304,4 @@
 ### Dec.
 
 - [Never call mysql_real_connect more than once without calling mysql_init again](./2011/12/mysql_real_connect.html)
+- [Killing a thread or query of MySQL running on RDS](./2011/12/mysql_kill.html)
