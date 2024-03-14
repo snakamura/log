@@ -311,3 +311,4 @@
 
 - [Getting a frame from bounds](./2011/11/frame.html)
 - [xterm-256color on Ubuntu](./2011/11/xterm.html)
+- [coreutils in MacPorts](./2011/11/coreutils.html)
