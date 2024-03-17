@@ -316,3 +316,4 @@
 ### Oct.
 
 - [Use multi-byte subject in osTicket](./2011/10/osticket.html)
+- [Enable assertions on Android](./2011/10/android_assertion.html)
