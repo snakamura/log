@@ -322,3 +322,4 @@
 
 - [Retrieve branches on a subversion repository using git-svn](./2011/8/git_svn_branch.html)
 - [MySQL puts the default value to NOT NULL column](./2011/8/mysql_not_null.html)
+- [MySQL updates columns from left to right](./2011/8/mysql_update.html)
