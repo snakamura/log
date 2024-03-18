@@ -343,3 +343,4 @@
 ### Mar.
 
 - [Remove a particular field from a munin graph](./2011/3/munin.html)
+- [Disable vc-mode](./2011/3/vc_mode.html)
