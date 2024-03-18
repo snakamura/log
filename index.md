@@ -336,3 +336,4 @@
 ### Apr.
 
 - [Show diff of the specified commit with its parent](./2011/4/git_diff.html)
+- [Apply svn:ignore to git using git svn](./2011/4/svn_ignore.html)
