@@ -1,6 +1,6 @@
 # Implementing length-indexed vector using dependent types
 
-In [Implementing Maybe using dependent types](https://snak.tumblr.com/post/634446023985643520/implementing-maybe-using-dependent-types), I implemented `Maybe` using dependent types. The type itself is `Optional` which is indexed by kind `O`. In kind `O`, there are two types `S` and `N`.
+In [Implementing Maybe using dependent types](../../2020/11/dependent_maybe.html), I implemented `Maybe` using dependent types. The type itself is `Optional` which is indexed by kind `O`. In kind `O`, there are two types `S` and `N`.
 
 So it's basically a type indexed by a kind with two types. Then, how does it look like if we implement a type indexed by a kind with infinite number of types? Let's try it.
 

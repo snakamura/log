@@ -91,7 +91,7 @@ instance (SCatI cat, SSubCatI subCat) => Show (Item cat subCat) where
     show _ = "Item " <> show (singCat @cat) <> " " <> show (singSubCat @subCat)
 ```
 
-You can find `ValidSubCats`, `OneOf` and `ToConstraint` in [the previous post](https://snak.tumblr.com/post/684400816546840576/expressing-relations-between-types-part-2).
+You can find `ValidSubCats`, `OneOf` and `ToConstraint` in [the previous post](./types2.html).
 
 We add `SomeItem` existential type here for convenience. Then, we can put any `Item cat subCat`s to a list by wrapping `Item` in `SomeItem`.
 

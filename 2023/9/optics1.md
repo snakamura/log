@@ -254,7 +254,7 @@ toListOf3 :: Getting3 [a] s a -> s -> [a]
 toListOf3 fold = views3 fold pure
 ```
 
-This works well, but you can make it more efficient by using `Data.Monoid.Endo` as I wrote in [When do you use Data.Monoid.Endo?](https://snak.tumblr.com/post/679221762414837760/when-do-you-use-datamonoidendo).
+This works well, but you can make it more efficient by using `Data.Monoid.Endo` as I wrote in [When do you use Data.Monoid.Endo?](../../2022/3/endo.html).
 
 ```
 toListOf3' :: Getting3 (Endo [a]) s a -> s -> [a]

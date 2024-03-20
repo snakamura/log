@@ -1,6 +1,6 @@
 # Functions taking some types, part 2
 
-In [the previous post](https://snak.tumblr.com/post/631687468085886976/functions-taking-some-types), we looked at how we can define functions taking some types with a phantom type. However, all of those functions need to know an actual type at the compile time. How can define functions that take some types which will be known at runtime?
+In [the previous post](./take_some_types1.html), we looked at how we can define functions taking some types with a phantom type. However, all of those functions need to know an actual type at the compile time. How can define functions that take some types which will be known at runtime?
 
 First, let's pick a function from the previous post.
 

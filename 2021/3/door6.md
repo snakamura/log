@@ -4,7 +4,7 @@ In the previous posts, I used `Either` for a return type of `unlock`. It returns
 
 You can use [`Sigma`](https://hackage.haskell.org/package/singletons-3.0/docs/Data-Singletons-Sigma.html#t:Sigma) when you want to make a function return one of multiple types. But in our situation, we need to return one of two types out of three types. We have `Door 'Opened`, `Door 'Closed` and `Door 'Locked`, but `unlock` only returns `Door 'Closed` or `Door 'Locked`.
 
-To limit the types a function can return, you can use `SigmaP` which I explained in [Function returning some types](https://snak.tumblr.com/post/632410914757492736/function-returning-some-types). You'll pass a custom constraint to `SigmaP` to limit types.
+To limit the types a function can return, you can use `SigmaP` which I explained in [Function returning some types](../../2020/10/return_some_types.html). You'll pass a custom constraint to `SigmaP` to limit types.
 
 Let's review `SigmaP` and a helper type function `OneOf`.
 

@@ -1,6 +1,6 @@
 # Expressing relations between types, part 7
 
-By putting everything together, we'll get this. [The original code](https://snak.tumblr.com/post/684284139560681472/expressing-relations-between-types-part-1) was 34 lines and this one is 154 lines. You've got type-safety, but they have the same level of safety when you look at them from outside. Do you think it's worth it?
+By putting everything together, we'll get this. [The original code](./types1.html) was 34 lines and this one is 154 lines. You've got type-safety, but they have the same level of safety when you look at them from outside. Do you think it's worth it?
 
 ```
 {-# LANGUAGE DataKinds,

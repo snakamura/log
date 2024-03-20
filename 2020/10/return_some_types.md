@@ -1,6 +1,6 @@
 # Function returning some types
 
-In the previous two posts ([part 1](https://snak.tumblr.com/post/631687468085886976/functions-taking-some-types-part-1) and [part 2](https://snak.tumblr.com/post/631854525488201729/functions-taking-some-types-part-2)), we discussed how we can define functions taking some types. Now, we're going to think about functions returning some types.
+In the previous two posts ([part 1](./take_some_types1.html) and [part 2](./take_some_types2.html)), we discussed how we can define functions taking some types. Now, we're going to think about functions returning some types.
 
 First, let's define `S` and `X`. They're identical to `S` and `X` in the previous posts.
 
@@ -65,7 +65,7 @@ c1 = case f1 True X1 of
 
 The problem of using `Either` is that we need to nest `Either`s or define a new sum type when a function returns more than two types.
 
-Another option would be returning `Sigma S (TyCon X)`. [`Sigma`](http://hackage.haskell.org/package/singletons-2.6/docs/Data-Singletons-Sigma.html#t:Sigma) is an existential type indexed by a singleton. You can think it as a generic version of `SomeX` in [the previous post](https://snak.tumblr.com/post/631854525488201729/functions-taking-some-types-part-2). Just like you used `SomeX SS2 (X2 2)` to express `X2 2` in an existential type, you can use `SS2 :&: X2 2`.
+Another option would be returning `Sigma S (TyCon X)`. [`Sigma`](http://hackage.haskell.org/package/singletons-2.6/docs/Data-Singletons-Sigma.html#t:Sigma) is an existential type indexed by a singleton. You can think it as a generic version of `SomeX` in [the previous post](./take_some_types2.html). Just like you used `SomeX SS2 (X2 2)` to express `X2 2` in an existential type, you can use `SS2 :&: X2 2`.
 
 Using `Sigma S (TyCon S)`, you can write `f2` like this.
 
