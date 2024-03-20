@@ -66,6 +66,6 @@ values$.subscribe(([_, sum]) => {
 
 Just like it was important to run the business logic in the `Model`, it's important to make `values$` run the business logic instead of running it in each `Observer`.
 
-You can find the complete code at [snakamura/mvc_rx](https://href.li/?https://github.com/snakamura/mvc_rx/tree/master/6).
+You can find the complete code at [snakamura/mvc_rx](https://github.com/snakamura/mvc_rx/tree/master/6).
 
 As you can see, `values$` itself behaves as a model. Then, what shall we do if we have more complex business logics? We'll look at it in the next post.

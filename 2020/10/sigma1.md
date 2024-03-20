@@ -1,6 +1,6 @@
 # Playing with Sigma, part 1
 
-As I wrote in [the previous post](https://snak.tumblr.com/post/632410914757492736/function-returning-some-types), you can think [Sigma](http://hackage.haskell.org/package/singletons-2.7/docs/Data-Singletons-Sigma.html#t:Sigma) is a generalized existential type. Then, how can I build it?
+As I wrote in [the previous post](./return_some_types.html), you can think [Sigma](http://hackage.haskell.org/package/singletons-2.7/docs/Data-Singletons-Sigma.html#t:Sigma) is a generalized existential type. Then, how can I build it?
 
 First, let's start from `SomeX` that contains type `X` indexed by kind `S`.
 

@@ -1,6 +1,6 @@
 # Monoid of functors
 
-As we saw in [the previous post](https://snak.tumblr.com/post/679221762414837760/when-do-you-use-datamonoidendo), a function from `a` to `a` forms a monoid with respect to their composition and an identity function. Then, what we can do with a functor?
+As we saw in [the previous post](./endo.html), a function from `a` to `a` forms a monoid with respect to their composition and an identity function. Then, what we can do with a functor?
 
 ```
 {-# LANGUAGE FlexibleInstances,

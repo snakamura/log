@@ -1,6 +1,6 @@
 # Classic MVC and Reactive Programming, part 6
 
-In [the previous post](https://snak.tumblr.com/post/652207940931092480/classic-mvc-and-reactive-programming-part-5), I added a new business logic, and made `values$` hold a calculated value.
+In [the previous post](../5/mvc_reactive5.html), I added a new business logic, and made `values$` hold a calculated value.
 
 There're some problems about this. First, it calculates the value even when it's not used. Second, the tuple containing the value will get larger when you add more business logics.
 
@@ -102,4 +102,4 @@ When you compare this with the classic MVC version, you'll find that we kind of 
 
 In the classic MVC version, the `Model` itself represents a state, but now, we use `Observable<model>` to represent the state.
 
-You can find the complete code at [snakamura/mvc_rx](https://href.li/?https://github.com/snakamura/mvc_rx/tree/master/7).
+You can find the complete code at [snakamura/mvc_rx](https://github.com/snakamura/mvc_rx/tree/master/7).

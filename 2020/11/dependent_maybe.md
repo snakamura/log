@@ -87,7 +87,7 @@ Are there anything we can do to make this simpler? First, let's define `Opt` to 
 type Opt a = Sigma O (FlipSym1 (TyCon Optional) @@ a)
 ```
 
-Since `addText` maps a `Sigma` returned by `textToInt` to another `Sigma`, we should be able to write it using `mapSigma`. As I wrote in [the previous post](https://snak.tumblr.com/post/633044262613860352/playing-with-sigma-part-2), we need a type function `G`, its singleton version `sG` and a value function `f` to use `mapSigma`.
+Since `addText` maps a `Sigma` returned by `textToInt` to another `Sigma`, we should be able to write it using `mapSigma`. As I wrote in [the previous post](../10/sigma2.html), we need a type function `G`, its singleton version `sG` and a value function `f` to use `mapSigma`.
 
 ```
 singletons [d|

@@ -1,6 +1,6 @@
 # Implementing Maybe using dependent types in Idris
 
-In [Implementing Maybe using dependent types](https://snak.tumblr.com/post/634446023985643520/implementing-maybe-using-dependent-types), we implemented Maybe using dependent types in Haskell. Now, let's try it in Idris.
+In [Implementing Maybe using dependent types](../../2020/11/dependent_maybe.html), we implemented Maybe using dependent types in Haskell. Now, let's try it in Idris.
 
 Since Idris supports dependent types, it should be much easier.
 
