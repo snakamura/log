@@ -1,8 +1,8 @@
 # Implementing length-indexed vector using dependent types in Idris
 
-Now that we've implemented `Optional` in [the previous post](https://snak.tumblr.com/post/666931568388997120/implementing-maybe-using-dependent-types-in-idris), let's try implementing a length-indexed vector based on [the Haskell implementation](https://snak.tumblr.com/post/662906879044976640/implementing-length-indexed-vector-using-dependent).
+Now that we've implemented `Optional` in [the previous post](./maybe_idris.html), let's try implementing a length-indexed vector based on [the Haskell implementation](../9/length_indexed_vector.html).
 
-It's very similar to [the Haskell with singletons version](https://snak.tumblr.com/post/662906879044976640/implementing-length-indexed-vector-using-dependent), but there're some differences. First, we need to implement `sameNat` manually.
+It's very similar to [the Haskell with singletons version](../9/length_indexed_vector_cont.html), but there're some differences. First, we need to implement `sameNat` manually.
 
 ```
 sameNat : (n : Nat) -> (m : Nat) -> Maybe (n = m)
@@ -13,7 +13,7 @@ sameNat (S n) (S m) = case sameNat n m of
 sameNat _ _ = Nothing
 ```
 
-This is similar to `sameSNat` in [the Haskell version without singletons](https://snak.tumblr.com/post/662857073524113408/implementing-length-indexed-vector-using-dependent), but you need to make it clear that `S n = S m` when `n = m` using `cong`.
+This is similar to `sameSNat` in [the Haskell version without singletons](../9/length_indexed_vector.html), but you need to make it clear that `S n = S m` when `n = m` using `cong`.
 
 Note that the parameters of `cong` changed in Idris 2, so you need to change `Just (cong S e)` to `Just (cong e)` to run this code with Idris 1.
 

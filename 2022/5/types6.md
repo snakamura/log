@@ -41,7 +41,7 @@ makeItem cat subCat = do
     SomeItem <$> buildItem cat subCat
 ```
 
-You can add `cat` and `subCat` to get `SomeSCat` and `SomeSSubCat` from `SomeItem`, with which you can get a category and a sub category at run time, just like you can do with [the original implementation](https://snak.tumblr.com/post/684284139560681472/expressing-relations-between-types-part-1).
+You can add `cat` and `subCat` to get `SomeSCat` and `SomeSSubCat` from `SomeItem`, with which you can get a category and a sub category at run time, just like you can do with [the original implementation](./types1.html).
 
 ```
 cat :: SomeItem -> SomeSCat

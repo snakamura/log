@@ -1,6 +1,6 @@
 # Open the door with types, part 5
 
-In [the previous post](https://snak.tumblr.com/post/646361617047650304/open-the-door-with-types-part-4), I implemented `SingState` and `SingStateI` manually.
+In [the previous post](./door4.html), I implemented `SingState` and `SingStateI` manually.
 
 With the help of [singletons](https://hackage.haskell.org/package/singletons), you no longer need to implement them manually.
 

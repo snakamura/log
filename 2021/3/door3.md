@@ -37,7 +37,7 @@ deriving instance Show (Door state)
 
 As you can see, `Door` is now a type indexed by `State`. So it can be one of `Door 'Opened`, `Door 'Closed` or `Door 'Locked`.
 
-Functions working on a door are pretty much similar to ones in [the previous post](https://snak.tumblr.com/post/645990203514896384/open-the-door-with-types-part-2).
+Functions working on a door are pretty much similar to ones in [the previous post](./door2.html).
 
 ```
 name :: Door state -> Text

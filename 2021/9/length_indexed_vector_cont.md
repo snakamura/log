@@ -1,6 +1,6 @@
 # Implementing length-indexed vector using dependent types (cont.)
 
-We've implemented a length-indexed vector manually in [the previous post](https://snak.tumblr.com/post/662857073524113408/implementing-length-indexed-vector-using-dependent). How will it look like with [singletons](https://hackage.haskell.org/package/singletons)?
+We've implemented a length-indexed vector manually in [the previous post](./length_indexed_vector.html). How will it look like with [singletons](https://hackage.haskell.org/package/singletons)?
 
 We no longer need to define `SNat` manually. Also, by making `Nat` derive `Eq`, singletons makes `SNat` an instance of [`TestEquality`](https://hackage.haskell.org/package/base/docs/Data-Type-Equality.html#t:TestEquality). So we don't need to write `sameSNat`.
 

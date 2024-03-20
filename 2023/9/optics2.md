@@ -80,7 +80,7 @@ identicalTraverse agb fa =
 
 Even though adding `Traversable` constraint adds nothing in practice, it'll make it even clearer that a functor implementing this class is isomorphic to `Identity`.
 
-You can read a bit more about isomorphism to `Identity` in [Traversable, Lone and Distributive](https://snak.tumblr.com/post/723546375430733824/traversable-lone-and-distributive).
+You can read a bit more about isomorphism to `Identity` in [Traversable, Lone and Distributive](../7/traversable_lone_distributive.html).
 
 By applying this constraint, we'll get `Identical3`.
 

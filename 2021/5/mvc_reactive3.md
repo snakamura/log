@@ -58,6 +58,6 @@ const values$ = fromEvent($add, 'click')
 
 Notice that `values$` always has the latest values after adding a value and loading values. Observers subscribing to this `Observable` get the latest value without any changes.
 
-You can find the complete code at [snakamura/mvc_rx](https://href.li/?https://github.com/snakamura/mvc_rx/tree/master/3).
+You can find the complete code at [snakamura/mvc_rx](https://github.com/snakamura/mvc_rx/tree/master/3).
 
 In the next post, we'll see how to handle errors while loading values.

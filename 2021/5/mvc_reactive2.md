@@ -91,6 +91,6 @@ Now you can get the latest values by subscribing to `values$` when a user clicks
 
 `values$` is no longer just an event emitter, but it's a value that changes over time, and you can get it by subscribing to it.
 
-You can find the complete code at [snakamura/mvc_rx](https://href.li/?https://github.com/snakamura/mvc_rx/tree/master/2).
+You can find the complete code at [snakamura/mvc_rx](https://github.com/snakamura/mvc_rx/tree/master/2).
 
 In the next post, I'll add support to load values.

@@ -1,6 +1,6 @@
 # Classic MVC and Reactive Programming, part 4
 
-In [the previous post](https://snak.tumblr.com/post/651775445418770432/classic-mvc-and-reactive-programming-part-3), we added a support to load values, but didn't handle errors at all. It stopped working when you input an invalid values to the prompt.
+In [the previous post](./mvc_reactive3.html), we added a support to load values, but didn't handle errors at all. It stopped working when you input an invalid values to the prompt.
 
 In this post, we'll look at how we'll handle errors.
 
@@ -100,6 +100,6 @@ const loadedValues$ = fromEvent($load, 'click')
 
 In either case, you need to make sure that the `Observable` doesn't terminate even after an error occurred.
 
-You can find the complete code at [snakamura/mvc_rx](https://href.li/?https://github.com/snakamura/mvc_rx/tree/master/4).
+You can find the complete code at [snakamura/mvc_rx](https://github.com/snakamura/mvc_rx/tree/master/4).
 
 We'll try adding some business logics in the next post.
