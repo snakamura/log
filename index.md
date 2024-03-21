@@ -4,69 +4,69 @@
 
 ### Mar.
 
-- [Memoize with Representable](./2024/3/representable_memoize.html)
+- [Memoize with Representable](./2024/3/representable_memoize.html) [haskell]
 
 ### Feb.
 
-- [Products and functions](./2024/2/products_functions.html)
+- [Products and functions](./2024/2/products_functions.html) [haskell]
 
 ## 2023
 
 ### Nov.
 
-- [WebAssembly text format](./2023/11/wasm_text_format.html)
-- [Importing a function to wasm](./2023/11/import_function_wasm.html)
-- [Exporting a function from wasm](./2023/11/export_function_wasm.html)
-- [Playing with wasm](./2023/11/playing_with_wasm.html)
+- [WebAssembly text format](./2023/11/wasm_text_format.html) [wasm]
+- [Importing a function to wasm](./2023/11/import_function_wasm.html) [wasm]
+- [Exporting a function from wasm](./2023/11/export_function_wasm.html) [wasm]
+- [Playing with wasm](./2023/11/playing_with_wasm.html) [wasm]
 
 ### Oct.
 
-- [Type of optics, part 4](./2023/10/optics4.html)
+- [Type of optics, part 4](./2023/10/optics4.html) [haskell]
 
 ### Sep.
 
-- [Type of optics, part 3](./2023/9/optics3.html)
-- [Type of optics, part 2](./2023/9/optics2.html)
-- [Type of optics, part 1](./2023/9/optics1.html)
+- [Type of optics, part 3](./2023/9/optics3.html) [haskell]
+- [Type of optics, part 2](./2023/9/optics2.html) [haskell]
+- [Type of optics, part 1](./2023/9/optics1.html) [haskell]
 
 ### Jul.
 
-- [Traversable, Lone and Distributive](./2023/7/traversable_lone_distributive.html)
+- [Traversable, Lone and Distributive](./2023/7/traversable_lone_distributive.html) [haskell]
 
 ### Jun.
 
-- [Control.Applicative.Backwards](./2023/6/backwards.html)
+- [Control.Applicative.Backwards](./2023/6/backwards.html) [haskell]
 
 ### May.
 
-- [Working with record fields in Haskell 2023](./2023/5/record.html)
+- [Working with record fields in Haskell 2023](./2023/5/record.html) [haskell]
 
 ### Apr.
 
-- [Combining two functions in a type-safe way](./2023/4/combine_functions.html)
+- [Combining two functions in a type-safe way](./2023/4/combine_functions.html) [haskell]
 
 ### Mar.
 
 - [zsh supports process substitution using a temporary file](./2023/3/zsh_process_substitution.html)
-- [Smart cast doesn't work well with computed properties](./2023/3/smartcast.html)
+- [Smart cast doesn't work well with computed properties](./2023/3/smartcast.html) [kotlin, typescript]
 
 ### Feb.
 
-- [Use write-ghc-environment-files to run doctest with cabal](./2023/2/cabal_doctest.html)
-- [Renaming properties in TypeScript](./2023/2/rename_properties.html)
+- [Use write-ghc-environment-files to run doctest with cabal](./2023/2/cabal_doctest.html) [haskell]
+- [Renaming properties in TypeScript](./2023/2/rename_properties.html) [typescript]
 
 ## 2022
 
 ### Sep.
 
-- [Omit in TypeScript isn't distributive](./2022/9/omit.html)
+- [Omit in TypeScript isn't distributive](./2022/9/omit.html) [typescript]
 
 ### Aug.
 
-- [Type-safe key and value pair](./2022/8/typesafe_key_value.html)
-- [Coproduct to product monoidal functor](./2022/8/coproduct_product_monoidal.html)
-- [Coproduct monoidal functor](./2022/8/coproduct_monoidal.html)
-- [Monoidal functor](./2022/8/monoidal.html)
+- [Type-safe key and value pair](./2022/8/typesafe_key_value.html) [haskell]
+- [Coproduct to product monoidal functor](./2022/8/coproduct_product_monoidal.html) [haskell]
+- [Coproduct monoidal functor](./2022/8/coproduct_monoidal.html) [haskell]
+- [Monoidal functor](./2022/8/monoidal.html) [haskell]
 
 ### Jul.
 
@@ -74,23 +74,23 @@
 
 ### May.
 
-- [Expressing relations between types, part 8](./2022/5/types8.html)
-- [Expressing relations between types, part 7](./2022/5/types7.html)
-- [Expressing relations between types, part 6](./2022/5/types6.html)
-- [Expressing relations between types, part 5](./2022/5/types5.html)
-- [Expressing relations between types, part 4](./2022/5/types4.html)
-- [Expressing relations between types, part 3](./2022/5/types3.html)
-- [Expressing relations between types, part 2](./2022/5/types2.html)
-- [Expressing relations between types, part 1](./2022/5/types1.html)
+- [Expressing relations between types, part 8](./2022/5/types8.html) [haskell, idris]
+- [Expressing relations between types, part 7](./2022/5/types7.html) [haskell]
+- [Expressing relations between types, part 6](./2022/5/types6.html) [haskell]
+- [Expressing relations between types, part 5](./2022/5/types5.html) [haskell]
+- [Expressing relations between types, part 4](./2022/5/types4.html) [haskell]
+- [Expressing relations between types, part 3](./2022/5/types3.html) [haskell]
+- [Expressing relations between types, part 2](./2022/5/types2.html) [haskell]
+- [Expressing relations between types, part 1](./2022/5/types1.html) [haskell]
 
 ### Apr.
 
-- [Expressing type equality](./2022/4/type_equality.html)
+- [Expressing type equality](./2022/4/type_equality.html) [haskell]
 
 ### Mar.
 
-- [Monoid of functors](./2022/3/monoid_functor.html)
-- [When do you use Data.Monoid.Endo?](./2022/3/endo.html)
+- [Monoid of functors](./2022/3/monoid_functor.html) [haskell]
+- [When do you use Data.Monoid.Endo?](./2022/3/endo.html) [haskell]
 - [Running a mongodb replica set in two availability zones may not as stable as you might think](./2022/3/mongodb_psa.html)
 
 ## 2021
@@ -102,15 +102,15 @@
 
 ### Nov.
 
-- [Implementing length-indexed vector using dependent types in Idris](./2021/11/length_indexed_vector_idris.html)
-- [Implementing Maybe using dependent types in Idris](./2021/11/maybe_idris.html)
+- [Implementing length-indexed vector using dependent types in Idris](./2021/11/length_indexed_vector_idris.html) [idris]
+- [Implementing Maybe using dependent types in Idris](./2021/11/maybe_idris.html) [idris]
 
 ### Sep.
 
 - [Installing Python using asdf on macos](./2021/9/asdf.html)
-- [Implementing length-indexed vector using dependent types (cont.)](./2021/9/length_indexed_vector_cont.html)
-- [Implementing length-indexed vector using dependent types](./2021/9/length_indexed_vector.md)
-- [TypeScript 4.4 changes how it calls a method when it’s imported separately](./2021/9/typescript_method.html)
+- [Implementing length-indexed vector using dependent types (cont.)](./2021/9/length_indexed_vector_cont.html) [haskell]
+- [Implementing length-indexed vector using dependent types](./2021/9/length_indexed_vector.md) [haskell]
+- [TypeScript 4.4 changes how it calls a method when it’s imported separately](./2021/9/typescript_method.html) [typescript]
 
 ### Aug.
 
@@ -123,28 +123,28 @@
 ### Jun.
 
 - [Calculating sum on console](./2021/6/sum.html)
-- [Classic MVC and Reactive Programming, part 6](./2021/6/mvc_reactive6.html)
+- [Classic MVC and Reactive Programming, part 6](./2021/6/mvc_reactive6.html) [typescript]
 
 ### May.
 
-- [Classic MVC and Reactive Programming, part 5](./2021/5/mvc_reactive5.html)
-- [Classic MVC and Reactive Programming, part 4](./2021/5/mvc_reactive4.html)
-- [Classic MVC and Reactive Programming, part 3](./2021/5/mvc_reactive3.html)
-- [Classic MVC and Reactive Programming, part 2](./2021/5/mvc_reactive2.html)
-- [Classic MVC and Reactive Programming, part 1](./2021/5/mvc_reactive1.html)
+- [Classic MVC and Reactive Programming, part 5](./2021/5/mvc_reactive5.html) [typescript]
+- [Classic MVC and Reactive Programming, part 4](./2021/5/mvc_reactive4.html) [typescript]
+- [Classic MVC and Reactive Programming, part 3](./2021/5/mvc_reactive3.html) [typescript]
+- [Classic MVC and Reactive Programming, part 2](./2021/5/mvc_reactive2.html) [typescript]
+- [Classic MVC and Reactive Programming, part 1](./2021/5/mvc_reactive1.html) [typescript]
 
 ### Apr.
 
-- [Using GADT as a type function](./2021/4/gadt_type_function.html)
+- [Using GADT as a type function](./2021/4/gadt_type_function.html) [haskell]
 
 ### Mar.
 
-- [Open the door with types, part 6](./2021/3/door6.html)
-- [Open the door with types, part 5](./2021/3/door5.html)
-- [Open the door with types, part 4](./2021/3/door4.html)
-- [Open the door with types, part 3](./2021/3/door3.html)
-- [Open the door with types, part 2](./2021/3/door2.html)
-- [Open the door with types, part 1](./2021/3/door1.html)
+- [Open the door with types, part 6](./2021/3/door6.html) [haskell]
+- [Open the door with types, part 5](./2021/3/door5.html) [haskell]
+- [Open the door with types, part 4](./2021/3/door4.html) [haskell]
+- [Open the door with types, part 3](./2021/3/door3.html) [haskell]
+- [Open the door with types, part 2](./2021/3/door2.html) [haskell]
+- [Open the door with types, part 1](./2021/3/door1.html) [haskell]
 
 ### Feb.
 
@@ -154,58 +154,58 @@
 
 ### Dec.
 
-- [Associated types in TypeScript](./2020/12/associated_types.html)
+- [Associated types in TypeScript](./2020/12/associated_types.html) [typescript]
 - [SecItemCopyMatching fails when a device is locked](./2020/12/sec_item_copy_matching.html)
 
 ### Nov.
 
-- [Implementing Maybe using dependent types](./2020/11/dependent_maybe.html)
+- [Implementing Maybe using dependent types](./2020/11/dependent_maybe.html) [haskell]
 
 ### Oct.
 
-- [Playing with Sigma, part 2](./2020/10/sigma2.html)
-- [Playing with Sigma, part 1](./2020/10/sigma1.html)
-- [Function returning some types](./2020/10/return_some_types.html)
-- [Functions taking some types, part 2](./2020/10/take_some_types2.html)
-- [Functions taking some types, part 1](./2020/10/take_some_types1.html)
+- [Playing with Sigma, part 2](./2020/10/sigma2.html) [haskell]
+- [Playing with Sigma, part 1](./2020/10/sigma1.html) [haskell]
+- [Function returning some types](./2020/10/return_some_types.html) [haskell]
+- [Functions taking some types, part 2](./2020/10/take_some_types2.html) [haskell]
+- [Functions taking some types, part 1](./2020/10/take_some_types1.html) [haskell]
 
 ### Sep.
 
-- [Installing GHC 8.8.4 and cabal-install to Ubuntu 20.04 LTS](./2020/9/ghc884.html)
+- [Installing GHC 8.8.4 and cabal-install to Ubuntu 20.04 LTS](./2020/9/ghc884.html) [haskell]
 - [NSMapTable.count counts released objects](./2020/9/ns_map_table.html)
 
 ### Aug.
 
 - [MongoDB query planner can be very slow](./2020/8/mongodb_query_planner.html)
-- [Converting a function taking a callback to a suspend function](./2020/8/suspend_function.html)
+- [Converting a function taking a callback to a suspend function](./2020/8/suspend_function.html) [kotlin]
 
 ### Jul.
 
-- [Writer monad and Traced comonad](./2020/7/writer_traced.html)
-- [Reader monad and Env comonad](./2020/7/reader_env.html)
+- [Writer monad and Traced comonad](./2020/7/writer_traced.html) [haskell]
+- [Reader monad and Env comonad](./2020/7/reader_env.html) [haskell]
 - [PostgreSQL doesn’t create an index on a column with a foreign key while MySQL does](./2020/7/foreign_key_index.html)
-- [Why do you need singletons?](./2020/7/singletons.html)
+- [Why do you need singletons?](./2020/7/singletons.html) [haskell]
 - [Increase max number of open files of mongodb on Ubuntu with systemd](./2020/7/open_files.html)
 - [Changing maxfiles for mongodb on Mac OS](./2020/7/maxfiles.html)
 
 ### Jun.
 
-- [Extend a class with a proxied constructor](./2020/6/proxied_constructor.html)
+- [Extend a class with a proxied constructor](./2020/6/proxied_constructor.html) [javascript]
 
 ## 2019
 
 ### Sep.
 
-- [All nils are not equal in go](./2019/9/nil.html)
-- [Calculating fibonacci numbers using recursion schemes](./2019/9/recursion_scheme.html)
+- [All nils are not equal in go](./2019/9/nil.html) [go]
+- [Calculating fibonacci numbers using recursion schemes](./2019/9/recursion_scheme.html) [haskell]
 
 ### Aug.
 
-- [Reusing an algorithm in synchronous and asynchronous functions](./2019/8/sync_async.html)
+- [Reusing an algorithm in synchronous and asynchronous functions](./2019/8/sync_async.html) [javascript]
 
 ### Jun.
 
-- [Lenses in Javascript](./2019/6/lenses_javascript.html)
+- [Lenses in Javascript](./2019/6/lenses_javascript.html) [javascript]
 
 ## 2015
 
@@ -215,31 +215,31 @@
 
 ### Feb.
 
-- [Convert a type level natural number to a value level integer and vise versa](./2015/2/type_level_natural.html)
-- [Type-safe list with GHC.TypeLits](./2015/2/type_safe_list.html)
-- [Type-safe list, DataKinds, ConstraintKinds and more](./2015/2/kind.html)
+- [Convert a type level natural number to a value level integer and vise versa](./2015/2/type_level_natural.html) [haskell]
+- [Type-safe list with GHC.TypeLits](./2015/2/type_safe_list.html) [haskell]
+- [Type-safe list, DataKinds, ConstraintKinds and more](./2015/2/kind.html) [haskell]
 
 ## 2014
 
 ### Nov.
 
-- [Hash with Pipes](./2014/11/hash_pipes.html)
+- [Hash with Pipes](./2014/11/hash_pipes.html) [haskell]
 
 ### Oct.
 
-- [Using cabal-install-1.20 on Travis-CI](./2014/10/cabal_travis.html)
+- [Using cabal-install-1.20 on Travis-CI](./2014/10/cabal_travis.html) [haskell]
 
 ### Sep.
 
-- [Writing an instance of Arbitrary for a list](./2014/9/arbitrary_list.html)
-- [Getting a path to a source file](./2014/9/source_file.html)
-- [Combining pipes](./2014/9/combine_pipes.html)
-- [Evaluate lenses by hand](./2014/9/evaluate_lenses.html)
-- [Calculating a sum in pipes](./2014/9/sum_pipes.html)
+- [Writing an instance of Arbitrary for a list](./2014/9/arbitrary_list.html) [haskell]
+- [Getting a path to a source file](./2014/9/source_file.html) [haskell]
+- [Combining pipes](./2014/9/combine_pipes.html) [haskell]
+- [Evaluate lenses by hand](./2014/9/evaluate_lenses.html) [haskell]
+- [Calculating a sum in pipes](./2014/9/sum_pipes.html) [haskell]
 
 ### Aug.
 
-- [Grouping in pipes](./2014/8/group_pipes.html)
+- [Grouping in pipes](./2014/8/group_pipes.html) [haskell]
 
 ### Jun.
 
@@ -259,7 +259,7 @@
 
 ### Jan.
 
-- [Network.URI.escapeURIString converts its input to UTF-8](./2013/1/escape_uri_string.html)
+- [Network.URI.escapeURIString converts its input to UTF-8](./2013/1/escape_uri_string.html) [haskell]
 
 ## 2012
 
@@ -269,27 +269,27 @@
 
 ### Jul.
 
-- [Creating your own error class with util.inherits is not that simple](./2012/7/error_class.html)
+- [Creating your own error class with util.inherits is not that simple](./2012/7/error_class.html) [javascript]
 
 ### Jun.
 
-- [Binding an event handler to a search box with jQuery Mobile](./2012/6/jquery_mobile.html)
+- [Binding an event handler to a search box with jQuery Mobile](./2012/6/jquery_mobile.html) [javascript]
 
 ### Apr.
 
 - [Round corners of an image with ImageMagick](./2012/4/rounded_corners.html)
-- [CPP with multi-line string literals](./2012/4/cpp_multiline.html)
+- [CPP with multi-line string literals](./2012/4/cpp_multiline.html) [haskell]
 
 ### Mar.
 
 - [How to upgrade a kernel image supporting pv-grub on EC2](./2012/3/pv_grub.html)
-- [Lifting a monadic computation through a stack of monad transformers, part 2](./2012/3/monad_transformer2.html)
-- [Lifting a monadic computation through a stack of monad transformers, part 1](./2012/3/monad_transformer1.html)
+- [Lifting a monadic computation through a stack of monad transformers, part 2](./2012/3/monad_transformer2.html) [haskell]
+- [Lifting a monadic computation through a stack of monad transformers, part 1](./2012/3/monad_transformer1.html) [haskell]
 
 ### Feb.
 
-- [Catching an exception using MonadCatchIO](./2012/2/monad_catch_io.html)
-- [MonadBase is a generalized MonadIO](./2012/2/monad_base.html)
+- [Catching an exception using MonadCatchIO](./2012/2/monad_catch_io.html) [haskell]
+- [MonadBase is a generalized MonadIO](./2012/2/monad_base.html) [haskell]
 - [Recovering from a failure of git svn dcommit](./2012/2/git_svn_dcommit.html)
 - [Decreasing the number of generations kept by logrotate won't delete old log files](./2012/2/log_rotate.html)
 - [Generating a sequence in a shell script](./2012/2/sequence.html)
@@ -305,7 +305,7 @@
 
 - [Never call mysql_real_connect more than once without calling mysql_init again](./2011/12/mysql_real_connect.html)
 - [Killing a thread or query of MySQL running on RDS](./2011/12/mysql_kill.html)
-- [for_ is whenJust](./2011/12/for.html)
+- [for_ is whenJust](./2011/12/for.html) [haskell]
 
 ### Nov.
 
