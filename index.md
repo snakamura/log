@@ -4,6 +4,7 @@
 
 ### Mar.
 
+- [Mounting EFS](./2024/3/efs.html)
 - [Memoize with Representable](./2024/3/representable_memoize.html) [haskell]
 
 ### Feb.
