@@ -4,7 +4,7 @@
 
 ### Mar.
 
-- [Mounting EFS](./2024/3/efs.html)
+- [Mounting EFS](./2024/3/efs.html) [aws]
 - [Memoize with Representable](./2024/3/representable_memoize.html) [haskell]
 
 ### Feb.
@@ -115,7 +115,7 @@
 
 ### Aug.
 
-- [Migrating an ECS service from EC2 container instances to Fargate](./2021/8/fargate.html)
+- [Migrating an ECS service from EC2 container instances to Fargate](./2021/8/fargate.html) [aws]
 
 ### Jul.
 
@@ -149,7 +149,7 @@
 
 ### Feb.
 
-- [Creating a NAT instance with Ubuntu](./2021/2/nat.html)
+- [Creating a NAT instance with Ubuntu](./2021/2/nat.html) [aws]
 
 ## 2020
 
@@ -283,7 +283,7 @@
 
 ### Mar.
 
-- [How to upgrade a kernel image supporting pv-grub on EC2](./2012/3/pv_grub.html)
+- [How to upgrade a kernel image supporting pv-grub on EC2](./2012/3/pv_grub.html) [aws]
 - [Lifting a monadic computation through a stack of monad transformers, part 2](./2012/3/monad_transformer2.html) [haskell]
 - [Lifting a monadic computation through a stack of monad transformers, part 1](./2012/3/monad_transformer1.html) [haskell]
 
@@ -305,7 +305,7 @@
 ### Dec.
 
 - [Never call mysql_real_connect more than once without calling mysql_init again](./2011/12/mysql_real_connect.html)
-- [Killing a thread or query of MySQL running on RDS](./2011/12/mysql_kill.html)
+- [Killing a thread or query of MySQL running on RDS](./2011/12/mysql_kill.html) [aws]
 - [for_ is whenJust](./2011/12/for.html) [haskell]
 
 ### Nov.
