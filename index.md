@@ -2,6 +2,10 @@
 
 ## 2024
 
+### Apr.
+
+- [Data.Functor.Day](./2024/4/day.html) [haskell]
+
 ### Mar.
 
 - [Mounting EFS](./2024/3/efs.html) [aws]
