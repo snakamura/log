@@ -4,6 +4,7 @@
 
 ### Apr.
 
+- [`Iterator::collect` can collect `Result`s](./2024/4/rust_collect.html) [haskell] [rust]
 - [Natural isomorphism between `Day Identity f` and `f`](./2024/4/day_natural_isomorphism.html) [haskell]
 - [`Data.Functor.Day`](./2024/4/day.html) [haskell]
 
