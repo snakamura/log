@@ -4,13 +4,13 @@
 
 ### Apr.
 
-- [Natural isomorphism between Day Identity f and f](./2024/4/day_natural_isomorphism.html) [haskell]
-- [Data.Functor.Day](./2024/4/day.html) [haskell]
+- [Natural isomorphism between `Day Identity f` and `f`](./2024/4/day_natural_isomorphism.html) [haskell]
+- [`Data.Functor.Day`](./2024/4/day.html) [haskell]
 
 ### Mar.
 
 - [Mounting EFS](./2024/3/efs.html) [aws]
-- [Memoize with Representable](./2024/3/representable_memoize.html) [haskell]
+- [Memoize with `Representable`](./2024/3/representable_memoize.html) [haskell]
 
 ### Feb.
 
@@ -37,11 +37,11 @@
 
 ### Jul.
 
-- [Traversable, Lone and Distributive](./2023/7/traversable_lone_distributive.html) [haskell]
+- [`Traversable`, `Lone` and `Distributive`](./2023/7/traversable_lone_distributive.html) [haskell]
 
 ### Jun.
 
-- [Control.Applicative.Backwards](./2023/6/backwards.html) [haskell]
+- [`Control.Applicative.Backwards`](./2023/6/backwards.html) [haskell]
 
 ### May.
 
@@ -65,7 +65,7 @@
 
 ### Sep.
 
-- [Omit in TypeScript isn't distributive](./2022/9/omit.html) [typescript]
+- [`Omit` in TypeScript isn't distributive](./2022/9/omit.html) [typescript]
 
 ### Aug.
 
@@ -96,20 +96,20 @@
 ### Mar.
 
 - [Monoid of functors](./2022/3/monoid_functor.html) [haskell]
-- [When do you use Data.Monoid.Endo?](./2022/3/endo.html) [haskell]
+- [When do you use `Data.Monoid.Endo`?](./2022/3/endo.html) [haskell]
 - [Running a mongodb replica set in two availability zones may not as stable as you might think](./2022/3/mongodb_psa.html)
 
 ## 2021
 
 ### Dec.
 
-- [Changing limits with prlimit](./2021/12/prlimit.html)
+- [Changing limits with `prlimit`](./2021/12/prlimit.html)
 - [Convert a text to a JSON string with jq](./2021/12/jq_string.html)
 
 ### Nov.
 
 - [Implementing length-indexed vector using dependent types in Idris](./2021/11/length_indexed_vector_idris.html) [idris]
-- [Implementing Maybe using dependent types in Idris](./2021/11/maybe_idris.html) [idris]
+- [Implementing `Maybe` using dependent types in Idris](./2021/11/maybe_idris.html) [idris]
 
 ### Sep.
 
@@ -161,16 +161,16 @@
 ### Dec.
 
 - [Associated types in TypeScript](./2020/12/associated_types.html) [typescript]
-- [SecItemCopyMatching fails when a device is locked](./2020/12/sec_item_copy_matching.html)
+- [`SecItemCopyMatching` fails when a device is locked](./2020/12/sec_item_copy_matching.html)
 
 ### Nov.
 
-- [Implementing Maybe using dependent types](./2020/11/dependent_maybe.html) [haskell]
+- [Implementing `Maybe` using dependent types](./2020/11/dependent_maybe.html) [haskell]
 
 ### Oct.
 
-- [Playing with Sigma, part 2](./2020/10/sigma2.html) [haskell]
-- [Playing with Sigma, part 1](./2020/10/sigma1.html) [haskell]
+- [Playing with `Sigma`, part 2](./2020/10/sigma2.html) [haskell]
+- [Playing with `Sigma`, part 1](./2020/10/sigma1.html) [haskell]
 - [Function returning some types](./2020/10/return_some_types.html) [haskell]
 - [Functions taking some types, part 2](./2020/10/take_some_types2.html) [haskell]
 - [Functions taking some types, part 1](./2020/10/take_some_types1.html) [haskell]
@@ -178,7 +178,7 @@
 ### Sep.
 
 - [Installing GHC 8.8.4 and cabal-install to Ubuntu 20.04 LTS](./2020/9/ghc884.html) [haskell]
-- [NSMapTable.count counts released objects](./2020/9/ns_map_table.html)
+- [`NSMapTable.count` counts released objects](./2020/9/ns_map_table.html)
 
 ### Aug.
 
@@ -187,8 +187,8 @@
 
 ### Jul.
 
-- [Writer monad and Traced comonad](./2020/7/writer_traced.html) [haskell]
-- [Reader monad and Env comonad](./2020/7/reader_env.html) [haskell]
+- [`Writer` monad and `Traced` comonad](./2020/7/writer_traced.html) [haskell]
+- [`Reader` monad and `Env` comonad](./2020/7/reader_env.html) [haskell]
 - [PostgreSQL doesn’t create an index on a column with a foreign key while MySQL does](./2020/7/foreign_key_index.html)
 - [Why do you need singletons?](./2020/7/singletons.html) [haskell]
 - [Increase max number of open files of mongodb on Ubuntu with systemd](./2020/7/open_files.html)
@@ -222,8 +222,8 @@
 ### Feb.
 
 - [Convert a type level natural number to a value level integer and vise versa](./2015/2/type_level_natural.html) [haskell]
-- [Type-safe list with GHC.TypeLits](./2015/2/type_safe_list.html) [haskell]
-- [Type-safe list, DataKinds, ConstraintKinds and more](./2015/2/kind.html) [haskell]
+- [Type-safe list with `GHC.TypeLits`](./2015/2/type_safe_list.html) [haskell]
+- [Type-safe list, `DataKinds`, `ConstraintKinds` and more](./2015/2/kind.html) [haskell]
 
 ## 2014
 
@@ -237,7 +237,7 @@
 
 ### Sep.
 
-- [Writing an instance of Arbitrary for a list](./2014/9/arbitrary_list.html) [haskell]
+- [Writing an instance of `Arbitrary` for a list](./2014/9/arbitrary_list.html) [haskell]
 - [Getting a path to a source file](./2014/9/source_file.html) [haskell]
 - [Combining pipes](./2014/9/combine_pipes.html) [haskell]
 - [Evaluate lenses by hand](./2014/9/evaluate_lenses.html) [haskell]
@@ -249,15 +249,15 @@
 
 ### Jun.
 
-- [Files in /etc/cron.d](./2014/6/cron.html)
-- [Reverse words with tac](./2014/6/tac.html)
+- [Files in `/etc/cron.d`](./2014/6/cron.html)
+- [Reverse words with `tac`](./2014/6/tac.html)
 
 ## 2013
 
 ### Dec.
 
 - [Here strings are seekable](./2013/12/here_strings.html)
-- [$TERM becomes unknown when sudoing via ssh](./2013/12/term_sudo.html)
+- [`$TERM` becomes unknown when sudoing via ssh](./2013/12/term_sudo.html)
 
 ### Oct.
 
@@ -265,7 +265,7 @@
 
 ### Jan.
 
-- [Network.URI.escapeURIString converts its input to UTF-8](./2013/1/escape_uri_string.html) [haskell]
+- [`Network.URI.escapeURIString` converts its input to UTF-8](./2013/1/escape_uri_string.html) [haskell]
 
 ## 2012
 
@@ -275,7 +275,7 @@
 
 ### Jul.
 
-- [Creating your own error class with util.inherits is not that simple](./2012/7/error_class.html) [javascript]
+- [Creating your own error class with `util.inherits` is not that simple](./2012/7/error_class.html) [javascript]
 
 ### Jun.
 
@@ -294,9 +294,9 @@
 
 ### Feb.
 
-- [Catching an exception using MonadCatchIO](./2012/2/monad_catch_io.html) [haskell]
-- [MonadBase is a generalized MonadIO](./2012/2/monad_base.html) [haskell]
-- [Recovering from a failure of git svn dcommit](./2012/2/git_svn_dcommit.html)
+- [Catching an exception using `MonadCatchIO`](./2012/2/monad_catch_io.html) [haskell]
+- [`MonadBase` is a generalized `MonadIO`](./2012/2/monad_base.html) [haskell]
+- [Recovering from a failure of `git svn dcommit`](./2012/2/git_svn_dcommit.html)
 - [Decreasing the number of generations kept by logrotate won't delete old log files](./2012/2/log_rotate.html)
 - [Generating a sequence in a shell script](./2012/2/sequence.html)
 
@@ -309,9 +309,9 @@
 
 ### Dec.
 
-- [Never call mysql_real_connect more than once without calling mysql_init again](./2011/12/mysql_real_connect.html)
+- [Never call `mysql_real_connect` more than once without calling `mysql_init` again](./2011/12/mysql_real_connect.html)
 - [Killing a thread or query of MySQL running on RDS](./2011/12/mysql_kill.html) [aws]
-- [for_ is whenJust](./2011/12/for.html) [haskell]
+- [`for_` is `whenJust`](./2011/12/for.html) [haskell]
 
 ### Nov.
 
@@ -327,7 +327,7 @@
 ### Aug.
 
 - [Retrieve branches on a subversion repository using git-svn](./2011/8/git_svn_branch.html)
-- [MySQL puts the default value to NOT NULL column](./2011/8/mysql_not_null.html)
+- [MySQL puts the default value to `NOT NULL` column](./2011/8/mysql_not_null.html)
 - [MySQL updates columns from left to right](./2011/8/mysql_update.html)
 
 ### Jul.
@@ -336,14 +336,14 @@
 
 ### May.
 
-- [X-Content-Type-Options: nosniff](./2011/5/x_content_type_options.html)
+- [`X-Content-Type-Options: nosniff`](./2011/5/x_content_type_options.html)
 - [Sending a message to nil may return an undefined struct](./2011/5/objective_c_nil.html)
 
 ### Apr.
 
 - [Show diff of the specified commit with its parent](./2011/4/git_diff.html)
 - [Apply svn:ignore to git using git svn](./2011/4/svn_ignore.html)
-- [Using WIFSTOPPED with waitpid](./2011/4/wifstopped.html)
+- [Using `WIFSTOPPED` with `waitpid`](./2011/4/wifstopped.html)
 - [B flag for RewriteRule doesn't work in a path](./2011/4/rewrite_rule.html)
 
 ### Mar.

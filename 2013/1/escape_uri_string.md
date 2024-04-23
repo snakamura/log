@@ -1,4 +1,4 @@
-# Network.URI.escapeURIString converts its input to UTF-8
+# `Network.URI.escapeURIString` converts its input to UTF-8
 
 As of network-2.4.0.0, `Network.URI.escapeURIString` converts its input to UTF-8 bytes before escaping each byte. Earlier versions just escaped each character.
 

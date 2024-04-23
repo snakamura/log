@@ -1,4 +1,4 @@
-# Memoize with Representable
+# Memoize with `Representable`
 
 It's well-known that a naive implementation of a function to calculate a fibonacci number is slow.
 

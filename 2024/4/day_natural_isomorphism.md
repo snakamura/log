@@ -1,4 +1,4 @@
-# Natural isomorphism between Day Identity f and f
+# Natural isomorphism between `Day Identity f` and `f`
 
 In [the previous post](./day.html), we saw what we can do with `Data.Functor.Day`. Now, let' see natural isomorphism between `Day Identity f` and `f` where `f` is a functor.
 

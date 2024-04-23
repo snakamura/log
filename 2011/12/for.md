@@ -1,4 +1,4 @@
-# for_ is whenJust
+# `for_` is `whenJust`
 
 Sometimes, I defined a utility function whenJust as follows:
 

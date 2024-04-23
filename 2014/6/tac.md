@@ -1,4 +1,4 @@
-# Reverse words with tac
+# Reverse words with `tac`
 
 Imagine you're writing a shell script and try to reverse the order of words in a variable. For example,
 

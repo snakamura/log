@@ -1,4 +1,4 @@
-# Data.Functor.Day
+# `Data.Functor.Day`
 
 [`Data.Functor.Day`](https://hackage.haskell.org/package/kan-extensions-5.2.5/docs/Data-Functor-Day.html#t:Day) is an interesting type. It takes two functors and two values, and is a functor itself. Here is its definition.
 

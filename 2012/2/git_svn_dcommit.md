@@ -1,4 +1,4 @@
-# Recovering from a failure of git svn dcommit
+# Recovering from a failure of `git svn dcommit`
 
 Assume you're using git-svn and have committed some changes to git. When you `dcommit`ted these changes to the upstream subversion repository, something went wrong and you found that the local working directory was left weird state.
 

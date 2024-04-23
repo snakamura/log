@@ -1,4 +1,4 @@
-# Type-safe list, DataKinds, ConstraintKinds and more
+# Type-safe list, `DataKinds`, `ConstraintKinds` and more
 
 I've recently learned GHC's extensions for kinds such as `DataKinds` and `ConstraintKinds`, and I think it's worth leaving some notes about them. To make it clear which extension does what, I'm going to use them step-by-step, although you may feel it redundant. Let's take a type-safe list as an example.
 

@@ -1,4 +1,4 @@
-# Changing limits with prlimit
+# Changing limits with `prlimit`
 
 You can change limits of a running process using `prlimit`.
 

@@ -1,4 +1,4 @@
-# X-Content-Type-Options: nosniff
+# `X-Content-Type-Options: nosniff`
 
 Because IE determines `Content-Type` not only by the `Content-Type` header but by scanning the contents, it may cause XSS. For example, when a server outputs something like
 

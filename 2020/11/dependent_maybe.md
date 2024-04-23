@@ -1,4 +1,4 @@
-# Implementing Maybe using dependent types
+# Implementing `Maybe` using dependent types
 
 Let's try implementing `Maybe` using dependent types. This is useless in practice, but it'll give us some intuitions about how to use them.
 

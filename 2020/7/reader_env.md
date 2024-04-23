@@ -1,4 +1,4 @@
-# Reader monad and Env comonad
+# `Reader` monad and `Env` comonad
 
 It is said that [Env comonad](http://hackage.haskell.org/package/comonad/docs/Control-Comonad-Env.html) is identical to [Reader monad](http://hackage.haskell.org/package/mtl/docs/Control-Monad-Reader.html). Then how can you write the same code using `Reader` and `Env`?
 

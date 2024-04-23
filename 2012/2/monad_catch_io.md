@@ -1,4 +1,4 @@
-# Catching an exception using MonadCatchIO
+# Catching an exception using `MonadCatchIO`
 
 Imagine you're working with monad transformers and want to catch an exception. But because the signature of [catch](http://hackage.haskell.org/packages/archive/base/4.5.0.0/doc/html/Control-Exception.html#v:catch) is `Exception e => IO a -> (e -> IO a) -> IO a`, you need to unwrap monad stacks to do it.
 

@@ -1,4 +1,4 @@
-# Omit in TypeScript isn't distributive
+# `Omit` in TypeScript isn't distributive
 
 Imagine you have this type `X`.
 
