@@ -1,4 +1,4 @@
-# Files in /etc/cron.d
+# Files in `/etc/cron.d`
 
 According to `man cron`:
 

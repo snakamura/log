@@ -1,4 +1,4 @@
-# Writer monad and Traced comonad
+# `Writer` monad and `Traced` comonad
 
 Next, let's see how [Writer monad](http://hackage.haskell.org/package/mtl/docs/Control-Monad-Writer.html) and [Traced comonad](http://hackage.haskell.org/package/comonad/docs/Control-Comonad-Traced.html) look similar (or not similar).
 

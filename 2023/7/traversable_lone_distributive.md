@@ -1,4 +1,4 @@
-# Traversable, Lone and Distributive
+# `Traversable`, `Lone` and `Distributive`
 
 `Traversable` type class is a fundamental class in Haskell that most container types are instance of. The most important factor of `Traversable` is `sequenceA`. Let's revisit it by defining our own `Traversable'`.
 

@@ -1,4 +1,4 @@
-# Control.Applicative.Backwards
+# `Control.Applicative.Backwards`
 
 `Control.Applicative` has a type [`Backwards`](https://hackage.haskell.org/package/transformers/docs/Control-Applicative-Backwards.html) which applies actions in the reverse order.
 

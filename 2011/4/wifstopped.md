@@ -1,4 +1,4 @@
-# Using WIFSTOPPED with waitpid
+# Using `WIFSTOPPED` with `waitpid`
 
 It's common to use `WIFSTOPPED` with `waitpid` when the parent process wait for a child process to stop and then the parent process sends `SIGCONT` to the child process to continue processing.
 

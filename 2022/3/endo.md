@@ -1,4 +1,4 @@
-# When do you use Data.Monoid.Endo?
+# When do you use `Data.Monoid.Endo`?
 
 `Data.Monoid` module exports `Endo` which wraps `a -> a`. What's this?
 

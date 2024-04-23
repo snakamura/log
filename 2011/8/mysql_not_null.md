@@ -1,4 +1,4 @@
-# MySQL puts the default value to NOT NULL column
+# MySQL puts the default value to `NOT NULL` column
 
 When you try to put `NULL` to a column with `NOT NULL`, MySQL puts the default value. Assuming you have a table created by this SQL,
 

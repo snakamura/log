@@ -1,4 +1,4 @@
-# Creating your own error class with util.inherits is not that simple
+# Creating your own error class with `util.inherits` is not that simple
 
 If you're using node.js and want to create a "derived class", you may use util.inherits.
 

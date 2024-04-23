@@ -1,4 +1,4 @@
-# Type-safe list with GHC.TypeLits
+# Type-safe list with `GHC.TypeLits`
 
 In [the previous post](http://snak.tumblr.com/post/109752112942/type-safe-list-datakinds-constraintkinds-and), I've defined a type-safe list using [Peano numbers](http://wiki.haskell.org/Peano_numbers), but with [`GHC.TypeLits`](http://hackage.haskell.org/package/base/docs/GHC-TypeLits.html#t:Nat), you don't need to define your own type level numbers.
 

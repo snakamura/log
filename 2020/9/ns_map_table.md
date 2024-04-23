@@ -1,4 +1,4 @@
-# NSMapTable.count counts released objects
+# `NSMapTable.count` counts released objects
 
 Even though [the documentation](https://developer.apple.com/documentation/foundation/nsmaptable/1391360-count) isn't clear about this, but `NSMapTable.count` counts released objects.
 

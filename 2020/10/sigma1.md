@@ -1,4 +1,4 @@
-# Playing with Sigma, part 1
+# Playing with `Sigma`, part 1
 
 As I wrote in [the previous post](./return_some_types.html), you can think [Sigma](http://hackage.haskell.org/package/singletons-2.7/docs/Data-Singletons-Sigma.html#t:Sigma) is a generalized existential type. Then, how can I build it?
 

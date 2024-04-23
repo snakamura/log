@@ -1,4 +1,4 @@
-# SecItemCopyMatching fails when a device is locked
+# `SecItemCopyMatching` fails when a device is locked
 
 Assuming you're writing an iOS app and try to store a token or a password in the app. You may want to store them in the keystore to secure them.
 

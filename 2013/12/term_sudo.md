@@ -1,4 +1,4 @@
-# $TERM becomes unknown when sudoing via ssh
+# `$TERM` becomes unknown when sudoing via ssh
 
 Recently, I found that `$TERM` becomes `unknown` when I told ssh to sudo on a remote server. In short,
 

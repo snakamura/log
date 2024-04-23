@@ -1,4 +1,4 @@
-# Writing an instance of Arbitrary for a list
+# Writing an instance of `Arbitrary` for a list
 
 Imagine you have two functions which convert Word32 to its bit representation and vise versa. These functions would be something like this.
 

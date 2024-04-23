@@ -1,4 +1,4 @@
-# MonadBase is a generalized MonadIO
+# `MonadBase` is a generalized `MonadIO`
 
 When you work with monad transformers, you may lift a function using [lift](http://hackage.haskell.org/packages/archive/transformers/0.2.2.0/doc/html/Control-Monad-Trans-Class.html#v:lift). For example, this code lifts `print` from the base IO monad.
 

@@ -1,4 +1,4 @@
-# Playing with Sigma, part 2
+# Playing with `Sigma`, part 2
 
 So we have `Sigma` now. What can we do with it?
 

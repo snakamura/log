@@ -1,4 +1,4 @@
-# Never call mysql_real_connect more than once without calling mysql_init again
+# Never call `mysql_real_connect` more than once without calling `mysql_init` again
 
 I spent a couple of hours digging into a problem that a program using MySQL C API sometimes used a wrong character set. The code was something like:
 
