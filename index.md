@@ -80,7 +80,7 @@
 
 ### May.
 
-- [Expressing relations between types, part 8](./2022/5/types8.html) [haskell, idris]
+- [Expressing relations between types, part 8](./2022/5/types8.html) [haskell] [idris]
 - [Expressing relations between types, part 7](./2022/5/types7.html) [haskell]
 - [Expressing relations between types, part 6](./2022/5/types6.html) [haskell]
 - [Expressing relations between types, part 5](./2022/5/types5.html) [haskell]
