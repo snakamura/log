@@ -4,7 +4,7 @@
 
 ### May.
 
-- [Sharing a file in Slack via API is now asynchronous](./2024/5/slack_file_upload.html)
+- [Sharing a file in Slack via API is now asynchronous](./2024/5/slack_file_upload.html) [slack]
 
 ### Apr.
 
@@ -81,7 +81,7 @@
 
 ### Jul.
 
-- [Posting images with a structured message to Slack](./2022/7/slack.html)
+- [Posting images with a structured message to Slack](./2022/7/slack.html) [slack]
 
 ### May.
 
