@@ -2,6 +2,10 @@
 
 ## 2024
 
+### May.
+
+- [Sharing a file in Slack via API is now asynchronous](./2024/5/slack_file_upload.html)
+
 ### Apr.
 
 - [`Iterator::collect` can collect `Result`s](./2024/4/rust_collect.html) [haskell] [rust]
