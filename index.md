@@ -4,6 +4,7 @@
 
 ### May.
 
+- [Expressing monoidal category in Haskell, part 2](./2024/5/monoidal_category2.html) [haskell]
 - [Expressing monoidal category in Haskell, part 1](./2024/5/monoidal_category1.html) [haskell]
 - [Sharing a file in Slack via API is now asynchronous](./2024/5/slack_file_upload.html) [slack]
 
