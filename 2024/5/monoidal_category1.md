@@ -179,3 +179,5 @@ instance {-# OVERLAPPABLE #-} (MonoidObject (,) a) => Monoid a where
 ```
 
 You can see `mappend 1 2 :: Int` is evaluated to `3` through `MonoidObject`, for example. Note that it'll not evaluated to `3` without `MonoidObject` because `Int` isn't an instance of `Monoid` directly. We need [`Data.Monoid.Sum`](https://hackage.haskell.org/package/base-4.19.1.0/docs/Data-Monoid.html#t:Sum) wrapper for it, and make it `getSum $ mappend (Sum 1) (Sum 2)` to get `3`.
+
+In [the next post](./monoidal_category2.html), we'll do the same thing in a category of functors (`Hask^Hask`).
