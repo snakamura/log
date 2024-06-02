@@ -2,6 +2,10 @@
 
 ## 2024
 
+### Jun.
+
+- [Category of monoids and monoid homomorphisms](./2024/6/category_of_monoids.html) [haskell]
+
 ### May.
 
 - [Expressing monoidal category in Haskell, part 2](./2024/5/monoidal_category2.html) [haskell]
