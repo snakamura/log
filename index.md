@@ -4,6 +4,7 @@
 
 ### Jun.
 
+- [Expressing monoid homomorphisms in Haskell](./2024/6/monoid_homomorphism.html) [haskell]
 - [Category of monoids and monoid homomorphisms](./2024/6/category_of_monoids.html) [haskell]
 
 ### May.
