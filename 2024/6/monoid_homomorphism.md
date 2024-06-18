@@ -94,3 +94,17 @@ testPreserveIdentity', testPreserveAppend' :: Bool
 testPreserveIdentity' = preserveIdentity' (type [Char]) (type (Sum Int))
 testPreserveAppend' = preserveAppend' ['A', 'B'] ['C', 'D', 'E'] (type (Sum Int))
 ```
+
+In addition to it, there is one more important property. It's a fact that `MonoidHomomorphism a b` itself is a monoid. This means that we can make it an instance of `Monoid` (and `Semigroup`).
+
+```
+instance Semigroup b => Semigroup (MonoidHomomorphism a b) where
+  (Hom f) <> (Hom g) = Hom $ \a -> f a <> g a
+
+instance Monoid b => Monoid (MonoidHomomorphism a b) where
+  mempty = Hom (const mempty)
+```
+
+These instances have `Semigroup b` and `Monoid b` constraints, but this is obvious because `a` and `b` are an instance of `Monoid` in the first place. I mean, `MonoidHomomorphism a b` represents a morphism from monoid `a` to monoid `b`.
+
+This doesn't look interesting at first, but this becomes interesting when we think about applicative functors. The fact that `MonoidHomomorphism a b` is an instance of `Monoid` means that `MonoidHomomorphism a b` is an object in the category of monoid as well as each function of type `MonoidHomomorphism a b` is a morphism in the same category. It's like a function of type `a -> b` is a morphism in `Hask` while `a -> b` itself is an object (an exponential) in `Hask`.
