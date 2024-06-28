@@ -2,7 +2,7 @@
 
 In [the previous post](./day.html), we saw what we can do with `Data.Functor.Day`. Now, let' see natural isomorphism between `Day Identity f` and `f` where `f` is a functor.
 
-In Haskell, you can say type `a` and type `b` are isomorphic when you can write a function `f :: a -> b` and `g :: b -> a` where `f . g = id` and `g .f = id`.
+In Haskell, you can say type `a` and type `b` are isomorphic when you can write a function `f :: a -> b` and `g :: b -> a` where `f . g = id` and `g . f = id`.
 
 For example, when you have
 
