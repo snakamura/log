@@ -2,6 +2,10 @@
 
 ## 2024
 
+### Jul.
+
+- [Monoidal functor and `Applicative`](./2024/7/monoidal_functor_applicative.html) [haskell]
+
 ### Jun.
 
 - [Expressing monoidal functors in Haskell](./2024/6/monoidal_functor.html) [haskell]
