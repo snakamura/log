@@ -51,10 +51,13 @@ Note that you can stop generating field selectors with [`NoFieldSelectors`](http
 
 There is another way to get field values, which is [`HasField`](https://ghc.gitlab.haskell.org/ghc/doc/users_guide/exts/hasfield.html). Using `HasField`, you can access a field with a type-level string.
 
+In addition to that, you can enable [`OverloadedLabels`](https://ghc.gitlab.haskell.org/ghc/doc/users_guide/exts/overloaded_labels.html) and add an orphan instance of `IsLabel` to use labels. For instance, you can write `#name` instead of `getField @"name"`.
+
 ```
-{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DataKinds, OverloadedLabels #-}
 
 import GHC.Records
+import GHC.OverloadedLabels
 
 data Person = Person
   { name :: Name,
@@ -68,11 +71,15 @@ data Name = Name
   }
   deriving (Show)
 
+instance HasField x r a => IsLabel x (r -> a) where
+  fromLabel = getField @x
+
 person :: Person
 person = Person (Name "Tiger" "Scott") 10
 
-f :: String
-f = getField @"first" $ getField @"name" person
+f1, f2 :: String
+f1 = getField @"first" $ getField @"name" person
+f2 = #first $ #name person
 
 a :: Int
 a = getField @"age" person
@@ -157,9 +164,10 @@ p2 = person & age .~ 11
 While `lens` package uses Template Haskell to generate lenses such as `name`, `age`, `first`, and so on, [`generic-lens`](https://hackage.haskell.org/package/generic-lens) package uses [`GHC.Generics`](https://hackage.haskell.org/package/base/docs/GHC-Generics.html) to generate lenses.
 
 ```
-{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DataKinds, OverloadedLabels #-}
 
 import Control.Lens
+import Data.Generics.Labels ()
 import Data.Generics.Product
 import GHC.Generics
 
@@ -178,15 +186,93 @@ data Name = Name
 person :: Person
 person = Person (Name "Tiger" "Scott") 10
 
-f :: String
-f = person ^. field @"name" . field @"first"
+f1, f2 :: String
+f1 = person ^. field @"name" . field @"first"
+f2 = person ^. #name . #first
 
-a :: Int
-a = person ^. field @"age"
+a1, a2 :: Int
+a1 = person ^. field @"age"
+a2 = person ^. #age
 
-p1, p2 :: Person
+p1, p2, p3 :: Person
 p1 = person & field @"name" . field @"first" .~ "Micheal"
 p2 = person & field @"age" .~ 11
+p3 = person & #name . #first .~ "Micheal"
 ```
 
-As you can see it uses a type-level string with `field` to specify a field instead of a generated lens.
+As you can see it uses a type-level string with `field` to specify a field instead of a generated lens. You can also import instances from `Data.Generics.Labels` to use labels instead, for instance, `#name` instead of `field @"name"`.
+
+There are some libraries that support record-like type if you take options to use non-standard records.
+
+For example, [extensible](https://hackage.haskell.org/package/extensible) lets you to define a record type with `Record` and work with it using lenses.
+
+```
+{-# LANGUAGE DataKinds, OverloadedLabels #-}
+
+import Control.Lens
+import Data.Extensible
+
+type Person = Record '[ "name" >: Name
+                      , "age" >: Int
+                      ]
+
+type Name = Record '[ "first" >: String
+                    , "last" >: String
+                    ]
+
+person :: Person
+person = #name @= (    #first @= "Tiger"
+                    <: #last @= "Scott"
+                    <: nil
+                  )
+      <: #age @= 10
+      <: nil
+
+f :: String
+f = person ^. xlb #name . xlb #first
+
+a :: Int
+a = person ^. #age
+
+p1, p2 :: Person
+p1 = person & xlb #name . xlb #first .~ "Micheal"
+p2 = person & #age .~ 11
+```
+
+One thing you should know is that you need `xlb` when you combine lenses.
+
+[vinyl](https://hackage.haskell.org/package/vinyl) provides similar functionalities.
+
+```
+{-# LANGUAGE DataKinds, OverloadedLabels #-}
+
+import Control.Lens
+import Data.Vinyl
+import Data.Vinyl.Syntax ()
+
+type Person = FieldRec '[ "name" ::: Name
+                        , "age" ::: Int
+                        ]
+
+type Name = FieldRec '[ "first" ::: String
+                      , "last" ::: String
+                      ]
+
+person :: Person
+person = #name =:= (     #first =:= "Tiger"
+                     <+> #last =:= "Scott"
+                   )
+     <+> #age =:= 10
+
+f :: String
+f = person ^. #name . #first
+
+a :: Int
+a = person ^. #age
+
+p1, p2 :: Person
+p1 = person & #name . #first .~ "Micheal"
+p2 = person & #age .~ 11
+```
+
+Note that these libraries provides much more functionalities than just replacing standard records. I picked up very basic usages in this post though.
