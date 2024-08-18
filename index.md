@@ -2,6 +2,10 @@
 
 ## 2024
 
+### Aug.
+
+- [Yoneda lemma in Haskell](./2024/8/yoneda.html) [haskell]
+
 ### Jul.
 
 - [Monoidal functor and `Applicative`](./2024/7/monoidal_functor_applicative.html) [haskell]
