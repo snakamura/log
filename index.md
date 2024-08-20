@@ -4,6 +4,7 @@
 
 ### Aug.
 
+- [Coyoneda from Yoneda](./2024/8/coyoneda.html) [haskell]
 - [Yoneda lemma in Haskell](./2024/8/yoneda.html) [haskell]
 
 ### Jul.
