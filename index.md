@@ -2,6 +2,10 @@
 
 ## 2024
 
+### Sep.
+
+- [Hom functor](./2024/9/hom_functor.html) [haskell]
+
 ### Aug.
 
 - [Coyoneda from Yoneda](./2024/8/coyoneda.html) [haskell]
