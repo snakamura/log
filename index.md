@@ -2,6 +2,10 @@
 
 ## 2024
 
+### Oct.
+
+- [Derivation with SymPy](./2024/10/derivation_sympy.html) [python]
+
 ### Sep.
 
 - [Hom functor](./2024/9/hom_functor.html) [haskell]
