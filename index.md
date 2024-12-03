@@ -2,6 +2,11 @@
 
 ## 2024
 
+### Nov.
+
+- [Tips about `AVAudioEngine`](./2024/11/audio_engine.html) [ios, swift]
+
+
 ### Oct.
 
 - [Derivation with SymPy](./2024/10/derivation_sympy.html) [python]
