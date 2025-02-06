@@ -1,5 +1,12 @@
 # /var/log/snak.log
 
+## 2025
+
+### Jan.
+
+- [Regular expression to free `Alternative`, part 1](./2025/1/free_alternative1.html) [haskell]
+
+
 ## 2024
 
 ### Nov.
