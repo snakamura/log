@@ -2,6 +2,10 @@
 
 ## 2025
 
+### Feb.
+
+- [Regular expression to free `Alternative`, part 2](./2025/2/free_alternative2.html) [haskell]
+
 ### Jan.
 
 - [Regular expression to free `Alternative`, part 1](./2025/1/free_alternative1.html) [haskell]
