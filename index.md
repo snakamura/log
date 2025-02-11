@@ -4,6 +4,7 @@
 
 ### Feb.
 
+- [Regular expression to free `Alternative`, part 5](./2025/2/free_alternative5.html) [haskell]
 - [Regular expression to free `Alternative`, part 4](./2025/2/free_alternative4.html) [haskell]
 - [Regular expression to free `Alternative`, part 3](./2025/2/free_alternative3.html) [haskell]
 - [Regular expression to free `Alternative`, part 2](./2025/2/free_alternative2.html) [haskell]
