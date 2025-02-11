@@ -3,10 +3,31 @@
 
 @import "{{ site.theme }}";
 
-header {
-  display: none;
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+header.page-header {
+  color: #606c71;
+  background: inherit;
+  padding: 0;
+
+  h1, h2 {
+    display: none;
+  }
+
+  div.index {
+    text-align: right;
+    margin: 0.5em 1em;
+  }
 }
 
-.main-content code {
-  font-size: 90%;
+.main-content {
+  padding-top: 0;
+
+  code {
+    font-size: 90%;
+  }
+}
+
+footer.site-footer {
+  display: none;
 }

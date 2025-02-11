@@ -1,1 +1,10 @@
 <link rel="shortcut icon" href="/log/favicon.ico">
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementsByClassName('page-header')[0];
+    const div = document.createElement('div');
+    div.setAttribute('class', 'index');
+    div.innerHTML = '<a href="/log/"><i class="bi bi-list"></i></a>';
+    header.appendChild(div);
+});
+</script>
