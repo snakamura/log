@@ -2,6 +2,10 @@
 
 ## 2025
 
+### Mar.
+
+- [`newtype` with poly-kinded photom types](./2025/3/newtype_existential.html) [haskell]
+
 ### Feb.
 
 - [Regular expression to free `Alternative`, part 5](./2025/2/free_alternative5.html) [haskell]
