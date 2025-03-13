@@ -22,7 +22,7 @@
 
 ### Nov.
 
-- [Tips about `AVAudioEngine`](./2024/11/audio_engine.html) [ios, swift]
+- [Tips about `AVAudioEngine`](./2024/11/audio_engine.html) [ios][swift]
 
 
 ### Oct.
@@ -56,7 +56,7 @@
 
 ### Apr.
 
-- [`Iterator::collect` can collect `Result`s](./2024/4/rust_collect.html) [haskell] [rust]
+- [`Iterator::collect` can collect `Result`s](./2024/4/rust_collect.html) [haskell][rust]
 - [Natural isomorphism between `Day Identity f` and `f`](./2024/4/day_natural_isomorphism.html) [haskell]
 - [`Data.Functor.Day`](./2024/4/day.html) [haskell]
 
@@ -107,7 +107,7 @@
 ### Mar.
 
 - [zsh supports process substitution using a temporary file](./2023/3/zsh_process_substitution.html)
-- [Smart cast doesn't work well with computed properties](./2023/3/smartcast.html) [kotlin, typescript]
+- [Smart cast doesn't work well with computed properties](./2023/3/smartcast.html) [kotlin][typescript]
 
 ### Feb.
 
@@ -133,7 +133,7 @@
 
 ### May.
 
-- [Expressing relations between types, part 8](./2022/5/types8.html) [haskell] [idris]
+- [Expressing relations between types, part 8](./2022/5/types8.html) [haskell][idris]
 - [Expressing relations between types, part 7](./2022/5/types7.html) [haskell]
 - [Expressing relations between types, part 6](./2022/5/types6.html) [haskell]
 - [Expressing relations between types, part 5](./2022/5/types5.html) [haskell]
