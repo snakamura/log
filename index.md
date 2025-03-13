@@ -4,6 +4,7 @@
 
 ### Mar.
 
+- [Universal and existential quantification in Rust, Swift and Haskell](./2025/3/universal_existential.html) [haskell][rust][swift]
 - [`newtype` with poly-kinded photom types](./2025/3/newtype_existential.html) [haskell]
 
 ### Feb.
