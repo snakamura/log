@@ -2,6 +2,10 @@
 
 ## 2025
 
+### Apr.
+
+- [Invisible kinds of GADT can be also generalized](./2025/4/gadt_kind.html) [haskell]
+
 ### Mar.
 
 - [Universal and existential quantification in Rust, Swift and Haskell](./2025/3/universal_existential.html) [haskell][rust][swift]
