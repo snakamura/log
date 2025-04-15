@@ -20,7 +20,7 @@ This works, but there is a problem even if we put performance issues aside. As y
 
 I'm going to look into what we can do about it.
 
-To make it simpler, I'll define one simple type class named `X`.
+To make it simpler, I'll define one simple type class named `X`, and try to implement this type class dynamically instead of `Eq`.
 
 ```
 class X a where
@@ -53,7 +53,7 @@ v2 :: String
 v2 = invokeCPS (100 :: Int) $ \n -> x n <> "!!!"
 ```
 
-Let's give `\n -> x n <> "!!!"` a look. A type of this function is `(X a) => a -> String`. Internally, a type class constraint `(X a) =>` will be converted to an additional parameter of a dictionary of methods in GHC. So its type will be `Dict X a -> a -> String` for some `Dict`. In addition to that, `Dict X a` is a function itself if the type class only has one method. The function type is identical to `(a -> String) -> a -> String`.
+Let's give `\n -> x n <> "!!!"` a look. A type of this function is `(X a) => a -> String`. Internally, a type class constraint `(X a) =>` will be converted to an additional parameter of a dictionary of methods in GHC. So its type will be `Dict X a -> a -> String` for some `Dict`. In addition to that, `Dict X a` is a function itself if the type class only has one method. To put them together, the function type becomes identical to `(a -> String) -> a -> String`.
 
 This means that you can call this function with any function of `a -> String` if you can cast `(X a) => a -> String` to `(a -> String) -> a -> String`. We can do that by wrapping it in a `newtype` and `unsafeCoerce` it.
 
