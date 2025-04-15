@@ -4,6 +4,7 @@
 
 ### Apr.
 
+- [Implementing an instance of a type class dynamically, part 1](./2025/4/reflection1.html) [haskell]
 - [Invisible kinds of GADT can be also generalized](./2025/4/gadt_kind.html) [haskell]
 
 ### Mar.
