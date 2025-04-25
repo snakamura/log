@@ -91,4 +91,4 @@ v5 :: String
 v5 = safeInvoke (\n -> show (n + 3)) (100 :: Int) $ \n -> x n <> "!!!"
 ```
 
-They work pretty well, but they only work with a type class with one method. What can we do with a type class with more than one methods? We'll see it in the following posts.
+They work pretty well, but they only work with a type class with one method. What can we do with a type class with more than one method? We'll see it in the following posts.
