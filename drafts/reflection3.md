@@ -5,8 +5,6 @@ We defined `BindY` and `bindY'` in [the previous post](./reflection2.html). They
 ```
 {-# LANGUAGE UndecidableInstances #-}
 
-module Reflection6 where
-
 import Data.Kind (Constraint, Type)
 import Data.Proxy (Proxy (..))
 import GHC.Exts (Any, withDict)
