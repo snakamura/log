@@ -2,6 +2,10 @@
 
 ## 2025
 
+### May.
+
+- [Implementing an instance of a type class dynamically, part 2](./2025/5/reflection2.html) [haskell]
+
 ### Apr.
 
 - [Implementing an instance of a type class dynamically, part 1](./2025/4/reflection1.html) [haskell]

@@ -1,6 +1,6 @@
 # Implementing an instance of a type class dynamically, part 2
 
-We successfully used any function as a method of a type class in [the previous post](./reflection1.html) if the type class had only one method. In this post, we'll see what we can do with a type class with more than one methods.
+We successfully used any function as a method of a type class in [the previous post](../4/reflection1.html) if the type class had only one method. In this post, we'll see what we can do with a type class with more than one methods.
 
 First, let's declare a type class with two methods and two instances.
 
@@ -28,7 +28,7 @@ instance Y WrappedString where
   y2 _ _ = 100
 ```
 
-But we cannot implement a new `newtype` for all sets of functions. We'll instead define a `newtype` which is indexed by a type. This way, we can define an infinite number of `newtype`s at once.
+But unfortunately, we cannot implement a new `newtype` for all sets of functions. We'll instead define a `newtype` which is indexed by a type. This way, we can define an infinite number of `newtype`s at once.
 
 ```
 type WrapY :: k -> Type -> Type
@@ -98,7 +98,7 @@ v2 = bindY
 
 `v1` becomes `"110"`, and `v2` becomes `200`.
 
-There is a problem though. Imagine we implement an instance for a specific type manually.
+There is a problem though. Imagine you implemented an instance for a specific type manually.
 
 ```
 type data BadKind = Bad
@@ -111,7 +111,7 @@ instance BindY Bad Int where
       }
 ```
 
-Which implementation will it use when we get a value of `WrapY Bad Int` from `bindY` and apply `y1` to it?
+Which implementation will it use when you get a value of `WrapY Bad Int` from `bindY` and apply `y1` to it outside `bindY`?
 
 ```
 bad :: WrapY Bad Int
