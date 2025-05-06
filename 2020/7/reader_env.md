@@ -54,7 +54,7 @@ result' = (add =>= mul) $ env 3 2
 
 When you use `Reader`, each function (`add` and `mul`) *returns* a `Reader` to lift a value into `Reader` monad. The bind operator (`>>=`) passes an environment from a functon to another function.
 
-On the other hand, with `Env`, each function *takes* an `Env` and extract a value from `Env` comonad. The extend operator (`=>>`) passes an environment from a functio nto another function.
+On the other hand, with `Env`, each function *takes* an `Env` and extract a value from `Env` comonad. The extend operator (`=>>`) passes an environment from a function to another function.
 
 It'll help understand what's going on under the hood by implementing `Reader` and `Env` by yourself.
 
