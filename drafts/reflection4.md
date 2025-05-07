@@ -54,7 +54,7 @@ v4 :: Int
 v4 = withDictMonoid (DictMonoid 1 (*)) v
 ```
 
-Can we generalize `withDictMonoid`? Yes, we can use a type family to associate a dictionary type and a constraint. Then, make `withDictMonoid` use a proper dictionary type.
+Can we generalize `withDictMonoid`? Yes, we can use a type family to associate a dictionary type and a constraint. Then, we can make `withDictMonoid` use a proper dictionary type.
 
 ```
 import Data.Kind (Constraint, Type)
@@ -74,7 +74,7 @@ withDict dict value = reify dict $ \(_ :: Proxy s) -> unwrap (value :: Wrap s a)
 
 This requires `AllowAmbiguousTypes` extension because `withDict` doesn't use `c` itself. It uses `c` only as `Dict c a` but the compiler cannot decide what `c` is from `Dict c a` because it's not injective. You need to specify a constraint when you call `withDict` like `withDict @Monoid`.
 
-Then, define instances of `ReifiableConstriant` for `Semigroup` and `Monoid`.
+Then, let's define instances of `ReifiableConstriant` for `Semigroup` and `Monoid`.
 
 ```
 type DictMonoid :: Type -> Type
@@ -96,7 +96,7 @@ instance (Reifies s (DictMonoid a)) => Monoid (Wrap s a) where
   mempty = Wrap $ _mempty (reflect (Proxy :: Proxy s))
 ```
 
-You can use `withDict` by specializing it to `Monoid` constraint.
+You can now use `withDict` by specializing it to `Monoid` constraint.
 
 ```
 v :: (Reifies s (DictMonoid Int)) => Wrap s Int
@@ -111,7 +111,7 @@ v2 = withDict @Monoid (DictMonoid 1 (*)) v
 
 We've evaluated `v` with different sets of methods of `Semigroup` and `Monoid`.
 
-You can remove `AllowAmbiguousTypes` by making `Wrap` indexed by `c` as well if you'd like. Then, `c` will appear in the type signature of `withDict` as `Wrap c s a`, and it's no longer ambiguous.
+By the way, you can remove `AllowAmbiguousTypes` by making `Wrap` indexed by `c` as well if you'd like. Then, `c` will appear in the type signature of `withDict` as `Wrap c s a`, and it's no longer ambiguous.
 
 ```
 type ReifiableConstraint :: (Type -> Constraint) -> Constraint
