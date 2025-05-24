@@ -4,6 +4,7 @@
 
 ### May.
 
+- [Implementing an instance of a type class dynamically, part 4](./2025/5/reflection4.html) [haskell]
 - [Implementing an instance of a type class dynamically, part 3](./2025/5/reflection3.html) [haskell]
 - [Implementing an instance of a type class dynamically, part 2](./2025/5/reflection2.html) [haskell]
 
