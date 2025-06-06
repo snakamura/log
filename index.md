@@ -2,6 +2,10 @@
 
 ## 2025
 
+### Jun.
+
+- [A parameter type is existential, a return type is universal, part 1](./2025/6/existential_universal1.html) [haskell]
+
 ### May.
 
 - [Implementing an instance of a type class dynamically, part 4](./2025/5/reflection4.html) [haskell]
