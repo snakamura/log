@@ -51,7 +51,7 @@ backward h = \(MkSomeC x) -> h x
 
 And you can see that `backward . forword == id` and `forward . backward == id`.
 
-In this sense, we can see a generic parameter type `a` that only appears in a parameter, you can think it's existential. It roughly means that you can only do what you can do with its constraint.
+In this sense, you can think it's existential when you see a generic parameter type `a` that only appears in a parameter. It roughly means that you can only do what you can do with its constraint.
 
 Let's extend this a bit more. We added a constraint above to make it usable. Another way of making it usable is to put it in a container.
 
@@ -141,4 +141,4 @@ It turned out that `SomeF` is a left adjoint and `Const` is a right adjoint. Unf
 
 Since `Some` is isomorphic to `SomeF Identity`, you can say `Some -> a` and `Identity ~> Const a` are isomorphic, which means `Some -> a` and `forall x. x -> a` are isomorphic.
 
-Intuitively, you can think this isomorphism this way. A function that takes `Some` cannot get anything from it because it's unknown what's inside it. Similarly, a function that takes `x` cannot get anything from `x` because it's unknown what it is. In both cases, a caller can pass anything to them as their argument. They're isomorphic in this sense.
+Intuitively, you can think this isomorphism this way. A function that takes `Some` cannot get anything from it because it's unknown what's inside it. Similarly, a function that takes any `x` cannot get anything from `x` because it's unknown what it is. In both cases, a caller can pass anything to them as their argument. They're isomorphic in this sense.
