@@ -25,7 +25,7 @@ type SomeC :: (Type -> Constraint) -> Type
 data SomeC c = forall a. (c a) => MkSomeC a
 ```
 
-You can put a value that implements a constraint `c` to `SomeC` such as `MkSomeC True :: SomeC Show`. You can do more than applying `id` with it because you can use the constraint `Show a` when you pattern match on `MkSomeC a`.
+With a constraint, you can put only a value that implements a constraint `c` to `SomeC` such as `MkSomeC True :: SomeC Show`. You can do more than just applying `id` with it using the constraint `Show a` when you pattern match on `MkSomeC a`.
 
 ```
 fromSomeCShow :: SomeC Show -> String
@@ -39,7 +39,7 @@ show' :: Show a => a -> String
 show' = show
 ```
 
-Their types are different, but are there anything we can do with one of them but we cannot do with the other? I turned out that they're isomorphic. You can define two functions converting them back and forth.
+Their types are different, but are there anything we can do with one of them but we cannot do with the other? It turned out that they're isomorphic. You can define two functions converting them back and forth.
 
 ```
 forward :: (SomeC c -> a) -> (forall x. c x => x -> a)
@@ -49,7 +49,7 @@ backward :: (forall x. c x => x -> a) -> (SomeC c -> a)
 backward h = \(MkSomeC x) -> h x
 ```
 
-And you can see that `backward . forword == id` and `forward . backward == id`.
+You'll notice that `backward . forword == id` and `forward . backward == id`.
 
 In this sense, you can think it's existential when you see a generic parameter type `a` that only appears in a parameter. It roughly means that you can only do what you can do with its constraint.
 
@@ -74,7 +74,7 @@ fromSomeF :: SomeF [] -> Int
 fromSomeF (MkSomeF l) = length l
 ```
 
-As you can see, this works no matter what `a` is because the type of `length` is `forall a. [a] -> Int`, which means it works with any `a`. You can say that `fromSomeF` and `length` are isomorphic. Let's define two functions converting them back and forth.
+As you see, this works no matter what `a` is because the type of `length` is `forall a. [a] -> Int`, which means it works with any `a`. You can say that `fromSomeF` and `length` are isomorphic. Let's define two functions converting them back and forth.
 
 ```
 forward :: (SomeF f -> a) -> (forall x. f x -> a)
@@ -137,8 +137,8 @@ class (Functor f, Functor g) => Adjunction f g | f -> g, g -> f where
   rightAdjunct f = counit . fmap f
 ```
 
-It turned out that `SomeF` is a left adjoint and `Const` is a right adjoint. Unfortunately, we cannot make them an instance of this `Adjunction`. `Adjunction` defines an adjunction whose left adjoint and right adjoint are both in the category of Haskell types `Hask` where objects are types and morphisms are functions. But in an adjunction of `SomeF` and `Const`, a left adjoint `SomeF` is in `Hask`, but a right adjoint `Const` is in a category of functors where objects are functors and morphisms are natural transformations. Still, there are an adjunction.
+It turned out that `SomeF` is a left adjoint and `Const` is a right adjoint. Unfortunately, we cannot make them an instance of this `Adjunction`. `Adjunction` defines an adjunction whose left adjoint and right adjoint are both in the category of Haskell types `Hask` where objects are types and morphisms are functions. But in an adjunction of `SomeF` and `Const`, a left adjoint `SomeF` is in `Hask`, but a right adjoint `Const` is in a category of functors where objects are functors and morphisms are natural transformations. Still, they are an adjunction.
 
 Since `Some` is isomorphic to `SomeF Identity`, you can say `Some -> a` and `Identity ~> Const a` are isomorphic, which means `Some -> a` and `forall x. x -> a` are isomorphic.
 
-Intuitively, you can think this isomorphism this way. A function that takes `Some` cannot get anything from it because it's unknown what's inside it. Similarly, a function that takes any `x` cannot get anything from `x` because it's unknown what it is. In both cases, a caller can pass anything to them as their argument. They're isomorphic in this sense.
+Intuitively, you'd think this isomorphism this way. A function that takes `Some` cannot get anything from it because it's unknown what's inside it. Similarly, a function that takes any `x` cannot get anything from `x` because it can be anything. In both cases, a caller can pass anything to them as their argument. They're isomorphic in this sense.
