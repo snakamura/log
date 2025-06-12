@@ -114,4 +114,4 @@ matchChar (RChar rc) (c : cs)
 matchChar _ [] = []
 ```
 
-In the next post, we'll see how we can get more information when matching a regular expression.
+In [the next post](../2/free_alternative2.html), we'll see how we can get more information when matching a regular expression.

@@ -117,4 +117,4 @@ regex' = (rChar' 'a' `rSeq` rChar' 'b') `rAlt` (rMany (rChar' 'c' `rSeq` rChar' 
 
 This time, `match regex' "cdcdcde" returns `Just "cdcdcde".
 
-Now we can get information from `Regex` using the same match function if the information is `Monoid`. But this means that we always concatenate information in `RChar`. How can we get information with more flexibilities? For example, how can we get a string that matched a part of a regular expression? Let's see what we can do in the next post.
+Now we can get information from `Regex` using the same match function if the information is `Monoid`. But this means that we always concatenate information in `RChar`. How can we get information with more flexibilities? For example, how can we get a string that matched a part of a regular expression? Let's see what we can do in [the next post](./free_alternative3.html).

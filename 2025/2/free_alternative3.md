@@ -164,4 +164,4 @@ regex :: Regex String
 regex = (<>) <$> rChar' 'a' <*> rChar' 'b' <|> ((<>) <$> concat <$> many ((<>) <$> rChar' 'c' <*> rChar' 'd')) <*> rChar' 'e'
 ```
 
-We'll make it a bit more generic in the next post.
+We'll make it a bit more generic in [the next post](./free_alternative4.html).

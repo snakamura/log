@@ -154,4 +154,4 @@ regex = (<>) <$> (rChar 'a' <|> rChar 'b') <*> rChar 'c' <|> (\a b c -> a <> b <
 
 `matchAlt listChar regex` returns `["ac","bc","deg","dfg"]`. This is a list which will match `regex`. We can use `regex` to match a regular expression as well as list strings that match it. Unfortunately, `matchAlt listChar regex` doesn't work when `regex` contains `many` because it produces an infinite number of strings.
 
-We'll put everything together in the next post.
+We'll put everything together in [the next post](./free_alternative5.html).
