@@ -1,4 +1,4 @@
-# F-Algebra of monoid and free monoid, part 2
+# Initial F-Algebra of monoid and free monoid, part 2
 
 In [the previous post](./monoid_f_algebra_free1.html), we saw an F-Algebra of monoid, but we could only create a monoid structure with monoid units (`Empty`) because `Monoid` in the post only represents a structure of monoid. What can we do to have actual values in it?
 

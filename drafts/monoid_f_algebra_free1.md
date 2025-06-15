@@ -1,4 +1,4 @@
-# F-Algebra of monoid and free monoid, part 1
+# Initial F-Algebra of monoid and free monoid, part 1
 
 Monoid has two operations `mappend` and `mempty` that satisfy some conditions such as associativity law and unit law. When you ignore these conditions, you can express monoid as a combination of these two operations.
 
