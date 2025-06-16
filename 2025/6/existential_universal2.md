@@ -26,7 +26,7 @@ type AnyC :: (Type -> Constraint) -> Type
 newtype AnyC c = MkAnyC (forall a. (c a) => a)
 ```
 
-This type, you can put a polymorphic type that implements the constraint to it.
+This type allows you to put a polymorphic type that implements the constraint to it.
 
 ```
 intToAny :: Int -> AnyC Num
@@ -76,9 +76,9 @@ backward :: (a -> AnyC c) -> (forall x. c x => a -> x)
 backward h = \a -> let MkAnyC x = h a in x
 ```
 
-And you can see that `backward . forword == id` and `forward . backward == id`.
+Notice that `backward . forword == id` and `forward . backward == id`.
 
-In this sense, we can see a generic parameter type `a` that only appears in a return value, you can think it's universal. It roughly means that you have to return anything that satisfies its constraint.
+In this sense, when we see a generic parameter type `a` that only appears in a return value, you can think it's universal. It roughly means that you have to make it return anything that satisfies its constraint.
 
 Let's extend this a bit more by putting it in a container like we did with `Some`.
 
@@ -107,7 +107,7 @@ toAnyF' :: Int -> AnyF Maybe
 toAnyF' _ = MkAnyF Nothing
 ```
 
-This time, `toAnyF` is isomorphic to `const [] :: forall x. x -> [a]`. We can see it by `forward` and `backward`.
+This time, `toAnyF` is isomorphic to `const [] :: forall x. x -> [a]`. We can see this by `forward` and `backward`.
 
 ```
 forward :: (forall x. a -> f x) -> (a -> AnyF f)
@@ -117,7 +117,7 @@ backward :: (a -> AnyF f) -> (forall x. a -> f x)
 backward h = \a -> let MkAnyF fx = h a in fx
 ```
 
-Again, `backward . forward == id` and `forward . backward == id`. You'll see that `toAnyF` is `forward (const [])`.
+Again, `backward . forward == id` and `forward . backward == id`. You'll find that `toAnyF` is `forward (const [])`.
 
 With a constant functor we used in the previous post, we can make the left hand side of `forward` and the right hand side of `backward` natural transformations.
 
@@ -135,6 +135,6 @@ backward' h = \(MkConst a) -> let MkAnyF fx = h a in fx
 
 Again they are an adjunction. `Const` is a left adjoint and `AnyF` is a right adjoint. `Const` is in a category of functors and `AnyF` is in `Hask`.
 
-Since `Any` is isomorphic to `AnyF Identity`, you can say `Const a ~> Identity` and `a -> AnyF` are isomorphic, which means `forall x. a -> x` and `a -> AnyF` are isomorphic.
+Since `Any` is isomorphic to `AnyF Identity`, you can say `Const a ~> Identity` and `a -> Any` are isomorphic, which means `forall x. a -> x` and `a -> Any` are isomorphic.
 
 Intuitively, you can think this isomorphism this way. A function that returns `Any` cannot put anything to it. Similarly, a function that returns any `x` cannot create it because it must be any type. In both cases, a caller should be able to get anything from a return value. They're isomorphic in this sense.
