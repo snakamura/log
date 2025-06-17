@@ -20,7 +20,7 @@ fmap' = \(MkSomeFA g fa) -> fmap g fa
 
 This `SomeFA` is identical to [`Coyoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Coyoneda.html#t:Coyoneda) in `Data.Functor.Coyoneda`, and `fmap'` is identical to [`lowerCoyoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Coyoneda.html#v:lowerCoyoneda). With `lowerCoyoneda` and [`liftCoyoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Coyoneda.html#v:liftCoyoneda), you can say that `SomeFA f` and `f` are naturally isomorphic.
 
-Next, let's flip parameters of `fmap`. You'll get `Functor f => f a -> (a -> b) -> f b`. `b` only appears in the return value `(a -> b) -> f b`, so it should be universal. Let's define this universal type.
+Next, let's flip parameters of `fmap`. You'll get `Functor f => f a -> ((a -> b) -> f b)`. `b` only appears in the return value `(a -> b) -> f b`, so it should be universal. Let's define this universal type.
 
 ```
 type AnyFA :: (Type -> Type) -> Type -> Type
