@@ -1,8 +1,8 @@
 # A parameter type is existential, a return type is universal, part 3
 
-In the previous posts, we saw that a parameter type is existential and a return type is universal. Let's take a look at some examples.
+In the [previous](./existential_universal1.html) [posts](./existential_universal2.html), we saw that a parameter type is existential and a return type is universal. Let's take a look at some examples.
 
-The first example is `fmap`. The type of `fmap` is `Functor f => (a -> b) -> f a -> f b`. When you uncurry its parameters, you'll get `Functor f => ((a -> b), f a) -> f b`. `a` appears only in the parameter, so it should be existential. Let's define this existential type.
+The first example is `fmap`. The type of `fmap` is `Functor f => (a -> b) -> f a -> f b`. When you uncurry its parameters, you'll get `Functor f => (a -> b, f a) -> f b`. `a` appears only in the parameter, so it should be existential. Let's define this existential type.
 
 ```
 type SomeFA :: (Type -> Type) -> Type -> Type
@@ -38,7 +38,7 @@ fmap'' fa = MkAnyFA (flip fmap fa)
 
 This `AnyFA` is identical to [`Yoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Yoneda.html#t:Yoneda) in `Data.Functor.Yoneda`, and `fmap''` is identical to [`liftYoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Yoneda.html#v:liftYoneda). With `liftYoneda` and [`lowerYoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Yoneda.html#v:lowerYoneda), you can say that `AnyFA f` and `f` are naturally isomorphic.
 
-Let's take another example. This time we use `liftA2`. Its type is `Applicative f => (a -> b -> c) -> f a -> f b -> f c`. When you uncurry it, you'll get `Applicative f => (a -> b -> c, f a, f b) -> f c`. With this `SomeFA2`,
+Let's take another example. This time we use `liftA2`. Its type is `Applicative f => (a -> b -> c) -> f a -> f b -> f c`. When you uncurry it, you'll get `Applicative f => (a -> b -> c, f a, f b) -> f c`. You see `a` and `b` appear only in the parameter, and they should be existential. With this `SomeFA2`,
 
 ```
 type SomeFA2 :: (Type -> Type) -> Type -> Type
