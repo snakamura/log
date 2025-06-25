@@ -4,6 +4,7 @@
 
 ### Jun.
 
+- [A parameter type is existential, a return type is universal, part 3](./2025/6/existential_universal3.html) [haskell]
 - [A parameter type is existential, a return type is universal, part 2](./2025/6/existential_universal2.html) [haskell]
 - [A parameter type is existential, a return type is universal, part 1](./2025/6/existential_universal1.html) [haskell]
 
