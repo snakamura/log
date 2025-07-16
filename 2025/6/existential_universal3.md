@@ -16,7 +16,7 @@ fmap' :: Functor f => SomeFA f a -> f a
 fmap' = \(MkSomeFA g fa) -> fmap g fa
 ```
 
-`fmap` and `fmap'` are isomorphic. Note that this `fmap'` is a natural transformation and you can write its type as `Functor f => SomeFA f ~> f`. This means that there should be a natural transformation from `SomeFA f` to `f` if `f` is `Functor`.
+`fmap` and `fmap'` are isomorphic. `fmap'` means that if you have `x -> a` and `f x` for some `x`, you can get `f a`.  Note that this `fmap'` is a natural transformation and you can write its type as `Functor f => SomeFA f ~> f`. This means that there should be a natural transformation from `SomeFA f` to `f` if `f` is `Functor`.
 
 This `SomeFA` is identical to [`Coyoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Coyoneda.html#t:Coyoneda) in `Data.Functor.Coyoneda`, and `fmap'` is identical to [`lowerCoyoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Coyoneda.html#v:lowerCoyoneda). With `lowerCoyoneda` and [`liftCoyoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Coyoneda.html#v:liftCoyoneda), you can say that `SomeFA f` and `f` are naturally isomorphic.
 
@@ -34,7 +34,7 @@ fmap'' :: Functor f => f a -> AnyFA f a
 fmap'' fa = MkAnyFA (flip fmap fa)
 ```
 
-`fmap` and `fmap''` are isomorphic, and `fmap''` is a natural transformation. You can write its type as `Functor f => f ~> AnyFA f`. This means that there should be a natural transformation from `f` to `AnyFA f` if `f` is `Functor`.
+`fmap` and `fmap''` are isomorphic. `fmap''` means that if you have `f a`, you can have `f x` once you've got `a -> x` for any `x`. Note that `fmap''` is a natural transformation and you can write its type as `Functor f => f ~> AnyFA f`. This means that there should be a natural transformation from `f` to `AnyFA f` if `f` is `Functor`.
 
 This `AnyFA` is identical to [`Yoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Yoneda.html#t:Yoneda) in `Data.Functor.Yoneda`, and `fmap''` is identical to [`liftYoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Yoneda.html#v:liftYoneda). With `liftYoneda` and [`lowerYoneda`](https://hackage.haskell.org/package/kan-extensions-5.2.6/docs/Data-Functor-Yoneda.html#v:lowerYoneda), you can say that `AnyFA f` and `f` are naturally isomorphic.
 
