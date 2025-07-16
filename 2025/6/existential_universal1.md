@@ -137,7 +137,7 @@ class (Functor f, Functor g) => Adjunction f g | f -> g, g -> f where
   rightAdjunct f = counit . fmap f
 ```
 
-It turned out that `SomeF` is a left adjoint and `Const` is a right adjoint. Unfortunately, we cannot make them an instance of this `Adjunction`. `Adjunction` defines an adjunction whose left adjoint and right adjoint are both in the category of Haskell types `Hask` where objects are types and morphisms are functions. But in an adjunction of `SomeF` and `Const`, a left adjoint `SomeF` is in `Hask`, but a right adjoint `Const` is in a category of functors where objects are functors and morphisms are natural transformations. Still, they are an adjunction.
+It turned out that `SomeF` is a left adjoint and `Const` is a right adjoint. Unfortunately, we cannot make them an instance of this `Adjunction`. `Adjunction` defines an adjunction whose left adjoint and right adjoint are both endofunctors in the category of Haskell types `Hask` where objects are types and morphisms are functions. But in an adjunction of `SomeF` and `Const`, the left adjoint `SomeF` is a functor from a category of functors, where objects are functors and morphisms are natural transformations, to `Hask`, and the right adjoint `Const` is a functor from `Hask` to a category of functors. Still, they are an adjunction.
 
 Since `Some` is isomorphic to `SomeF Identity`, you can say `Some -> a` and `Identity ~> Const a` are isomorphic, which means `Some -> a` and `forall x. x -> a` are isomorphic.
 

@@ -133,7 +133,7 @@ backward' :: (a -> AnyF f) -> (Const a ~> f)
 backward' h = \(MkConst a) -> let MkAnyF fx = h a in fx
 ```
 
-Again they are an adjunction. `Const` is a left adjoint and `AnyF` is a right adjoint. `Const` is in a category of functors and `AnyF` is in `Hask`.
+Just like `SomeF` and `Const`, `Const` and `AnyF` form an adjunction. The left adjoint `Const` is a functor from `Hask` to a category of functors where objects are functors and morphisms are natural transformations, and the right adjoint `AnyF` is a functor from a category of functors to `Hask`.
 
 Since `Any` is isomorphic to `AnyF Identity`, you can say `Const a ~> Identity` and `a -> Any` are isomorphic, which means `forall x. a -> x` and `a -> Any` are isomorphic.
 
