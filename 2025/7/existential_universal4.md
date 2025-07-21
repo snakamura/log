@@ -1,6 +1,6 @@
 # A parameter type is existential, a return type is universal, part 4
 
-We saw an adjunction of `SomeF` and `Const` in [the part 1](./existential_universal1.html), and an adjunction of `Const` and `AnyF` in [the part 2](./existential_universal2.html). They're called an adjoint triple and denoted as `SomeF -| Const -| AnyF`. Let's express them as code in Haskell.
+We saw an adjunction of `SomeF` and `Const` in [the part 1](../6/existential_universal1.html), and an adjunction of `Const` and `AnyF` in [the part 2](../6/existential_universal2.html). They're called an adjoint triple and denoted as `SomeF -| Const -| AnyF`. Let's express them as code in Haskell.
 
 We'll use two categories. First category is `Hask` where objects are types and morphisms are functions. The second category is `Hask^Hask` where objects are endofunctors in `Hask` and morphisms are natural transformations.
 
