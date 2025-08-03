@@ -2,6 +2,10 @@
 
 ## 2025
 
+### Aug.
+
+- [Initial F-Algebra of monoid and free monoid, part 1](./2025/8/monoid_f_algebra_free1.html) [haskell]
+
 ### Jul.
 
 - [A parameter type is existential, a return type is universal, part 4](./2025/7/existential_universal4.html) [haskell]
