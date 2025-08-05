@@ -128,7 +128,7 @@ v5 = y1 bad
 
 `v5` becomes `"1010"` instead of `"110"`. It means that `y1 (WrapY 10 :: WrapY Bad Int)` returns a different result based on whether it's in a function passed to `bindY` or outside it. This breaks the referential transparency.
 
-Fortunately, you can avoid this by existentially quantify `s` instead of universally quantify it.
+Fortunately, you can avoid this by existentially quantifying `s` instead of universally quantifying it.
 
 ```
 bindY' :: forall a r. DictY a -> (forall k (s :: k). (BindY s a) => Proxy s -> r) -> r
@@ -143,7 +143,7 @@ bindY' dictY f =
 
 This makes it impossible to get a value of `WrapY s Int` from `bindY'` because `s` is now only available in a function passed to `bindY'`. You cannot call `y1` on `Wrap s Int` outside the function passed to `bindY'`.
 
-Note that `@(BindY (Any @Any) a)` corresponds to `forall k (s :: k) (BindY s a) =>`, and `@(Proxy (Any @Any) -> DictY a)` corresponds to `forall k (s :: k). Proxy s -> DictY a`. Since `s` is existential, we use `Any` for it. Also we pass `@Any` to `Any` since `s` is polly-kinded. The `@Any` means any kind. In addition to that, we need to make `f` `f @Any @Any`. The first `@Any` corresponds to `k`, and the second `@Any` corresponds to `s`.
+Note that `@(BindY (Any @Any) a)` corresponds to `forall k (s :: k) (BindY s a) =>`, and `@(Proxy (Any @Any) -> DictY a)` corresponds to `forall k (s :: k). Proxy s -> DictY a`. Since `s` is existential, we use `Any` for it. Also we pass `@Any` to `Any` since `s` is poly-kinded. The `@Any` means any kind. In addition to that, we need to make `f` `f @Any @Any`. The first `@Any` corresponds to `k`, and the second `@Any` corresponds to `s`.
 
 ```
 bad' :: WrapY Bad Int
