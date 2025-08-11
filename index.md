@@ -4,6 +4,7 @@
 
 ### Aug.
 
+- [Initial F-Algebra of monoid and free monoid, part 2](./2025/8/monoid_f_algebra_free2.html) [haskell]
 - [Initial F-Algebra of monoid and free monoid, part 1](./2025/8/monoid_f_algebra_free1.html) [haskell]
 
 ### Jul.
