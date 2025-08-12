@@ -59,11 +59,10 @@ These values are more interesting than `m0`, `m1` in the previous post because t
 
 ```
 i0, i1, i2, i3 :: Int
-i0, i1, i2 :: Int
-i0 = cata sumIntAlg m0
-i1 = cata sumIntAlg m1
-i2 = cata sumIntAlg m2
-i3 = cata sumIntAlg m3
+i0 = cata sumIntAlg m0 -- 0
+i1 = cata sumIntAlg m1 -- 1
+i2 = cata sumIntAlg m2 -- 3
+i3 = cata sumIntAlg m3 -- 6
 ```
 
 `Fix (FreeMonoid Int)` is a free monoid of `Int`. You can build a monoidal structure without evaluating it at that point, and lazily evaluate it with any algebra later. We usually call a list a free monoid, but `Fix (FreeMonoid Int)` can be flattened to a list using the associativity of a monoid. For example, `m3` represents `(1 + (2 + 3)) + 0`, but it's equivalent to `1 + (2 + (3 + 0))` which can be represented by a list.
