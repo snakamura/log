@@ -120,3 +120,9 @@ Once you have done that, run `./compile` to build it.
 ```
 ./compile
 ```
+
+ARWpost generates files that GrADS reads. So you'll probably want to install GrDAS to render them.
+
+```
+sudo apt-get install grads
+```
