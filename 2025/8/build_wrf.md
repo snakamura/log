@@ -105,7 +105,7 @@ cd ARWpost
 
 I chose `3 (PC Linux i486 i586 i686 x86_64, gfortran compiler)` when it asked `Please select from among the following supported platforms.`.
 
-Now, you need to patch `src/Makefile` to link `netcdff` in addition to `netcdf`. Also patch `configure.arwp` to make C pre-processor to omit C-style comments in fortran source files, and pass `-fallow-argument-mismatch` to a fortran compiler.
+Now, you need to patch `src/Makefile` to link `netcdff` in addition to `netcdf`. Also patch `configure.arwp` to make C pre-processor to omit C-style comments in fortran source files, and pass `-fallow-argument-mismatch` to `gfortran`.
 
 ```
 cp src/Makefile src/Makefile.orig
