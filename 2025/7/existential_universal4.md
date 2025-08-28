@@ -1,10 +1,10 @@
 # A parameter type is existential, a return type is universal, part 4
 
-We saw an adjunction of `SomeF` and `Const` in [the part 1](../6/existential_universal1.html), and an adjunction of `Const` and `AnyF` in [the part 2](../6/existential_universal2.html). They're called an adjoint triple and denoted as `SomeF -| Const -| AnyF`. Let's express them as code in Haskell.
+We saw an adjunction of `SomeF` and `Const` in [the part 1](../6/existential_universal1.html), and an adjunction of `Const` and `AnyF` in [the part 2](../6/existential_universal2.html). They're called an adjoint triple and denoted as $SomeF \dashv Const \dashv AnyF$. Let's express them as code in Haskell.
 
-We'll use two categories. First category is `Hask` where objects are types and morphisms are functions. The second category is `Hask^Hask` where objects are endofunctors in `Hask` and morphisms are natural transformations.
+We'll use two categories. First category is $Hask$ where objects are types and morphisms are functions. The second category is $Hask^{Hask}$ where objects are endofunctors in $Hask$ and morphisms are natural transformations.
 
-First, let's define some types to express endofunctors in `Hask` and natural transformations.
+First, let's define some types to express endofunctors in $Hask$ and natural transformations.
 
 ```
 type FunctorType :: Type
@@ -14,7 +14,7 @@ type (~>) :: FunctorType -> FunctorType -> Type
 type f ~> g = forall a. f a -> g a
 ```
 
-Then, we'll define two functors. The first functor is a functor from `Hask` to `Hask^Hask`. We'll call it `FunctorFromHaskToHask2`.
+Then, we'll define two functors. The first functor is a functor from $Hask$ to $Hask^{Hask}$. We'll call it `FunctorFromHaskToHask2`.
 
 ```
 type FunctorFromHaskToHask2Type :: Type
@@ -25,9 +25,9 @@ class FunctorFromHaskToHask2 t where
   mapFromHaskToHask2 :: (Functor (t a), Functor (t b)) => (a -> b) -> (t a ~> t b)
 ```
 
-This functor maps an object in `Hask` (`Type`) to an object in `Hask^Hask` (`FunctorType`), and maps a morphism in `Hask` (`Type -> Type`) to a morphism in `Hask^Hask` (`FunctorType ~> FunctorType`).
+This functor maps an object in $Hask$ (`Type`) to an object in $Hask^{Hask}$ (`FunctorType`), and maps a morphism in $Hask$ (`Type -> Type`) to a morphism in $Hask^{Hask}$ (`FunctorType ~> FunctorType`).
 
-The second functor is the opposite; `Hask^Hask` to `Hask`. We'll call it `FunctorFromHask2ToHask`.
+The second functor is the opposite; $Hask^{Hask}$ to $Hask$. We'll call it `FunctorFromHask2ToHask`.
 
 ```
 type FunctorFromHask2ToHaskType :: Type
@@ -38,7 +38,7 @@ class FunctorFromHask2ToHask t where
   mapFromHask2ToHask :: (Functor f, Functor g) => (f ~> g) -> (t f -> t g)
 ```
 
-This functor maps an object in `Hask^Hask` (`FunctorType`) to an object in `Hask` (`Type`), and maps a morphism in `Hask^Hask` (`FunctorType ~> FunctorType`) to a morphism in `Hask` (`Type -> Type`).
+This functor maps an object in $Hask^{Hask}$ (`FunctorType`) to an object in $Hask$ (`Type`), and maps a morphism in $Hask^{Hask}$ (`FunctorType ~> FunctorType`) to a morphism in $Hask$ (`Type -> Type`).
 
 When you have `Const`,
 
@@ -55,7 +55,7 @@ instance Functor (Const a) where
   fmap _ (MkConst a) = MkConst a
 ```
 
-When you look at the kind of `Const`, you'll find its type is `Type -> Type -> Type`, but it's identical to `Type -> FunctorType`. So you can think `Const` is a functor from `Hask` to `Hask^Hask`. Let's make it an instance of `FunctorFromHaskToHask2`.
+When you look at the kind of `Const`, you'll find its type is `Type -> Type -> Type`, but it's identical to `Type -> FunctorType`. So you can think `Const` is a functor from $Hask$ to $Hask^{Hask}$. Let's make it an instance of `FunctorFromHaskToHask2`.
 
 ```
 instance FunctorFromHaskToHask2 Const where
@@ -70,7 +70,7 @@ type SomeF :: FunctorType -> Type
 data SomeF f = forall a. MkSomeF (f a)
 ```
 
-`SomeF` is a type that takes a `FunctorType`. So you can think it's a functor from `Hask^Hask` to `Hask`. Let's make it an instance of `FunctorFromHask2ToHask`.
+`SomeF` is a type that takes a `FunctorType`. So you can think it's a functor from $Hask^{Hask}$ to $Hask$. Let's make it an instance of `FunctorFromHask2ToHask`.
 
 ```
 instance FunctorFromHask2ToHask SomeF where
@@ -89,7 +89,7 @@ instance FunctorFromHask2ToHask AnyF where
   mapFromHask2ToHask f2g = \(MkAnyF fa) -> MkAnyF (f2g fa)
 ```
 
-Now, we've had necessary functors; `Const` from `Hask` to `Hask^Hask`, and `SomeF` and `AnyF` from `Hask^Hask` to `Hask`. We'll define two type classes expressing adjunctions. The first one has `Hask^Hask` to `Hask` on the left, and `Hask` to `Hask^Hask` on the right.
+Now, we've had necessary functors; `Const` from $Hask$ to $Hask^{Hask}$, and `SomeF` and `AnyF` from $Hask^{Hask}$ to $Hask$. We'll define two type classes expressing adjunctions. The first one has $Hask^{Hask}$ to $Hask$ on the left, and $Hask$ to $Hask^{Hask}$ on the right.
 
 ```
 class (FunctorFromHask2ToHask f, FunctorFromHaskToHask2 g) => LeftAdjunction f g | f -> g, g -> f where
@@ -125,4 +125,4 @@ instance RightAdjunction Const AnyF where
 
 In an adjoint triple, there is a forgetful functor in the middle, and a free functor on the left and a cofree functor on the right. A forgetful functor forgets a structure, a free functor creates a minimum structure, and a cofree functor creates a maximum structure.
 
-In this adjoint triple `SomeF -| Const -| AnyF`, you can think that `Const` forgets a functor `f`, `SomeF` creates a minimum functor that works with some given `a`, and `AnyF` creates a maximum functor that works with any given `a`.
+In this adjoint triple $SomeF \dashv Const \dashv AnyF$, you can think that `Const` forgets a functor `f`, `SomeF` creates a minimum functor that works with some given `a`, and `AnyF` creates a maximum functor that works with any given `a`.
