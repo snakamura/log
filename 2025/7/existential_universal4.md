@@ -93,34 +93,34 @@ Now, we've had necessary functors; `Const` from $Hask$ to $Hask^{Hask}$, and `So
 
 ```
 class (FunctorFromHask2ToHask f, FunctorFromHaskToHask2 g) => LeftAdjunction f g | f -> g, g -> f where
-  liftLeftAdjunct :: (Functor h) => (f h -> a) -> (h ~> g a)
-  leftRightAdjunct :: (Functor h) => (h ~> g a) -> (f h -> a)
+  leftLeftAdjunct :: (Functor h) => (f h -> a) -> (h ~> g a)
+  rightLeftAdjunct :: (Functor h) => (h ~> g a) -> (f h -> a)
 ```
 
 The second one has the opposite.
 
 ```
 class (FunctorFromHaskToHask2 f, FunctorFromHask2ToHask g) => RightAdjunction f g | f -> g, g -> f where
-  liftRightAdjunct :: (Functor h) => (f a ~> h) -> (a -> g h)
-  rightLeftAdjunct :: (Functor h) => (a -> g h) -> (f a ~> h)
+  leftRightAdjunct :: (Functor h) => (f a ~> h) -> (a -> g h)
+  rightRightAdjunct :: (Functor h) => (a -> g h) -> (f a ~> h)
 ```
 
 We can make a pair of `SomeF` and `Const` an instance of `LeftAdjunction`, and a pair of `Const` and `AnyF` an instance of `RightAdjunction`.
 
 ```
 instance LeftAdjunction SomeF Const where
-  liftLeftAdjunct :: (Functor h) => (SomeF h -> a) -> (h ~> Const a)
-  liftLeftAdjunct someH2a = \h -> MkConst (someH2a (MkSomeF h))
+  leftLeftAdjunct :: (Functor h) => (SomeF h -> a) -> (h ~> Const a)
+  leftLeftAdjunct someH2a = \h -> MkConst (someH2a (MkSomeF h))
 
-  leftRightAdjunct :: (Functor h) => (h ~> Const a) -> (SomeF h -> a)
-  leftRightAdjunct h2const = \(MkSomeF h) -> let MkConst a = h2const h in a
+  rightLeftAdjunct :: (Functor h) => (h ~> Const a) -> (SomeF h -> a)
+  rightLeftAdjunct h2const = \(MkSomeF h) -> let MkConst a = h2const h in a
 
 instance RightAdjunction Const AnyF where
-  liftRightAdjunct :: (Functor h) => (Const a ~> h) -> (a -> AnyF h)
-  liftRightAdjunct const2h = \a -> MkAnyF (const2h (MkConst a))
+  leftRightAdjunct :: (Functor h) => (Const a ~> h) -> (a -> AnyF h)
+  leftRightAdjunct const2h = \a -> MkAnyF (const2h (MkConst a))
 
-  rightLeftAdjunct :: (Functor h) => (a -> AnyF h) -> (Const a ~> h)
-  rightLeftAdjunct a2anyH = \(MkConst a) -> let MkAnyF ha = a2anyH a in ha
+  rightRightAdjunct :: (Functor h) => (a -> AnyF h) -> (Const a ~> h)
+  rightRightAdjunct a2anyH = \(MkConst a) -> let MkAnyF ha = a2anyH a in ha
 ```
 
 In an adjoint triple, there is a forgetful functor in the middle, and a free functor on the left and a cofree functor on the right. A forgetful functor forgets a structure, a free functor creates a minimum structure, and a cofree functor creates a maximum structure.
