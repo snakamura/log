@@ -1,6 +1,6 @@
 # Terminal F-Coalgebra of monoid and cofree monoid
 
-We saw F-Algebra of monoid in [this post](./monoid_f_algebra_free1.html). Then, what's the dual of it? It's a F-Coalgebra of monoid. Let's see what it is.
+We saw F-Algebra of monoid in [this post](../8/monoid_f_algebra_free1.html). Then, what's the dual of it? It's a F-Coalgebra of monoid. Let's see what it is.
 
 We will use the same `Monoid` definition in this post.
 

@@ -2,6 +2,11 @@
 
 ## 2025
 
+### Sep.
+
+- [Terminal F-Coalgebra of monoid and cofree monoid](./2025/9/monoid_f_coalgebra_cofree.html) [haskell]
+
+
 ### Aug.
 
 - [Building WRF on Ubuntu 24.04 LTS](./2025/8/build_wrf.html) [wrf]
