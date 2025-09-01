@@ -1,6 +1,6 @@
 # T-Algebra and an adjunction
 
-As we saw in [Initial F-Algebra of monoid and free monoid, part 1](./monoid_f_algebra_free1.html), F-Algebra of a functor `f` is a pair of a carrier type `a` and an evaluation function `alg :: f a -> a`. If `f` is also a monad, we have `pure :: a -> f a` and `join :: f (f a) -> f a`. We can say they're compatible if these two conditions hold.
+We saw in [Initial F-Algebra of monoid and free monoid, part 1](./monoid_f_algebra_free1.html) that F-Algebra of a functor `f` was a pair of a carrier type `a` and an evaluation function `alg :: f a -> a`. If `f` is also a monad, we have `pure :: a -> f a` and `join :: f (f a) -> f a`. We can say they're compatible if these two conditions hold.
 
 - `alg . pure == id`
 - `alg . join == alg . fmap alg`
@@ -73,13 +73,13 @@ So a pair `(Maybe Int, join)` is a T-algebra for `Maybe`, and is called a free T
 
 Now, let's think about a category of T-algebras for `Maybe`, and call it $Hask^{Maybe}$. In this category, an object is a pair of a carrier type `a` and an algebra `alg :: Maybe a -> a`.
 
-There is a functor $F^{Maybe}$ from $Hask$ to $Hask^{Maybe}$. This functor maps an object in $Hask$ (type `a`) to a free T-algebra in $Hask^{Maybe}$ (`(Maybe a, join)`). It maps a morphism in $Hask$ (a function `a -> b`) to a morphism in $Hask^{Maybe}$ (`(Maybe a, join) -> (Maybe b, join)`). It can map a morphism this way because `join` is polymorphic. I mean, its type is `forall a. (Maybe (Maybe a) -> Maybe a)`, so it should work for both `a` and `b`.
+There is a functor $F^{Maybe}$ from $Hask$ to $Hask^{Maybe}$. This functor maps an object in $Hask$ (type `a`) to a free T-algebra in $Hask^{Maybe}$ (`(Maybe a, join)`). It maps a morphism in $Hask$ (a function `a -> b`) to a morphism in $Hask^{Maybe}$ (`(Maybe a, join) -> (Maybe b, join)`). It can map a morphism this way because `join` is polymorphic. I mean, its type is `forall x. (Maybe (Maybe x) -> Maybe x)`, so it should work for both `a` and `b`.
 
 Also, there is a forgetful functor $U^{Maybe}$ from $Hask^{Maybe}$ to $Hask$ which maps an object `(a, alg :: Maybe a -> a)` to `a`, and maps a morphism in $Hask^{Maybe}$ (`(a, alg) -> (b, alg')`) to a morphism in $Hask$ (`a -> b`).
 
 It turns out that $F^{Maybe}$ is a left adjoint and $U^{Maybe}$ is a right adjoint. Let's check what will be `unit` and `counit` of this adjunction.
 
-`unit` is a natural transformation $I \to U^{Maybe} \circ F^{Maybe}$ where `I` is an identify functor. When you pick an object in $Hask$ `a`, and apply $F^{Maybe}$, you'll get `(Maybe a, join)`, then applying $U^{Maybe}$ to get `Maybe a`. So we need a morphism `a -> Maybe a` for `unit`, and we can use `pure`.
+`unit` is a natural transformation $I \to U^{Maybe} \circ F^{Maybe}$ where $I$ is an identify functor. When you pick an object in $Hask$ `a`, and apply $F^{Maybe}$, you'll get `(Maybe a, join)`, then applying $U^{Maybe}$ to get `Maybe a`. So we need a morphism `a -> Maybe a` for `unit`, and we can use `pure`.
 
 `counit` is a natural transformation $F^{Maybe} \circ U^{Maybe} \to I$. When you pick an object in $Hask^{Maybe}$ `(a, alg)`, you'll get `a` by applying $U^{Maybe}$ to it, then applying $F^{Maybe}$ to get `(Maybe a, join)`. So we need a homomorphism `(Maybe a, join) -> (a, alg)` for `counit`, and we can use `alg` itself as this homomorphism. You can see it in this diagram.
 
