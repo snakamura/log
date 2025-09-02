@@ -106,7 +106,7 @@ withTraced =
    in m2a' mempty
 ```
 
-In this example, `gain` uses doesn't shift an index (`Sum 0`), `delay` shifts it `-d`.
+In this example, `gain` doesn't shift an index (`Sum 0`), and `delay` shifts it `-d` (`Sum (-d)`).
 
 With a helper function `trace`, you can write it without using `Traced` data constructor directly.
 
