@@ -1,8 +1,8 @@
 # Pairs and functions, part 3
 
-Now, we've looked at how we could compose `a -> (->) e b`, `(,) e a -> b`, `a -> (,) m b)` and `(->) m a -> b`. Let's compose `(,)` and `(->)` and see what happens.
+Now, we've looked at how we could compose `a -> (->) e b`, `(,) e a -> b`, `a -> (,) m b)` and `(->) m a -> b`. Now, let's compose functors `(,) e` and `(->) e` themselves and see what happens.
 
-When you compose `(->) t` and `(,) t` , you'll get `(->) t ((,) t a)` which is `t -> (t, a)`. When you compose `(,) t` and `(->) t`, you'll get `(,) t ((->) t a)` which is `(t, t -> a)`. Now, let's try compose `a -> (t -> (t, b))`, first. Obviously, it's a famous `State` monad.
+When you compose `(->) t` and `(,) t` , you'll get a new functor `F t a = (->) t ((,) t a)` which is `t -> (t, a)`. When you compose `(,) t` and `(->) t`, you'll get another new functor `G t a = (,) t ((->) t a)` which is `(t, t -> a)`. Now, let's try compose functions returning the first functor (`a -> (t -> (t, b))`), first. Obviously, it's a famous `State` monad.
 
 ```
 newtype State t a = State (t -> (t, a))
@@ -29,7 +29,7 @@ instance Monad (State t) where
      in t2tb t'
 ```
 
-`State` monad extends `Reader` monad by allowing you to update a state. While `Writer` monad allows you only to put a value of `Monoid` and concatenate them, `State` monad allows you to put an arbitrary value.
+`State` monad extends `Reader` monad by allowing you to update its state. While `Writer` monad allows you only to append a monoidal value, `State` monad allows you to put an arbitrary value.
 
 ```
 withState :: (String, Int)
@@ -78,7 +78,7 @@ withState' =
 
 When you uncurry `a -> (t -> (t, b))`, you'll get `(a, t) -> (t, b)`. Once you've flipped the first pair, you'll get `(t, a) -> (t, b)`. So composing `State` monad is the same thing as composing functions from a state-value pair to a state-value pair.
 
-Then, what happens when you compose `(t, t -> a) -> b`? It's called `Store` comonad.
+Then, what happens when you compose functions taking the second functor (`(t, t -> a) -> b`)? It's called `Store` comonad.
 
 ```
 newtype Store t a = Store (t, t -> a)
@@ -98,7 +98,7 @@ instance Comonad (Store t) where
   duplicate (Store (t, t2a)) = Store (t, \t' -> Store (t', t2a))
 ```
 
-`Store` comonad extends `Traced` comonad by allowing you to peek at values at any indexes. It still has a current index just like `Traced` comonad. As we saw in [the previous post](./pair_function2.html), you can shift a current index and make the following functions use that index as a current index with `Traced` comonad. With `Store` comonad, you can get a value at any index from the input map from `t` to `a`.
+`Store` comonad extends `Traced` comonad by allowing you to peek values at any indices. It still has a current index just like `Traced` comonad though. As we saw in [the previous post](./pair_function2.html), you can shift a current monoidal index and make the following functions use that index as a current index with `Traced` comonad. With `Store` comonad, you can let following functions use any specified index in addition to peeking at values at any indices.
 
 ```
 withStore :: ([Int], Int)
@@ -116,7 +116,7 @@ withStore =
    in (map t2a' [1 .. 5], t2a' t')
 ```
 
-In this example, `s1` makes a pair of values at `n - 1` and `n + 1`, and `s2` gets length of a string concatenating these strings in the pair.
+In this example, `s1` makes a pair of values at the previous and the next index of the current index, and `s2` concatenates those two strings at the current index and gets its length.
 
 We have some helper functions for `Store` comonad as well.
 
@@ -137,7 +137,7 @@ seeks :: (t -> t) -> Store t a -> Store t a
 seeks f (Store (t, t2a)) = Store (f t, t2a)
 ```
 
-`peek` allows you to get a value at any index. `peeks` is a convenient function to get a value at a specified offset from the current index. `seek` and `seeks` are like `local` for `Reader` and `Env`. They allow you to run your functions with the same map from `t` to `a` but with a modified current index. You can also think that it's like specifying an offset with `Traced` comonad. But, while `Traced` comonad allows you only to shift a current index by a specified offset, `seek` allows you to specify an arbitrary index.
+`peek` allows you to get a value at any index. `peeks` is a convenient function to get a value at a specified offset from the current index. `seek` and `seeks` are like `local` for `Reader` and `Env`. They allow you to run your functions with the same map from `t` to `a` but with a modified current index. You can also think that it's like specifying an offset with `Traced` comonad. But, while `Traced` comonad allows you only to specify an offset from the current index, `seek` allows you to specify an arbitrary index.
 
 ```
 withStore' :: ([Int], Int)
@@ -155,4 +155,4 @@ withStore' =
    in (map t2a' [1 .. 5], t2a' t')
 ```
 
-Even though their constructions are similar, `State` monad and `Store` comonad behave in completely different ways.
+Even though constructions of `State` monad and `Store` comonad have some similarities, `State` monad and `Store` comonad behave in completely different ways.
