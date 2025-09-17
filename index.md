@@ -4,6 +4,7 @@
 
 ### Sep.
 
+- [T-Algebra and an adjunction](./2025/9/t_algebra_adjunction.html) [haskell]
 - [Terminal F-Coalgebra of monoid and cofree monoid](./2025/9/monoid_f_coalgebra_cofree.html) [haskell]
 
 

@@ -1,6 +1,6 @@
 # T-Algebra and an adjunction
 
-We saw in [Initial F-Algebra of monoid and free monoid, part 1](./monoid_f_algebra_free1.html) that F-Algebra of a functor `f` was a pair of a carrier type `a` and an evaluation function `alg :: f a -> a`. If `f` is also a monad, we have `pure :: a -> f a` and `join :: f (f a) -> f a`. We can say they're compatible if these two conditions hold.
+We saw in [Initial F-Algebra of monoid and free monoid, part 1](../8/monoid_f_algebra_free1.html) that F-Algebra of a functor `f` was a pair of a carrier type `a` and an evaluation function `alg :: f a -> a`. If `f` is also a monad, we have `pure :: a -> f a` and `join :: f (f a) -> f a`. We can say they're compatible if these two conditions hold.
 
 - `alg . pure == id`
 - `alg . join == alg . fmap alg`
@@ -92,6 +92,6 @@ It turns out that $F^{Maybe}$ is a left adjoint and $U^{Maybe}$ is a right adjoi
                    alg
 </code></pre>
 
-This adjunction gives rise to `Maybe` monad itself. When you have `a`, applying $F^{Maybe}$ creates a pair `(Maybe a, join)`, and applying $U^{Maybe}$ drops the evaluator `join`, and you'll get `Maybe a`. So $U^{Maybe} \circ F^{Maybe} == Maybe$.
+This adjunction gives rise to `Maybe` monad itself. When you have `a`, applying $F^{Maybe}$ creates a pair `(Maybe a, join)`, and applying $U^{Maybe}$ drops the evaluator `join`, and you'll get `Maybe a`. So $U^{Maybe} \circ F^{Maybe} \equiv Maybe$.
 
 This applies to any monad `T`. $F^T$ is a left adjoint and $U^T$ is a right adjoint, and the composition $U^T \circ F^T$ gives rise to the monad `T` itself.
