@@ -81,7 +81,7 @@ It turns out that $F^{Maybe}$ is a left adjoint and $U^{Maybe}$ is a right adjoi
 
 `unit` is a natural transformation $I \to U^{Maybe} \circ F^{Maybe}$ where $I$ is an identify functor. When you pick an object in $Hask$ `a`, and apply $F^{Maybe}$, you'll get `(Maybe a, join)`, then applying $U^{Maybe}$ to get `Maybe a`. So we need a morphism `a -> Maybe a` for `unit`, and we can use `pure`.
 
-`counit` is a natural transformation $F^{Maybe} \circ U^{Maybe} \to I$. When you pick an object in $Hask^{Maybe}$ `(a, alg)`, you'll get `a` by applying $U^{Maybe}$ to it, then applying $F^{Maybe}$ to get `(Maybe a, join)`. So we need a homomorphism `(Maybe a, join) -> (a, alg)` for `counit`, and we can use `alg` itself as this homomorphism. You can see it in this diagram.
+`counit` is a natural transformation $F^{Maybe} \circ U^{Maybe} \to I$. When you pick an object in $Hask^{Maybe}$ `(a, alg)`, you'll get `a` by applying $U^{Maybe}$ to it, then applying $F^{Maybe}$ to get `(Maybe a, join)`. So we need a morphism `(Maybe a, join) -> (a, alg)` in $Hask^{Maybe}$ for `counit`. This morphism is a homomorphism in $Hask$ that preserves the algebra, and we can use `alg` itself as this homomorphism. You can see it in this diagram.
 
 <pre><code>                fmap alg
 <strong>Maybe (Maybe a)</strong>    →→→   <strong>Maybe a</strong>
