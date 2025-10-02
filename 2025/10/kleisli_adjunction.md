@@ -18,4 +18,4 @@ There is an adjunction $F \dashv U$. $F$ is a left adjoint and $U$ is a right ad
 
 $U \circ F$ produces the monad `T` itself.
 
-When you think about a category of adjunctions of `T` in `Hask`, this adjunction is the initial object in this category, and the free T-algebra adjunction we saw in the previous post is the terminal object.
+When you think about a category of adjunctions that result in the monad `T` on `Hask`, this adjunction is the initial object in this category. Also, the free T-algebra adjunction we saw in the previous post is the terminal object.
