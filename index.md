@@ -2,6 +2,10 @@
 
 ## 2025
 
+### Oct.
+
+- [Kleisli category and an adjunction](./2025/10/kleisli_adjunction.html) [haskell]
+
 ### Sep.
 
 - [T-Algebra and an adjunction](./2025/9/t_algebra_adjunction.html) [haskell]

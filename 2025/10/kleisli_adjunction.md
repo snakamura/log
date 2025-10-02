@@ -1,6 +1,6 @@
 # Kleisli category and an adjunction
 
-We saw an adjunction that gives rise to a monad `T` from a free T-algebra in [the previous post](./t_algebra_adjunction.html). Now let's take a look at another adjunction that gives rise to `T`.
+We saw an adjunction that gives rise to a monad `T` from a free T-algebra in [the previous post](../9/t_algebra_adjunction.html). Now let's take a look at another adjunction that gives rise to `T`.
 
 We'll think about a monad `T` in `Hask`. There is a category called Kleisli category $Hask_T$ in which an object is the same object in `Hask` but a morphism $f :: A_{Hask_T} \to B_{Hask_T}$ is equivalent to `pure . f :: A -> T B` in `Hask` where `f :: A -> B` is a morphism in `Hask`.
 
