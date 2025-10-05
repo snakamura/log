@@ -4,6 +4,7 @@
 
 ### Oct.
 
+- [Building RASP](./2025/10/build_rasp.html) [wrf][rasp]
 - [Kleisli category and an adjunction](./2025/10/kleisli_adjunction.html) [haskell]
 
 ### Sep.

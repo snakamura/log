@@ -1,6 +1,6 @@
 # Building RASP
 
-If you want to generate Blipmap Forecasts by yourself, using [RASP from scratch](https://github.com/sfalmo/rasp-from-scratch) is a good starting point. It allows you to a docker image to generate forecasts. But there are a few things you need to do to build this docker image. This post explains how you can build the simplest docker image from it on AWS EC2.
+If you want to generate Blipmap Forecasts by yourself, using [RASP from scratch](https://github.com/sfalmo/rasp-from-scratch) is a good starting point. It allows you to build a docker image to generate forecasts. But there are a few things you need to do to build this docker image. This post explains how you can build the simplest docker image from it on AWS EC2.
 
 ## Creating an EC2 instance
 
@@ -46,9 +46,9 @@ docker compose build wrf_build
 docker compose build wrf_prod
 ```
 
-It's better to build `wrf_prod` with more specific CPU architecture by specifying `WRF_MARCH_PROD` in `.env`, we'll use the default `native` now.
+It's better to build `wrf_prod` with more specific CPU architecture by specifying `WRF_MARCH_PROD` in `.env`, but we'll use the default `native` now.
 
-Before building `rasp` image, we need to prepare geographical data. It's configured to use some high resolution data by default, but we'll patch `namelist.wps` to use the simplest ones we can download from [WPS V4 Geographical Static Data Downloads Page](https://www2.mmm.ucar.edu/wrf/users/download/get_sources_wps_geog.html).
+Before building `rasp` image, we need to prepare geographical data. The repo is configured to use some high resolution data, but we'll use the simplest ones we can download from [WPS V4 Geographical Static Data Downloads Page](https://www2.mmm.ucar.edu/wrf/users/download/get_sources_wps_geog.html) by patching `namelist.wps`.
 
 ```
 diff --git a/rasp/TIR/namelist.wps b/rasp/TIR/namelist.wps
