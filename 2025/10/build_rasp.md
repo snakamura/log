@@ -41,12 +41,33 @@ You're now ready to build docker images. Clone the repo and build `base`, `wrf_b
 git clone https://github.com/sfalmo/rasp-from-scratch.git
 cd rasp-from-scratch
 cp .env.template .env
+```
+
+You can optionally update `.env` to use newer versions of WRF and WPS.
+
+```
+--- a/.env       2025-09-28 08:25:48.211582952 +0000
++++ b/.env        2025-10-06 12:56:02.602479862 +0000
+@@ -7,8 +7,8 @@
+ RASP_IMAGE=your.docker.repo/aufwinde/rasp/rasp
+
+ # Versions of WRF and WPS that shall be used. Those must be valid tags in the corresponding GitHub repo
+-WRF_VERSION=v4.5
+-WPS_VERSION=v4.5
++WRF_VERSION=v4.7.1
++WPS_VERSION=v4.6.0
+
+ # Choose the CPU architecture for the machine you are currently using for the build (native should be fine)
+ WRF_MARCH_BUILD=native
+```
+
+Once you've updated (or not updated) `.env`, you're ready to build these three images.
+
+```
 docker compose build base
 docker compose build wrf_build
 docker compose build wrf_prod
 ```
-
-It's better to build `wrf_prod` with more specific CPU architecture by specifying `WRF_MARCH_PROD` in `.env`, but we'll use the default `native` now.
 
 Before building `rasp` image, we need to prepare geographical data. The repo is configured to use some high resolution data, but we'll use the simplest ones we can download from [WPS V4 Geographical Static Data Downloads Page](https://www2.mmm.ucar.edu/wrf/users/download/get_sources_wps_geog.html) by patching `namelist.wps`.
 
