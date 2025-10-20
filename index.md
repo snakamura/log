@@ -4,6 +4,7 @@
 
 ### Oct.
 
+- [Homomorphic mapped types map `unknown` to `{}`](./2025/10/homomorphic_mapped_type.html) [typescript]
 - [Building RASP](./2025/10/build_rasp.html) [wrf][rasp]
 - [Kleisli category and an adjunction](./2025/10/kleisli_adjunction.html) [haskell]
 
