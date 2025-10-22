@@ -39,7 +39,21 @@ const tupleNames = tupleMap(objects, name);
 
 But this doesn't give me `['a', 'b', 'c']`. This is because a type of `name` function will be unified to `(v: { readonly name: 'a' | 'b' | 'c' }): 'a' | 'b' | 'c'` when you pass it to `tupleNames` even though we want to pass it as a polymorphic function.
 
-It's an option to pass a tuple of functions instead of passing a polymorphic function.
+Of course, you can do this if you just want to pick a property from an object.
+
+```
+function pickMap<K extends PropertyKey, T extends readonly Record<K, unknown>[]>(
+  t: T,
+  key: K
+): { readonly [key in keyof T]: T[key][K]} {
+  return t.map(o => o[key]) as any;
+}
+
+// pickedNames: readonly ['a', 'b', 'c']
+const pickedNames = pickMap(objects, 'name');
+```
+
+But this doesn't work with an arbitrary function. It's an option to pass a tuple of functions instead of passing a polymorphic function.
 
 ```
 function tupleMap2<
@@ -63,7 +77,17 @@ const tupleNames2 = tupleMap2(
 );
 ```
 
-As you can see, we need to create a const tuple of functions because we get a return type of `toupleMap2` from a return type of each of these functions. Can we generate this tuple from `name` function? It's possible if you get a return type of each function from the tuple of objects. You need to pass a key to this function which property of an object it'll pick a type from.
+As you can see, we need to create a const tuple of functions because we get a return type of `toupleMap2` from a return type of each of these functions. Or you need to specify their types explicitly.
+
+```
+// tupleNames3: readonly ['a', 'b', 'c']
+const tupleNames3 = tupleMap2<
+  typeof objects,
+  [(v: { name: 'a' }) => 'a', (v: { name: 'b' }) => 'b', (v: { name: 'c' }) => 'c']
+>(objects, [name, name, name]);
+```
+
+Can we generate this tuple type from `name` function? It's possible if you get a return type of each function from the tuple of objects. You need to pass a key to this function which property of an object it'll pick a type from.
 
 ```
 function generateFunctions<K extends PropertyKey>(): <
@@ -80,13 +104,15 @@ function generateFunctions<K extends PropertyKey>(): <
 `generateFunctions<'name'>()(objects, name)` returns `readonly [(o: { readonly name: 'a' }) => 'a', (o: { readonly name: 'b' }) => 'b', (o: { readonly name: 'c' }) => 'c']`. This means that you can pass it to `tupleMap2`.
 
 ```
-// tupleNames3: readonly ['a', 'b', 'c']
-const tupleNames3 = tupleMap2(
+// tupleNames4: readonly ['a', 'b', 'c']
+const tupleNames4 = tupleMap2(
   objects,
   generateFunctions<'name'>()(objects, name)
 );
 ```
 
-We did it, but these implementations are full of casts to `any` everywhere, and they're not that type-safe. The main issue is that TypeScript doesn't support rank-2 types. We need to specify each function types separately, and we need to cast a polymorphic function to one of these function types manually.
+But this is almost the same as `pickMap`. Since `generateFunctions` works only to get a type of properties, a combination of `tupleMap2` and `generateFunctions` works only to pick properties.
+
+Also, these implementations are full of casts to `any` everywhere, and they're not that type-safe. The main issue is that TypeScript doesn't support rank-2 types. We need to specify each function types separately, and we need to cast a polymorphic function to one of these function types manually.
 
 What will it look like when we do the same thing in a language supporting rank-2 types such as Haskell?
