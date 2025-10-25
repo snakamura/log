@@ -22,7 +22,9 @@ type FunctorFromHaskToHask2Type = Type -> FunctorType
 
 type FunctorFromHaskToHask2 :: FunctorFromHaskToHask2Type -> Constraint
 class FunctorFromHaskToHask2 t where
-  mapFromHaskToHask2 :: (Functor (t a), Functor (t b)) => (a -> b) -> (t a ~> t b)
+  mapFromHaskToHask2 ::
+    (Functor (t a), Functor (t b)) =>
+    (a -> b) -> (t a ~> t b)
 ```
 
 This functor maps an object in $Hask$ (`Type`) to an object in $Hask^{Hask}$ (`FunctorType`), and maps a morphism in $Hask$ (`Type -> Type`) to a morphism in $Hask^{Hask}$ (`FunctorType ~> FunctorType`).
@@ -35,7 +37,9 @@ type FunctorFromHask2ToHaskType = FunctorType -> Type
 
 type FunctorFromHask2ToHask :: FunctorFromHask2ToHaskType -> Constraint
 class FunctorFromHask2ToHask t where
-  mapFromHask2ToHask :: (Functor f, Functor g) => (f ~> g) -> (t f -> t g)
+  mapFromHask2ToHask ::
+    (Functor f, Functor g) =>
+    (f ~> g) -> (t f -> t g)
 ```
 
 This functor maps an object in $Hask^{Hask}$ (`FunctorType`) to an object in $Hask$ (`Type`), and maps a morphism in $Hask^{Hask}$ (`FunctorType ~> FunctorType`) to a morphism in $Hask$ (`Type -> Type`).
@@ -92,7 +96,12 @@ instance FunctorFromHask2ToHask AnyF where
 Now, we've had necessary functors; `Const` from $Hask$ to $Hask^{Hask}$, and `SomeF` and `AnyF` from $Hask^{Hask}$ to $Hask$. We'll define two type classes expressing adjunctions. The first one has $Hask^{Hask}$ to $Hask$ on the left, and $Hask$ to $Hask^{Hask}$ on the right.
 
 ```
-class (FunctorFromHask2ToHask f, FunctorFromHaskToHask2 g) => LeftAdjunction f g | f -> g, g -> f where
+class
+  (FunctorFromHask2ToHask f, FunctorFromHaskToHask2 g) =>
+  LeftAdjunction f g
+    | f -> g,
+      g -> f
+  where
   leftLeftAdjunct :: (Functor h) => (f h -> a) -> (h ~> g a)
   rightLeftAdjunct :: (Functor h) => (h ~> g a) -> (f h -> a)
 ```
@@ -100,7 +109,12 @@ class (FunctorFromHask2ToHask f, FunctorFromHaskToHask2 g) => LeftAdjunction f g
 The second one has the opposite.
 
 ```
-class (FunctorFromHaskToHask2 f, FunctorFromHask2ToHask g) => RightAdjunction f g | f -> g, g -> f where
+class
+  (FunctorFromHaskToHask2 f, FunctorFromHask2ToHask g) =>
+  RightAdjunction f g
+    | f -> g,
+      g -> f
+  where
   leftRightAdjunct :: (Functor h) => (f a ~> h) -> (a -> g h)
   rightRightAdjunct :: (Functor h) => (a -> g h) -> (f a ~> h)
 ```
