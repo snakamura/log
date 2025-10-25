@@ -126,4 +126,4 @@ type RecursiveReadonly<T> = unknown extends T
 
 As I wrote above, the second condition (`0 extends (T & 0)`) holds for `unknown` as well. So we can omit the first condition (`unknown extends T`) here, but you can still use it to distinguish `unknown` and `any`.
 
-Of course, you can add some types such as `Function` and `RegExp` to the conditions if you don't want to make function properties and regexp properties, for example.
+Of course, you can add some types such as `Function` and `RegExp` to the conditions if you don't want to make properties of functions and regexps readonly, for example.
