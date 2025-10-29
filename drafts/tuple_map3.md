@@ -75,7 +75,11 @@ And use `MapTypes ResultType objectTypes` instead of `ResultTypes objectTypes`. 
 The idea is that we define partially applied versions of a type family manually and have another type family that defines how to apply a type parameter to it.
 
 ```
-type a ~> b = (a -> b) -> Type
+type TyFun :: k -> l -> Type
+data TyFun a b
+
+type (~>) :: k -> l -> Type
+type a ~> b = TyFun a b -> Type
 
 type Apply :: (a ~> b) -> a -> b
 type family Apply f x
