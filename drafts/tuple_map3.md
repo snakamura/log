@@ -40,6 +40,8 @@ type family All c ts where
   All c (t ': ts) = (c t, All c ts)
 ```
 
+Note that you can use [`All` in generics-sop](https://hackage.haskell.org/package/generics-sop-0.5.1.4/docs/Generics-SOP.html#t:All) instead of this `All`.
+
 Using `MapItem` and these utilities, you can now implement `map`.
 
 ```
@@ -101,6 +103,8 @@ type instance Apply ResultTypeSym0 x = ResultType x
 ```
 
 This means that you'll get `ResultType x` when you apply `x` to `ResultTypeSym0`.
+
+You can use [`singletons`](https://hackage.haskell.org/package/singletons) instead of defining them by yourself. It has `TyFun`, `(~>)`, `Apply` and `@@`, as well as a Template Haskell function to generate `ResultTypeSym0` from `ResultType`.
 
 Now, let's define `MapTypes` using them.
 
