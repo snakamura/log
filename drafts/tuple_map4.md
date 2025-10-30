@@ -246,6 +246,8 @@ map (AreObjectsCons _ areObjects) (HCons f fs) (HCons object objects) =
     (map areObjects fs objects)
 ```
 
+Note that you can define `Arrows` using [`ZipWith` in `singletons`](https://hackage.haskell.org/package/singletons-base-3.5/docs/Data-List-Singletons.html#t:ZipWith) as `type Arrows as rs = ZipWith (TyCon2 (->)) as rs`.
+
 You can build a list of functions from a list of `Object`s and a polymorphic function using a typeclass.
 
 ```
