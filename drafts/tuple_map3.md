@@ -91,8 +91,6 @@ type f @@ x = Apply f x
 infixr @@
 ```
 
-`a ~> b` is a type that wraps a type function `a -> b`. `Apply` type family defines how you can apply it to a type. `@@` is a just a synonym of `Apply`.
-
 For example, we can define `ResultTypeSym0` like this.
 
 ```
@@ -103,6 +101,10 @@ type instance Apply ResultTypeSym0 x = ResultType x
 ```
 
 This means that you'll get `ResultType x` when you apply `x` to `ResultTypeSym0`.
+
+`TyFun` is a promoted kind that marks a symbol we're going to use as a type function from `a` to `b`. Unfortunately, we cannot make `Apply` take `TyFun` directly because there is no type that belongs to `TyFun a b` kind.
+
+When you define a type using `data`, its kind must be `... -> Type`. So we use a type whose kind is `TyFun a b -> Type` as a symbol for a type function. You can think `TyFun a b` is a kind of a phantom kind.
 
 You can use [`singletons`](https://hackage.haskell.org/package/singletons) instead of defining them by yourself. It has `TyFun`, `(~>)`, `Apply` and `@@`, as well as a Template Haskell function to generate `ResultTypeSym0` from `ResultType`.
 
