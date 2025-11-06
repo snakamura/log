@@ -1,6 +1,6 @@
 # Pairs and functions, part 1
 
-As we saw in [Products and functions](../2024/2/products_functions.html), there is an adjunction between product and function. You can define `leftAdjunct` and `rightAdjunct` like these.
+As we saw in [Products and functions](../../2024/2/products_functions.html), product and function are adjoint. You can define `leftAdjunct` and `rightAdjunct` like these.
 
 ```
 leftAdjunct :: ((,) e a -> b) -> (a -> (->) e b)
@@ -12,7 +12,7 @@ rightAdjunct f (e, a) = f a e
 
 `leftAdjunct` is isomorphic to `curry`, and `rightAdjunct` is isomorphic to `uncurry`. This means that `(,) e a -> b` (`(e, a) -> b`) and `a -> (->) e b` (`a -> e -> b`) are isomorphic.
 
-When you think that a function `e -> a` is a map from `e` to `a`, you can think them this way. Passing `e` and `a` to a function to get `b` is identical to passing `a` to a function to get a map from `e` to `b`. As we saw in [A parameter type is existential, a return type is universal, part 1](../2025/6/existential_universal1.html), `e` is existential in the former because `e` appears as a parameter, and is universal in the latter because `e` appears as a return type.
+When you think that a function `e -> a` is a map from `e` to `a`, you can think them this way. Passing `e` and `a` to a function to get `b` is identical to passing `a` to a function to get a map from `e` to `b`. As we saw in [A parameter type is existential, a return type is universal, part 1](../6/existential_universal1.html), `e` is existential in the former because `e` appears as a parameter, and is universal in the latter because `e` appears as a return type.
 
 Now, let's see how we can compose functions of type `a -> (->) e b`. For example, we want to compose `a -> (->) e b` and `b -> (->) e c` to get `a -> (->) e c`. As you've noticed, it's `Reader` monad.
 

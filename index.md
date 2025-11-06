@@ -2,6 +2,11 @@
 
 ## 2025
 
+### Nov.
+
+- [Pairs and functions, part 1](./2025/11/pair_function1.html) [haskell]
+
+
 ### Oct.
 
 - [Making all properties readonly recursively](./2025/10/recursive_readonly.html) [typescript]
