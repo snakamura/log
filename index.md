@@ -4,8 +4,8 @@
 
 ### Nov.
 
+- [Pairs and functions, part 2](./2025/11/pair_function2.html) [haskell]
 - [Pairs and functions, part 1](./2025/11/pair_function1.html) [haskell]
-
 
 ### Oct.
 

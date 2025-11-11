@@ -131,4 +131,4 @@ withTraced' =
    in m2a' mempty
 ```
 
-While `Writer` concatenates an output `m`, `Traced` concatenates an index `m` of an input map `m -> a`, and they behave completely different ways.
+While `Writer` concatenates an output `m`, `Traced` concatenates an index `m` of an input map `m -> a`, and they behave in completely different ways.
