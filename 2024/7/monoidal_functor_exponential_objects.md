@@ -1,4 +1,4 @@
-# Monoidal functor and `Applicative`
+# Monoidal functor preserving exponential objects
 
 In the category of Haskell types `Hask`, objects are types and morphisms are functions. For instance `Int` and `Bool` are objects and functions from `Int` to `Bool` are all morphisms. When you look into the inside of `Int`, you can say that `Int` is a set whose elements are values `1`, `2`, `3` and so on.
 
@@ -19,36 +19,3 @@ A category with this structure is called a monoidal closed category. It's called
 In [the previous post](../6/monoidal_functor.html), we saw that a monoidal functor preserving a monoidal structure of $(Hask, (,), ())$ is equivalent to `Applicative`. This means that this monoidal functor preserves exponential objects.
 
 What does it mean when you say a functor preserves exponential objects? Imagine you have objects `A`, `B` and their exponential object `A -> B`. When you apply a functor `f` to `A -> B`, you'll get `f (A -> B)`. On the other hand, when you first apply `f` to `A` and `B` you'll get `f A` and `f B`, then get their exponential object `f A -> f B`. If these two are isomorphic, this functor is said to preserve exponential objects.
-
-As we saw in the previous post, a monoidal functor preserves a monoidal structure, which means you have `(f a, f b) -> f (a, b)`.
-
-Imagine that we have `A`, `B` and `C` in the source category. We know that `(A, B) -> C` is isomorphic to `A -> (B -> C)` because the source category is a closed monoidal category.
-
-Since the functor preserves the hom-set isomorphism between `(A, B) -> C` and `A -> (B -> C)`, we can say that `f (A, B) -> f C` is isomorphic to `f A -> f (B -> C)`. Also this functor is a monoidal functor, we have `(f a, f b) -> f (a, b)`. When we pre-compose it to `f (A, B) -> f C`, we'll get `(f A, f B) -> f C`. We can say we have `(f A, f B) -> f C` to `f A -> f (B -> C)`.
-
-In the target category, which is the same category as the source category in this case, we know that `(f A, f B) -> f C` is isomorphic to `f A -> (f B -> f C)` because the target category is also a closed monoidal category.
-
-By putting them together, we have `f A -> (f B -> f C)` to `f A -> f (B -> C)`. That means, we have `f (B -> C)` to `f B -> f C`.
-
-As you might've already noticed, this type (`f (a -> b) -> f a -> f b`) is the type of `(<*>)` in `Applicative`, and `Applicative` is a functor preserving exponential objects.
-
-This derivation looks a bit confusing in Haskell syntax because we use `->` for both morphisms and exponential objects. It might be easier to understand it by writing like this.
-
-1. $\boldsymbol{C}(A \otimes B, C) \cong \boldsymbol{C}(A, [B, C])$
-    - $\boldsymbol{C}$ is a source category
-    - Hom-set from $A \otimes B$ to $C$ in $\boldsymbol{C}$ is isomorphic to hom-set from $A$ to $[B, C]$ in $\boldsymbol{C}$ because $\boldsymbol{C}$ is a monoidal closed category
-    - $\otimes$ is a tensor product in $\boldsymbol{C}$
-    - $[B, C]$ is an exponential object
-2. $\boldsymbol{D}(F(A \otimes B), F(C)) \cong \boldsymbol{D}(F(A), F([B, C]))$
-    - $\boldsymbol{D}$ is a target category
-    - $F$ is a functor from $\boldsymbol{C}$ to $\boldsymbol{D}$
-    - Functor $F$ preserves hom-set isomorphism
-3. $\boldsymbol{D}(F(A) \otimes F(B), F(C)) \to \boldsymbol{D}(F(A), F([B, C]))$
-    - Functor $F$ preserves monoidal products
-    - $\otimes$ is a tensor product in $\boldsymbol{D}$
-4. $\boldsymbol{D}(F(A) \otimes F(B), F(C)) \cong \boldsymbol{D}(F(A), [F(B), F(C)])$
-    - Hom-set from $F(A) \otimes F(B)$ to $F(C)$ in $\boldsymbol{D}$ is isomorphic to hom-set from $F(A)$ to $[F(B), F(C)]$ in $\boldsymbol{D}$ because $\boldsymbol{D}$ is a monoidal closed category
-5. $\boldsymbol{D}(F(A), [F(B), F(C)]) \to \boldsymbol{D}(F(A), F([B, C]))$
-    - From 3 and 4
-6. $F([B, C]) \to [F(B), F(C)]$
-    - From 5

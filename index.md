@@ -86,7 +86,8 @@
 
 ### Jul.
 
-- [Monoidal functor and `Applicative`](./2024/7/monoidal_functor_applicative.html) [haskell]
+- [# Monoidal functor preserving exponential objects
+](./2024/7/monoidal_functor_exponential_objects.html) [haskell]
 
 ### Jun.
 
