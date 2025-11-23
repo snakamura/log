@@ -2,7 +2,7 @@
 
 Now, we've looked at how we could compose `a -> (->) e b`, `(,) e a -> b`, `a -> (,) m b)` and `(->) m a -> b`. Now, let's compose functors `(,) e` and `(->) e` themselves and see what happens.
 
-When you compose `(->) t` and `(,) t` , you'll get a new functor `F t a = (->) t ((,) t a)` which is `t -> (t, a)`. When you compose `(,) t` and `(->) t`, you'll get another new functor `G t a = (,) t ((->) t a)` which is `(t, t -> a)`. Now, let's try compose functions returning the first functor (`a -> (t -> (t, b))`), first. Obviously, it's a famous `State` monad.
+When you compose `(->) t` and `(,) t` , you'll get a new functor `F t a = (->) t ((,) t a)` which is `t -> (t, a)`. When you compose `(,) t` and `(->) t`, you'll get another new functor `G t a = (,) t ((->) t a)` which is `(t, t -> a)`. Now, let's try composing functions returning the first functor (`a -> (t -> (t, b))`), first. Obviously, it's a famous `State` monad.
 
 ```
 newtype State t a = State (t -> (t, a))
