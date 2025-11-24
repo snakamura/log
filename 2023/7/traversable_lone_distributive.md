@@ -65,7 +65,7 @@ instance Lone ((,) b) where
 
 It turns out that all `Lone` functors are isomorphic to `((,) b)` as it has one element that will be mapped over with additional information `b`. Note that `Identity` is isomorphic to `((,) ())`.
 
-So now, we have two functor `f` and `g`, and if `f` is `Lone`, you can convert `f (g a)` to `g (f a)` with any functor `g`.
+So now, we have two functors `f` and `g`, and if `f` is `Lone`, you can convert `f (g a)` to `g (f a)` with any functor `g`.
 
 Now, let's reverse the direction. What constraint do we need if we apply it to `g` instead of `f`? We can define `Distributive` type class.
 
