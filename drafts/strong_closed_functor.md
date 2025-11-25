@@ -77,3 +77,10 @@ instance (Functor f, Distributive f) => ClosedFunctor f where
   closed :: (a -> f b) -> f (a -> b)
   closed a2fb = distribute a2fb
 ```
+
+Strictly speaking, `a -> f b` and `f (a -> b)` must be isomorphic for `f` to be a closed functor. It means that there needs to be `unclosed :: f (a -> b) -> (a -> f b)`, where both `unclosed . closed == id` and `closed . unclosed == id` hold. But `unclosed` can be defined for any functor, and a pair of `closed` above and this `unclosed` satisfy these two conditions.
+
+```
+unclosed :: (Functor f) => f (a -> b) -> (a -> f b)
+unclosed fa2b = \a -> fmap (\a2b -> a2b a) fa2b
+```
