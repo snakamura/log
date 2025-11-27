@@ -26,6 +26,8 @@ instance (Functor f) => ProductStrongFunctor f where
 
 It means that any functor in Haskell is a strong functor.
 
+To be more precise, this is left strength because it lifts `a` on the left. There is also right strength, but you can get it by swapping elements in a tuple in Haskell (This isn't always true when you think about a asymmetric tensor in another category). When we talk about a strong functor, it usually means a left strong functor.
+
 Let's think a bit more about a type of `strength`. Its type is `(a, f b) -> f (a, b)` which is equivalent to `((,) a) (f b) -> f (((,) a) b)`. When you replace `(,) a` with `g`, it'll be `g (f b) -> f (g b)`. When we saw in [`Traversable`, `Lone` and `Distributive`](../../2023/7/traversable_lone_distributive.html), this holds when `g` is `Lone`, or `f` is `Distributive`. Since `(,) a` is `Lone`, we can define `strength` for any functor `f`.
 
 We've defined a strong functor in terms of a pair functor `(,) a`, but you can define it in terms of any tensor products in a monoidal category. For example, you can define it with `Either a`.
