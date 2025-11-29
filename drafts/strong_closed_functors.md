@@ -1,4 +1,4 @@
-# Strong and closed functor
+# Strong and closed functors
 
 In Haskell, we call it a strong functor when a functor has this function `strength`.
 
