@@ -57,7 +57,7 @@ instance (Functor f, Applicative f) => CoproductStrongFunctor f where
   strength (Right fb) = fmap Right fb
 ```
 
-The type of `strength` was `g (f b) -> f (g b)` where `g` was `(,) a`. Then what will it look like when we use `(->) a` as `g` this time? We'll get `(-> a) (f b) -> f (((->) a) b)` which is `(a -> f b) -> f (a -> b)`. A functor that has this function is called a closed functor.
+The type of `strength` was `g (f b) -> f (g b)` where `g` was `(,) a`. Then what will it look like when we use `(->) a` as `g` this time? We'll get `(-> a) (f b) -> f (((->) a) b)` which is `(a -> f b) -> f (a -> b)`. Let's call a functor having this function a closed functor.
 
 ```
 class (Functor f) => ClosedFunctor f where
@@ -88,3 +88,5 @@ Strictly speaking, `a -> f b` and `f (a -> b)` must be isomorphic for `f` to be 
 unclosed :: (Functor f) => f (a -> b) -> (a -> f b)
 unclosed fa2b = \a -> fmap (\a2b -> a2b a) fa2b
 ```
+
+Note that this closed functor is different from lax closed functor that has `f (a -> b) -> (f a -> f b)`.
