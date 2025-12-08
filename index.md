@@ -2,6 +2,10 @@
 
 ## 2025
 
+### Dec.
+
+- [Mapping a function over a tuple, part 1](./2025/12/tuple_map1.html) [typescript]
+
 ### Nov.
 
 - [Pairs and functions, part 3](./2025/11/pair_function3.html) [haskell]
