@@ -4,6 +4,7 @@
 
 ### Dec.
 
+- [Mapping a function over a tuple, part 2](./2025/12/tuple_map2.html) [typescript]
 - [Mapping a function over a tuple, part 1](./2025/12/tuple_map1.html) [typescript]
 
 ### Nov.

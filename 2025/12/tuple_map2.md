@@ -1,6 +1,6 @@
 # Mapping a function over a tuple, part 2
 
-In [the previous post](./tuplemap1.html), we saw how we can or cannot map a function over a tuple in TypeScript. Let's do the same in Haskell in this post.
+In [the previous post](./tuple_map1.html), we saw how we can or cannot map a function over a tuple in TypeScript. Let's do the same in Haskell in this post.
 
 The first thing we need to do is defining a literal type since there is no literal type in Haskell.
 
@@ -82,7 +82,7 @@ exampleObjects =
     `HCons` HNil
 ```
 
-Now, what we want to do have is something like this.
+Now, what we want to have is something like this.
 
 ```
 map ::
@@ -103,7 +103,7 @@ class Map objectTypes where
     HList (ResultTypes objectTypes)
 ```
 
-Then, we'll define two instances; one for an empty list and the other for non-empty list.
+Then, we'll define two instances; one for an empty list and the other for non-empty lists.
 
 ```
 instance Map '[] where
