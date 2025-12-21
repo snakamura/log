@@ -54,7 +54,7 @@ map (AreObjectsCons IsObject areObjects) f (HCons object objects) =
     (map areObjects f objects)
 ```
 
-This means that you can map a function over `objectTypes` as long as there is a value of `AreObjects objectTypes`. You can call it like this with `exampleObjects`.
+This means that `map` can map a function over `objectTypes` as long as there is a value of `AreObjects objectTypes`. Let's call it with `exampleObjects`.
 
 ```
 mappedNames :: HList [Literal "a", Literal "b", Literal "c"]
@@ -226,7 +226,7 @@ mappedNames =
 
 This works, but it's not ideal because we need to pass a function that can handle both `Object` and `Object'` even when you know that a list only contains `Object` or `Object'`.
 
-You can avoid this by passing a list of functions instead of passing a polymorphic function to `map` just like we did with TypeScript in [the first post of this series](./tuple_map1.html).
+It's an idea to avoid this by passing a list of functions instead of passing a polymorphic function to `map` just like we did with TypeScript in [the first post of this series](./tuple_map1.html).
 
 ```
 type Arrows :: [Type] -> [Type] -> [Type]
@@ -246,9 +246,9 @@ map (AreObjectsCons _ areObjects) (HCons f fs) (HCons object objects) =
     (map areObjects fs objects)
 ```
 
-Note that you can define `Arrows` using [`ZipWith` in `singletons`](https://hackage.haskell.org/package/singletons-base-3.5/docs/Data-List-Singletons.html#t:ZipWith) as `type Arrows as rs = ZipWith (TyCon2 (->)) as rs`.
+Note that `Arrows` can be defined with [`ZipWith` in `singletons`](https://hackage.haskell.org/package/singletons-base-3.5/docs/Data-List-Singletons.html#t:ZipWith) as `type Arrows as rs = ZipWith (TyCon2 (->)) as rs`.
 
-You can build a list of functions from a list of `Object`s and a polymorphic function using a typeclass.
+Once you've built a list of functions from a list of `Object`s and a polymorphic function using a typeclass,
 
 ```
 class BuildObjectArrows objectTypes nameTypes where
@@ -268,7 +268,7 @@ instance
     HCons f (buildObjectArrows areObjects f)
 ```
 
-Then, you can call `map` with it.
+you can call `map` with it.
 
 ```
 mappedNames :: HList [Literal "a", Literal "b", Literal "c"]
@@ -322,4 +322,4 @@ mappedTitles =
 
 You can of course build type witnesses using typeclasses here, too, but you still need to write a typeclass and its instances for each type you want to apply `map` to.
 
-This is almost identical to what we did with TypeScript in [the first post](./tuple_map1.html). You need to write a lot more than in TypeScript because we casted to `any` in lot of places in TypeScript while this one is type-safe.
+This is almost identical to what we did with TypeScript in [the first post](./tuple_map1.html). You need to write a lot more than in TypeScript because we casted to `any` at lot of places in TypeScript while this one is type-safe.
