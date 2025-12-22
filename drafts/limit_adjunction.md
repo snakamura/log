@@ -56,7 +56,7 @@ class Adjunction f g | f -> g, g -> f where
   rightAdjunct :: forall (v :: Type) (d :: J -> Type). (v -> g d) -> (f v ~> d)
 ```
 
-Since we only have two objects $J1$ and $J2$ in category $J$ (two types `J1` and `J2` of kind `J`), a polymorphic function `forall (j :: J) :: f j -> d j` is equivalent to a pair of functions `(f J1 -> d J1, f J2 -> d J2)`. Expanding `j` this way makes it look like this.
+Since we only have two objects $J1$ and $J2$ in category $J$ (two types `J1` and `J2` of kind `J`), a polymorphic function `f v ~> d` (`forall (j :: J) :: f v j -> d j`) is equivalent to a pair of functions `(f v J1 -> d J1, f v J2 -> d J2)`. Expanding `j` this way makes it look like this.
 
 ```
 type Adjunction' :: (Type -> (J -> Type)) -> ((J -> Type) -> Type) -> Constraint
