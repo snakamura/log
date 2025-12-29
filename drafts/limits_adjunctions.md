@@ -1,4 +1,4 @@
-# Limit and adjunction
+# Limits and adjunctions
 
 Imagine that you have a discrete category $J$, and category $C$. There are two objects `J1` and `J2` without morphisms except their identities in $J$, and you have a functor $F$ that maps `J1` and `J2` to `A` and `B` in $C$ respectively. The limit of $F$ is product $A \otimes B$.
 
