@@ -6,9 +6,9 @@ Now we pick an object `V` in $C$ and have a functor $\Delta(V)$ from $J$ to $C$.
 
 Let's call a natural transformation from `V` to `A` `p'`, and `V` to `B` `q'`. When $F$ has a limit `Lim(F)`, there should be natural transformations from `Lim(F)` to `A` named `p` and `Lim(F)` to `B` named `q`. `p'` should be factorized to `p . h` for some `h`, and `q'` should be factorized to `q . h`.
 
-This means that $Hom_{C^J}(\Delta(V), F)$ is isomorphic to `h` which is a hom-set from `V` to `Lim(F)` ($Hom_C(V, Lim(F))$).
+This means that $Hom_{C^J}(\Delta(V), F)$ is isomorphic to `h` which is a hom-set from `V` to `Lim(F)` ($Hom_C(V, Lim(F))$). The intuition is that you can find a unique cone $Hom_{C^J}(\Delta(V), F)$ when you have `h` since `h` is a unique morphism from `V` to `Lim(F)`.
 
-When you can write this isomorphism this way,
+When you write this isomorphism this way,
 
 $Hom_{C^J}(\Delta(V), F) \cong Hom_C(V, Lim(F))$
 
@@ -17,7 +17,7 @@ $Hom_{C^J}(\Delta(V), F) \cong Hom_C(V, Lim(F))$
 - $F$ is a functor from $C^J$ to $C$
 - $Lim$ is a functor from $C^J$ to $C$
 
-and squint a bit, you'll find that it's is in the form expressing adjunction.
+and squint a bit, you'll find that it's in the form expressing adjunction.
 
 $Hom_N(P X, Y) \cong Hom_M(X, Q Y)$
 
