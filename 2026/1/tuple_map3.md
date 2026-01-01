@@ -1,6 +1,6 @@
 # Mapping a function over a tuple, part 3
 
-We defined `map` in `Map` typeclass in [the previous post](./tuple_map2.html), and found that we needed to define entire `map` for each type. It'd be nice if we could reuse the implementation for different types. What can we do?
+We defined `map` in `Map` typeclass in [the previous post](../../2025/12/tuple_map2.html), and found that we needed to define entire `map` for each type. It'd be nice if we could reuse the implementation for different types. What can we do?
 
 First, let's define a typeclass `MapItem` that maps each object. We'll implement an instance of this typeclass for each type instead of `Map`.
 

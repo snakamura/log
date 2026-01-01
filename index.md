@@ -1,5 +1,11 @@
 # /var/log/snak.log
 
+## 2026
+
+### Jan.
+
+- [Mapping a function over a tuple, part 3](./2026/1/tuple_map3.html) [haskell]
+
 ## 2025
 
 ### Dec.
