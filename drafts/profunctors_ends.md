@@ -62,7 +62,9 @@ hom3 = Hom go
     go (_ : xs) = go xs
 ```
 
-Just like we can define cones for a functor, we can define wedges for a profunctor. To create a wedge, you first need to pick an object `x` in the target category of `f` and `g`. Then, we'll have morphisms from this object to the profunctor itself. In these Haskell examples, both source category and target category are $Hask$. So let's pick `()`, for example, as the object. Then we'll have morphisms from this object to a hom-set $Hom_{Hask}(f c, g c)$. We call it $\tau(x)$. Let's pick two candidates of such morphisms as examples.
+Just like we can define cones for a functor, we can define wedges for a profunctor. To create a wedge, you first need to pick an object `x` in the target category of `f` and `g`. Then, we'll have morphisms from this object to the profunctor itself. We call it $\tau(x)$. You can think wedges as dinatural transformations from a constant functor that maps everything to `x` to the profunctor.
+
+In these Haskell examples, both source category and target category are $Hask$. So let's pick `()`, for example, as the object. Then we'll have morphisms from this object to a hom-set $Hom_{Hask}(f c, g c)$. Let's pick two candidates of such morphisms as examples.
 
 ```
 tau1Int :: () -> List2Maybe Int Int
@@ -72,7 +74,9 @@ tau2Int :: () -> List2Maybe Int Int
 tau2Int () = hom2
 ```
 
-But to be a wedge, it has to satisfy the wedge condition. The wedge condition can be written as `lmap h (tau x) == rmap h (tau x)` for any function `h :: Int -> Int` in this example. Since we picked `()` as `x`,  It's `lmap h (tau ()) == rmap h (tau ())`. Let's check if `tau1Int` and `tau2Int` satisfy this condition. We'll use `(+ 100)` as `h`.
+But to be a wedge, it has to satisfy the wedge condition. The wedge condition is a condition for the dinatural transformations from the constant profunctor to the profunctor to be dinatural.
+
+In this example, the wedge condition can be written as `lmap h . tau == rmap h . tau` for any function `h :: Int -> Int`. Since we picked `()` as `x`,  It's `lmap h (tau ()) == rmap h (tau ())`. Let's check if `tau1Int` and `tau2Int` satisfy this condition. We'll use `(+ 100)` as `h`.
 
 ```
 l1, r1 :: Maybe Int
