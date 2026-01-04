@@ -226,7 +226,7 @@ mappedNames =
 
 This works, but it's not ideal because we need to pass a function that can handle both `Object` and `Object'` even when you know that a list only contains `Object` or `Object'`.
 
-It's an idea to avoid this by passing a list of functions instead of passing a polymorphic function to `map` just like we did with TypeScript in [the first post of this series](./tuple_map1.html).
+It's an idea to avoid this by passing a list of functions instead of passing a polymorphic function to `map` just like we did with TypeScript in [the first post of this series](../../2025/12/tuple_map1.html).
 
 ```
 type Arrows :: [Type] -> [Type] -> [Type]
@@ -322,4 +322,4 @@ mappedTitles =
 
 You can of course build type witnesses using typeclasses here, too, but you still need to write a typeclass and its instances for each type you want to apply `map` to.
 
-This is almost identical to what we did with TypeScript in [the first post](./tuple_map1.html). You need to write a lot more than in TypeScript because we casted to `any` at lot of places in TypeScript while this one is type-safe.
+This is almost identical to what we did with TypeScript in [the first post](../../2025/12/tuple_map1.html). You need to write a lot more than in TypeScript because we casted to `any` at lot of places in TypeScript while this one is type-safe.

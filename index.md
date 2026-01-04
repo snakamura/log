@@ -4,6 +4,7 @@
 
 ### Jan.
 
+- [Mapping a function over a tuple, part 4](./2026/1/tuple_map4.html) [haskell]
 - [Mapping a function over a tuple, part 3](./2026/1/tuple_map3.html) [haskell]
 
 ## 2025
