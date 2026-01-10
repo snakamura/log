@@ -64,7 +64,7 @@ hom3 = Hom go
 
 Just like we can define cones for a functor, we can define wedges for a profunctor. To create a wedge, you first need to pick an object `x` in the target category of `f` and `g`. Then, we'll have morphisms from this object to the profunctor itself. We call it $\tau(x)$. You can think wedges as dinatural transformations from a constant functor that maps everything to `x` to the profunctor.
 
-In these Haskell examples, both source category and target category are $Hask$. So let's pick `()`, for example, as the object. Then we'll have morphisms from this object to a hom-set $Hom_{Hask}(f c, g c)$. Let's pick two candidates of such morphisms as examples.
+In these Haskell examples, both source category and target category are $Hask$. So let's pick `()`, for example, as the object. Then we'll have morphisms from this object to a hom-set $Hom_{Hask}(f \, c, g \, c)$. Let's pick two candidates of such morphisms as examples.
 
 ```
 tau1Int :: () -> List2Maybe Int Int
@@ -169,6 +169,6 @@ r3_2' =
 
 Just like there might exist a limit for cones, there might exist an end for wedges. An end for wedges is the most universal wedge among them, which is a terminal object in a category of the wedges. In the above example, it's `List2Maybe a a` itself. You can think morphisms `() -> List2Maybe a a` or `Bool -> List2Maybe a a` as morphisms from `()` and `Bool` to the terminal object `List2Maybe a a` (not in $Hask$, but in the category of wedges).
 
-An end of a profunctor $Hom_{Hask}(f a, g a)$ (`Hom f g a a`) is natural transformations from `f` to `g` (`forall a. f a -> g a`), and denoted as $\displaystyle \int_c Hask(f a, g a) \cong Nat(f, g)$.
+An end of a profunctor $Hom_{Hask}(f \, a, g \, a)$ (`Hom f g a a`) is natural transformations from `f` to `g` (`forall a. f a -> g a`), and denoted as $\displaystyle \int_c Hask(f \, a, g \, a) \cong Nat(f, g)$.
 
 Getting back to the original question, we can say that, when we have category $C$ and $D$, and functors $F$ and $G$ from $C$ to $D$, there is a profunctor $S(a, b)$ from $C^{op} \times C$ to $Set$, and the end of $S$ ($\displaystyle \int_c S(c, c)$) is natural transformations from $F$ to $G$.
