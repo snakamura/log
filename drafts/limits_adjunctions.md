@@ -119,3 +119,5 @@ homVtoLimD' = leftAdjunct' homDeltaVtoD
 homDeltaVtoD' :: (Delta V J1 -> D J1, Delta V J2 -> D J2)
 homDeltaVtoD' = rightAdjunct' homVtoLimD
 ```
+
+This adjunction is the adjunction we saw in [A parameter type is existential, a return type is universal, part 2](../../2025/6/existential_universal2.html).
