@@ -53,13 +53,44 @@ $$
 
 This is why they say ends are generalized limits.
 
-The same goes for coends. A coend of `a -> a` is `exists a. a -> a`. A coend of `WrappedFunctor f a a` is a colimit of `f`.
+It's also an idea to think about it by using a constant functor as `f` or `g` in a hom-set from `f a` to `g b`. This hom-set is an instance of `Profunctor`.
+
+```
+type Hom :: (Type -> Type) -> (Type -> Type) -> Type -> Type -> Type
+newtype Hom f g a b = Hom (f a -> g b)
+
+instance (Functor f, Functor g) => Profunctor (Hom f g) where
+  dimap :: (s -> a) -> (b -> t) -> (Hom f g a b -> Hom f g s t)
+  dimap s2a b2t (Hom h) = Hom (fmap b2t . h . fmap s2a)
+```
+
+When you use `Const c` as `f`, `Hom (Const c) g a` will be an instance of `Functor`.
+
+```
+instance (Functor g) => Functor (Hom (Const c) g a) where
+  fmap :: (b -> t) -> (Hom (Const c) g a b -> Hom (Const c) g a t)
+  fmap = rmap
+```
+
+Also, using `Const c` as `g` and swapping `a` and `b` makes it an instance of `Contravariant`.
+
+```
+newtype HomOp f g a b = HomOp (Hom f g b a)
+
+instance (Functor f) => Contravariant (HomOp f (Const c) b) where
+  contramap :: (s -> a) -> (HomOp f (Const c) b a -> HomOp f (Const c) b s)
+  contramap s2a (HomOp hom)= HomOp (lmap s2a hom)
+```
+
+So when you pick a type in $Hask$ and another type in $Hask^{op}$, and map them to $Hask$, you can map one of them to one type in the target category using a constant functor. Then, the hom-set will be a covariant or contravariant functor. The end of this profunctor is a limit of the covariant functor as well as a colimit of the contravariant functor.
+
+While ends are generalization of limits, coends are generalization of colimits. A coend of `a -> a` is `exists a. a -> a`, and a coend of `WrappedFunctor f a a` is a colimit of `f`.
 
 $$
 \int^a WrappedFunctor f \, a \, a \cong \int^a f \, a \cong \operatorname*{colim}_a f \, a
 $$
 
-And a coend of `WrappedContravariant f a a` is a limit of `f`.
+Also, a coend of `WrappedContravariant f a a` is a limit of `f`.
 
 $$
 \int^a WrappedContravariant f \, a \, a \cong \int^a f \, a \cong \operatorname*{colim}_{a \in Hask^{op}} f \, a \cong \lim_a f \, a
