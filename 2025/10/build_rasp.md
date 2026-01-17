@@ -35,10 +35,11 @@ Once you've done this, reboot your instance.
 
 ## Building docker images
 
-You're now ready to build docker images. Clone the repo and build `base`, `wrf_build` and `wrf_prod` images.
+You're now ready to build docker images. Clone the repo and build `base`, `wrf_build` and `wrf_prod` images. I used [`e625fc7`](https://github.com/sfalmo/rasp-from-scratch/commit/e625fc753c66e324d6d11a19d1cbfd21539fb1af).
 
 ```
 git clone https://github.com/sfalmo/rasp-from-scratch.git
+git checkout e625fc753c66e324d6d11a19d1cbfd21539fb1af
 cd rasp-from-scratch
 cp .env.template .env
 ```
