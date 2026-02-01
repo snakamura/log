@@ -2,6 +2,10 @@
 
 ## 2026
 
+### Feb.
+
+ - [Horizontal and vertical composition of natural transformations](./2026/2/natural_transformation_composition.html) [haskell]
+
 ### Jan.
 
 - [Mapping a function over a tuple, part 4](./2026/1/tuple_map4.html) [haskell]

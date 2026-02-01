@@ -38,7 +38,7 @@ Vertical composition composes them naturally. It's just a composition of morphis
 └────┘                 └────┘
 ```
 
-You can compose natural transformations vertically using the normal function composition (`(.)`).
+This vertical composition of natural transformations can be done with the normal function composition (`(.)`).
 
 ```
 (.|) ::
@@ -50,7 +50,7 @@ pairToList :: (,) Bool ~> List
 pairToList = maybeToList .| pairToMaybe
 ```
 
-Horizontal composition composes natural transformations by composing functors first.
+On the other hand, horizontal composition composes natural transformations by composing functors first.
 
 ```
 ┌────┐                                      ┌────┐
