@@ -4,7 +4,8 @@
 
 ### Feb.
 
- - [Horizontal and vertical composition of natural transformations](./2026/2/natural_transformation_composition.html) [haskell]
+- [Strong and closed functors](./2026/2/strong_closed_functors.html) [haskell]
+- [Horizontal and vertical composition of natural transformations](./2026/2/natural_transformation_composition.html) [haskell]
 
 ### Jan.
 
