@@ -30,7 +30,7 @@ To be more precise, this is left strength because it lifts `a` on the left. Ther
 
 Also note that this strong functor is different from strong monoidal functor that satisfies `f (a, b)` and `(f a, f b)` are isomorphic ($F (A \otimes B) \cong (F A \otimes F B)$). We saw it in [Expressing monoidal functors in Haskell](../../2024/6/monoidal_functor.html).
 
-Let's think a bit more about a type of `strength`. Its type is `(a, f b) -> f (a, b)` which is equivalent to `((,) a) (f b) -> f (((,) a) b)`. When you replace `(,) a` with `g`, it'll be `g (f b) -> f (g b)`. When we saw in [`Traversable`, `Lone` and `Distributive`](../../2023/7/traversable_lone_distributive.html), this holds when `g` is `Lone`, or `f` is `Distributive`. Since `(,) a` is `Lone`, we can define `strength` for any functor `f`.
+Let's think a bit more about a type of `strength`. Its type is `(a, f b) -> f (a, b)` which is equivalent to `((,) a) (f b) -> f (((,) a) b)`. When you replace `(,) a` with `g`, it'll be `g (f b) -> f (g b)`. As we saw in [`Traversable`, `Lone` and `Distributive`](../../2023/7/traversable_lone_distributive.html), this holds when `g` is `Lone`, or `f` is `Distributive`. Since `(,) a` is `Lone`, we can define `strength` for any functor `f`.
 
 We've defined a strong functor in terms of a pair functor `(,) a`, but you can define it in terms of any tensor products in a monoidal category. For example, you can define it with `Either a`.
 
@@ -57,7 +57,7 @@ instance (Functor f, Applicative f) => CoproductStrongFunctor f where
   strength (Right fb) = fmap Right fb
 ```
 
-The type of `strength` was `g (f b) -> f (g b)` where `g` was `(,) a`. Then what will it look like when we use `(->) a` as `g` this time? We'll get `(-> a) (f b) -> f (((->) a) b)` which is `(a -> f b) -> f (a -> b)`. Let's call a functor having this function a closed functor.
+Now, let's take a look at what we can do with other functors. The type of `strength` was `g (f b) -> f (g b)` where `g` was `(,) a`. Then what will it look like when we use `(->) a` as `g` this time? We'll get `(-> a) (f b) -> f (((->) a) b)` which is `(a -> f b) -> f (a -> b)`. Let's call a functor having this function a closed functor.
 
 ```
 class (Functor f) => ClosedFunctor f where
@@ -82,7 +82,7 @@ instance (Functor f, Distributive f) => ClosedFunctor f where
   closed a2fb = distribute a2fb
 ```
 
-Strictly speaking, `a -> f b` and `f (a -> b)` must be isomorphic for `f` to be a closed functor. It means that there needs to be `unclosed :: f (a -> b) -> (a -> f b)`, where both `unclosed . closed == id` and `closed . unclosed == id` hold. But `unclosed` can be defined for any functor, and a pair of `closed` above and this `unclosed` satisfy these two conditions.
+Strictly speaking, `a -> f b` and `f (a -> b)` must be isomorphic for `f` to be a closed functor. It means that there needs to be `unclosed :: f (a -> b) -> (a -> f b)`, where both `unclosed . closed == id` and `closed . unclosed == id` hold. But `unclosed` can be defined for any functors, and a pair of `closed` above and this `unclosed` satisfy these two conditions.
 
 ```
 unclosed :: (Functor f) => f (a -> b) -> (a -> f b)
