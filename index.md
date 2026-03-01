@@ -2,6 +2,10 @@
 
 ## 2026
 
+## Mar.
+
+- [Strong and closed profunctors](./2026/3/strong_closed_profunctors.html) [haskell]
+
 ### Feb.
 
 - [Strong and closed functors](./2026/2/strong_closed_functors.html) [haskell]

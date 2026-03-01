@@ -1,6 +1,6 @@
 # Strong and closed profunctors
 
-We saw strong and closed functors in [Strong and closed functors](./strong_closed_functors.html). Then, what will strong and closed profunctors look like?
+We saw strong and closed functors in [Strong and closed functors](../2/strong_closed_functors.html). Then, what will strong and closed profunctors look like?
 
 Strong functors allow you to lift a value into a functor using a tensor (A product for `ProductStrongFunctor`, and a coproduct for `CoproductStrongFunctor`).
 
@@ -93,7 +93,7 @@ instance (CoproductStrongFunctor f) => CoproductStrongProfunctor (Star f) where
   right (Star a2fb) = Star (\eca -> strength (fmap a2fb eca))
 ```
 
-A functor is `CoproductStrongFunctor` when it's `Applicative` as we saw in the previous post. It means that you can say that `Star f` is an instance of `CoproductStrongProfunctor` if `f` is `Applicative`.
+A functor is `CoproductStrongFunctor` when it's `Applicative` as we saw in [the previous post](../2/strong_closed_functors.html). It means that you can say that `Star f` is an instance of `CoproductStrongProfunctor` if `f` is `Applicative`.
 
 By the way, in Haskell, `second` can be implemented in terms of `first` and vice versa, and `right` can be implemented in terms of `left` and vice versa, by swapping their elements. But this isn't always true when you think about strong profunctors using a asymmetric tensor product.
 
