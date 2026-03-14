@@ -51,7 +51,7 @@ $$
 
 for any $a2b :: a \rightarrow b$. Notice that all of them transform $p \, b \, a$ to $q \, a \, b$.
 
-Natural transformations that satisfy the first isomorphisms are called dinatural transformations.
+Natural transformations that satisfy only the first isomorphisms are called dinatural transformations.
 
 $$rmap \, a2b \circ nat_{a} \circ lmap \, a2b \cong lmap \, a2b \circ nat_{b} \circ rmap \, a2b$$
 
@@ -133,7 +133,7 @@ You can see `hoistStar fx2gx` satisfies the dinaturality condition, too.
 -> Star (fmap a2b . fx2gx . b2fa . a2b) -- fx2gx . fmap a2b = fmap a2b . fx2gx
 ```
 
-Actually, they satisfy the naturality condition as well when you relax their types. So they're natural transformations. Notice that a natural transformation `pureStar` is indexed by `a` and `b` while the previous `pureStar` was index only by `a`.
+Actually, they satisfy the naturality condition as well when you relax their types. So they're not only dinatural transformations, but natural transformations. Notice that a natural transformation `pureStar` is indexed by `a` and `b` while the previous `pureStar` was index only by `a`.
 
 ```
 pureStar :: forall f a b. (Applicative f) => Pure a b -> Star f a b
