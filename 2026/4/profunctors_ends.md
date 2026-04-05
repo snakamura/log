@@ -100,7 +100,7 @@ r2 =
    in hom [0, 1, 2]
 ```
 
-As you can see, `tau1Int` doesn't satisfy this condition while `tau2Int` does. We've only seen `(+ 100)` satisfied it, but it actually satisfies it with any function. What are the differences between them? It turned out that `tua1Int` isn't a natural transformation while `tua2Int` is. I mean, `tau1Int` (`hom1`) touches the `Int` value while `tau2Int` (`hom2`) doesn't touch it. You can only use `tau1Int` with `Int`, but you can use `tau2Int` with any type. In other words, you can generalize the type of `hom2` to `List2Maybe a a` while you cannot generalize the type of `hom1`.
+As you can see, `tau1Int` doesn't satisfy this condition while `tau2Int` does. We've only seen `(+ 100)` satisfied it, but it actually satisfies it with any functions. What are the differences between them? It turned out that `tua1Int` isn't a natural transformation while `tua2Int` is. I mean, `tau1Int` (`hom1`) touches the `Int` value while `tau2Int` (`hom2`) doesn't touch it. You can only use `tau1Int` with `Int`, but you can use `tau2Int` with any type. In other words, you can generalize the type of `hom2` to `List2Maybe a a` while you cannot generalize the type of `hom1`.
 
 It turned out that the fact that a wedge satisfies the wedge condition means the hom-set pointed by the wedge is a natural transformation. Let's see some more examples. This time, we use `Bool` as well as `()` as `x`.
 
