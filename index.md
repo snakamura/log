@@ -2,11 +2,11 @@
 
 ## 2026
 
-## Apr.
+### Apr.
 
 - [Profunctors and ends](./2026/4/profunctors_ends.html) [haskell]
 
-## Mar.
+### Mar.
 
 - [Dinatural transformations](./2026/3/dinatural_transformations.html) [haskell]
 - [Strong and closed profunctors](./2026/3/strong_closed_profunctors.html) [haskell]
