@@ -2,6 +2,10 @@
 
 ## 2026
 
+### Jun.
+
+- [Limits to ends](./2026/6/limits_ends.html) [haskell]
+
 ### Mar.
 
 - [Limits and adjunctions](./2026/5/limits_adjunctions.html) [haskell]
