@@ -14,7 +14,9 @@ There is an adjunction $F \dashv U$. $F$ is a left adjoint and $U$ is a right ad
 
 `unit` is a natural transformation $I \to U \circ F$. When you pick an object `A` in `Hask`, $F$ maps it to $A_{Hask_T}$ in $Hask_T$. Then, $U$ maps it to `T A` in `Hask`. `unit` will be a morphism `A -> T A` in `Hask` which is `pure` of `T`.
 
-`counit` is a natural transformation $F \circ U \to I$. When you pick an object $A_{Hask_T}$ in $Hask_T$, $U$ maps it to `T A` in `Hask`. Then, $F$ maps it to $T A_{Hask_T}$ in $Hask_T$. `counit` will be $T A_{Hask_T} \to A_{Hask_T}$, which is equivalent to `T A -> T A` in `Hask` which is `id`.
+`counit` is a natural transformation $F \circ U \to I$. When you pick an object $A_{Hask_T}$ in $Hask_T$, $U$ maps it to `T A` in `Hask`. Then, $F$ maps it to $T A_{Hask_T}$ in $Hask_T$. `counit` will be $T A_{Hask_T} \to A_{Hask_T}$, which is equivalent to `T A -> T A` in `Hask` which is `id`. You'll get `join . fmap id` by mapping this morphism from $Hask_T$ to `Hask` with $U$, which is equivalent to `join` of `T`.
+
+You've got `pure` from `unit`, and `join` from `counit`.
 
 $U \circ F$ produces the monad `T` itself.
 
