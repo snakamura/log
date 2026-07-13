@@ -35,7 +35,7 @@ project @f = snd . cata alg
     alg x = (embed (fst <$> x), fst <$> x)
 ```
 
-You can factor out paramorphism from it just like we factored out `apo` from `embed` for `Nu`. Then, you can write `project` with `para`.
+Just like we factored out `apo` from `embed` for `Nu` in the previous post, you can factor out paramorphism from it . Then, `project` can be written with `para`.
 
 ```
 para :: (Functor f) => (f (Mu f, a) -> a) -> Mu f -> a
@@ -62,7 +62,7 @@ data Nu f where
   Out :: (a -> f a) -> a -> Nu f
 ```
 
-and compare the pair with a pair of `Yoneda` and `Coyoneda`
+and compare this pair with a pair of `Yoneda` and `Coyoneda`
 
 ```
 type Yoneda :: (Type -> Type) -> Type -> Type

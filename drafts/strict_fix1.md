@@ -96,7 +96,7 @@ inf' = Fix' (\_ -> Just inf')
 
 Now, you can build `inf'` because it won't build its child until the function is called. But it's just emulating laziness. Are there any other representations?
 
-Theoretically, `Fix` represents a least fixed point of a functor $\mu F$ ($F$ is a functor) which only contains finite structures and doesn't contain an indefinitely nested structure. There is a greatest fixed point $\nu F$ as well which contains an indefinitely nested structure. While the least fixed point was built by building a nested structure, the greatest fixed point is built by observing a nested structure.
+Theoretically, `Fix` represents the least fixed point of a functor $\mu F$ ($F$ is a functor) which only contains finite structures and doesn't contain an indefinitely nested structure. There is a greatest fixed point $\nu F$ as well which contains an indefinitely nested structure. While the least fixed point was built by building a nested structure, the greatest fixed point is built by observing a nested structure.
 
 In Haskell, $\nu F$ can be represented as `Nu`.
 
@@ -182,7 +182,7 @@ embed @f = ana coalg . Right
     coalg (Right fnuf) = Left <$> fnuf
 ```
 
-You can factor this out into apomorphism. Then, `embed` can be written using it.
+This folding is very common and can be factored out as apomorphism. Then, `embed` can be written using it.
 
 ```
 apo :: (Functor f) => (a -> f (Either (Nu f) a)) -> a -> Nu f
@@ -196,7 +196,7 @@ embed :: (Functor f) => f (Nu f) -> Nu f
 embed = apo (fmap Left)
 ```
 
-Note that `is 100 inf` won't terminate when you write it with `cata`.
+Even though `is 100 inf` terminates, it won't terminate when you write it with `cata`.
 
 ```
 is' :: Natural -> Nat -> Bool
