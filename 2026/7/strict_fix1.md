@@ -7,14 +7,14 @@ type Fix :: (Type -> Type) -> Type
 newtype Fix f = Fix (f (Fix f))
 ```
 
-For example, a fixed point of `Maybe` is natural numbers.
+For example, a fixed point of `Maybe` is a type of natural numbers.
 
 ```
 type Nat :: Type
 type Nat = Fix Maybe
 ```
 
-You can express 0, 1, and 2 like this.
+Values such as 0, 1, and 2 can be expressed like these.
 
 ```
 zero, one, two :: Nat
@@ -23,7 +23,18 @@ one = Fix (Just (Fix Nothing))
 two = Fix (Just (Fix (Just (Fix Nothing))))
 ```
 
-`Fix` has these four basic operations.
+There is also a function `succ` to get the next value of a specified value. This means you can get any value only from `zero` and `succ`.
+
+```
+succ :: Nat -> Nat
+succ n = Fix (Just n)
+
+one', two' :: Nat
+one' = succ zero
+two' = succ one'
+```
+
+This `Fix` has these four basic operations; `embed`, `project`, `cata` and `ana`.
 
 ```
 -- Embed a functor in a fixed point
@@ -79,7 +90,7 @@ is n nat = cata alg nat n
     alg (Just f) = \n' -> n' > 0 && f (n' - 1)
 ```
 
-This is because Haskell is lazy. When you enable `Strict` extension, `is 100 inf` won't terminate because `inf` tries to build an infinite chain like `Fix (Just (Fix (Just (Fix (Just ...)))))`. How can we express infinity with Strict Haskell then?
+This is because Haskell is lazy. When you enable [`Strict` extension](https://ghc.gitlab.haskell.org/ghc/doc/users_guide/exts/strict.html#strict-by-default-pattern-bindings), `is 100 inf` won't terminate because `inf` tries to build an infinite chain like `Fix (Just (Fix (Just (Fix (Just ...)))))`. How can we express infinity with Strict Haskell then?
 
 One of the options is to make `Fix` hold a function instead of a value.
 
@@ -96,9 +107,9 @@ inf' = Fix' (\_ -> Just inf')
 
 Now, you can build `inf'` because it won't build its child until the function is called. But it's just emulating laziness. Are there any other representations?
 
-Theoretically, `Fix` represents the least fixed point of a functor $\mu F$ ($F$ is a functor) which only contains finite structures and doesn't contain an indefinitely nested structure. There is a greatest fixed point $\nu F$ as well which contains an indefinitely nested structure. While the least fixed point was built by building a nested structure, the greatest fixed point is built by observing a nested structure.
+Theoretically, `Fix` represents the least fixed point of a functor $\mu F$ ($F$ is a functor) which only contains finite structures and doesn't contain indefinitely nested structures. There is a greatest fixed point $\nu F$ as well which contains indefinitely nested structures. While the least fixed point was built by building a nested structure like `Fix`, the greatest fixed point is built by observing a nested structure.
 
-In Haskell, $\nu F$ can be represented as `Nu`.
+In Haskell, $\nu F$ can be represented as this `Nu`.
 
 ```
 type Nu :: (Type -> Type) -> Type
@@ -113,7 +124,7 @@ ana :: (Functor f) => (a -> f a) -> a -> Nu f
 ana = Out
 ```
 
-How can we build values of of `Nu Maybe`, for example?
+How can we build values of of `Nu Maybe`, then?
 
 ```
 type Nat :: Type
@@ -127,7 +138,7 @@ one = Out f True
     f True = Just False
 ```
 
-As you can see, we need a coalgebra for one value to represent `zero` (`Maybe () -> ()`), and need two values to represent `one` (`Maybe Bool -> Bool`). When you have a natural number `n`, it can have `n + 1` values (from `0` to `n`), and you can express it as `Nat`.
+We need a coalgebra for one value (`()`) to represent `zero` (`Maybe () -> ()`), and need two values (`Bool`) to represent `one` (`Maybe Bool -> Bool`). When you have a natural number `n`, it can have `n + 1` values (from `0` to `n`), and you can express it as `Nat`.
 
 ```
 fromNatural :: Natural -> Nat
@@ -155,7 +166,7 @@ is n nat = case (project nat, n) of
     (Just nat', n') -> n' > 0 && is (n' - 1) nat'
 ```
 
-Note that `project` is a function to unwrap one layer.
+Note that `project` is a function to unwrap one layer just like the `project` for `Fix`.
 
 ```
 project :: (Functor f) => Nu f -> f (Nu f)

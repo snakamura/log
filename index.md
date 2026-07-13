@@ -2,6 +2,10 @@
 
 ## 2026
 
+### Jul.
+
+- [Fixed point in Strict Haskell, part 1](./2026/7/strict_fix1.html) [haskell]
+
 ### Jun.
 
 - [Limits to ends](./2026/6/limits_ends.html) [haskell]
