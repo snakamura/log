@@ -1,6 +1,6 @@
 # Fixed point in Strict Haskell, part 2
 
-Now, we [saw `Fix` for $\mu F$, and `Nu` for $\nu F$](./strict_fix1.html). But they're not symmetric. Can we write $\mu F$ whose representation is symmetric to `Nu`? Yes, it's this `Mu`.
+Now, we [saw `Fix` for $\mu F$, and `Nu` for $\nu F$](../7/strict_fix1.html). But they're not symmetric. Can we write $\mu F$ whose representation is symmetric to `Nu`? Yes, it's this `Mu`.
 
 ```
 type Mu :: (Type -> Type) -> Type

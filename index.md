@@ -2,6 +2,10 @@
 
 ## 2026
 
+### Aug.
+
+- [Fixed point in Strict Haskell, part 2](./2026/8/strict_fix2.html) [haskell]
+
 ### Jul.
 
 - [Fixed point in Strict Haskell, part 1](./2026/7/strict_fix1.html) [haskell]
