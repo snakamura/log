@@ -1,6 +1,6 @@
 # Fixed point in Strict Haskell, part 3
 
-We saw `Fix`, `Mu`, and `Nu` in the previous [two](./strict_fix1.html) [posts](./strict_fix1.html). When you put `Mu` and `Nu` together
+We saw `Fix`, `Mu`, and `Nu` in the previous [two](../7/strict_fix1.html) [posts](../8/strict_fix2.html). When you put `Mu` and `Nu` together
 
 ```
 type Mu :: (Type -> Type) -> Type
