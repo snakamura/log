@@ -103,7 +103,7 @@ instance
     AreObjectsCons (isObject object) (areObjects objects)
 ```
 
-Once you've defined a function `mapC` that use these type classes,
+Once you've defined a function `mapC` that uses these type classes,
 
 ```
 mapC ::
