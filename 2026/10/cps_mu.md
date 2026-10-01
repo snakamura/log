@@ -159,7 +159,7 @@ fold f a as = as g
     g (InR (Pair (Const a') (Identity as'))) = f a' as'
 ```
 
-You should've noticed that all of them are in the form of `forall r. (f r -> r) -> r` for some functor `f`. And, it's the `Mu` we saw in [the previous post](./strict_fix2.html).
+You should've noticed that all of them are in the form of `forall r. (f r -> r) -> r` for some functor `f`. And, it's the `Mu` we saw in [the previous post](../8/strict_fix2.html).
 
 ```
 type Bool = Mu (Sum (Const ()) (Const ()))
@@ -205,4 +205,4 @@ fold f a (In as) = as g
     g (InR (Pair (Const a') (Identity as'))) = f a' as'
 ```
 
-You should remember that `Mu` represents the least fixed point of a functor. This means that `Bool` is the least fixed point of `Sum (Const ()) (Const ())` ($F a = 1 + 1$), `Natural` is the least fixed point of `Sum (Const ()) Identity`, `Pair` is the least fixed point of `Product (Const a) (Const b)`, `List` is the least fixed point of `Sum (Const ()) (Product (Const a) Identity)` ($F a = 1 + (a \times r)$), and so on.
+You might remember that `Mu` represents the least fixed point of a functor. This means that `Bool` is the least fixed point of `Sum (Const ()) (Const ())` ($F a = 1 + 1$), `Natural` is the least fixed point of `Sum (Const ()) Identity`, `Pair` is the least fixed point of `Product (Const a) (Const b)`, `List` is the least fixed point of `Sum (Const ()) (Product (Const a) Identity)` ($F a = 1 + (a \times r)$), and so on.

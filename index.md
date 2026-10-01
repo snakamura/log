@@ -2,6 +2,10 @@
 
 ## 2026
 
+### Oct.
+
+- [CPS to `Mu`](./2026/10/cps_mu.html) [haskell]
+
 ### Sep.
 
 - [Fixed point in Strict Haskell, part 3](./2026/9/strict_fix3.html) [haskell]
