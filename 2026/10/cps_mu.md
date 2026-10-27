@@ -205,4 +205,4 @@ fold f a (In as) = as g
     g (InR (Pair (Const a') (Identity as'))) = f a' as'
 ```
 
-You might remember that `Mu` represents the least fixed point of a functor. This means that `Bool` is the least fixed point of `Sum (Const ()) (Const ())` ($F a = 1 + 1$), `Natural` is the least fixed point of `Sum (Const ()) Identity`, `Pair` is the least fixed point of `Product (Const a) (Const b)`, `List` is the least fixed point of `Sum (Const ()) (Product (Const a) Identity)` ($F a = 1 + (a \times r)$), and so on.
+You might remember that `Mu` represents the least fixed point of a functor. This means that `Bool` is the least fixed point of `Sum (Const ()) (Const ())` ($F\ r = 1 + 1$), `Natural` is the least fixed point of `Sum (Const ()) Identity` ($F\ r = 1 + r$), `Pair` is the least fixed point of `Product (Const a) (Const b)` ($F\ a\ b\ r = a \times b$), `List` is the least fixed point of `Sum (Const ()) (Product (Const a) Identity)` ($F\ a\ r = 1 + a \times r$), and so on.
