@@ -78,7 +78,7 @@ snd :: Pair a b -> b
 snd p = p (\a b -> b)
 ```
 
-The same goes for a list. A list is empty or a value with another list. So it'll be represented as a function takes a function taking a value and another list `a -> r -> r`, and a value for an empty list `r`.
+The same goes for a list. A list is empty or a value with another list. So it'll be represented as a function that takes a function taking a value and another list `a -> r -> r` and a value for an empty list `r`.
 
 ```
 type List a = forall r. (a -> r -> r) -> r -> r
