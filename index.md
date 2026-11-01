@@ -2,6 +2,10 @@
 
 ## 2026
 
+### Nov.
+
+- [Serializing and deserializing free monads](./2026/11/serialize_free.html) [haskell]
+
 ### Oct.
 
 - [CPS to `Mu`](./2026/10/cps_mu.html) [haskell]
